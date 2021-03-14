@@ -1,0 +1,18 @@
+{
+  "[js]": {
+    "editor.formatOnSave": false
+  },
+  "[ts]": {
+    "editor.formatOnSave": false
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
+  },
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+}
