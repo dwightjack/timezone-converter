@@ -10,8 +10,32 @@
       defer
     ></script>
     <script src="/js/main.js" defer></script>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: relative;
+      }
+
+      #container {
+        width: 300px;
+        height: 300px;
+        overflow: auto;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
+    <ul id="list">
+      <li>first</li>
+      <li>second</li>
+    </ul>
+    <p>
+      <button type="button" id="btn">toggle</button>
+    </p>
+    <div id="box"></div>
+
+    <div id="container"></div>
   </body>
 </html>
