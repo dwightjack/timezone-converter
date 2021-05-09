@@ -3,9 +3,7 @@
   "description": "",
   "version": "1.0.0",
   "author": "Marco Solazzi",
-  "homepage": "https://github.com/dwightjack/",
-  "main": "index.js",
-  "module": "index.m.js",
+  "homepage": "https://github.com/dwightjack/yui3-demo",
   "license": "MIT",
   "dependencies": {},
   "engines": {
@@ -13,23 +11,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dwightjack/"
+    "url": "https://github.com/dwightjack/yui3-demo"
   },
   "scripts": {
     "start": "wds --watch --root-dir public --app-index public/index.html",
     "lint": "eslint && npx stylelint --aei '**/*.css'"
   },
   "devDependencies": {
-    "@web/dev-server": "0.1.8",
-    "eslint": "7.22.0",
-    "eslint-config-prettier": "8.1.0",
+    "@web/dev-server": "^0.1.8",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "2.2.1",
+    "prettier": "^2.2.1",
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-standard": "21.0.0",
-    "stylelint-prettier": "^1.1.2",
-    "stylelint-scss": "^3.14.2"
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-prettier": "^1.1.2"
   }
 }
