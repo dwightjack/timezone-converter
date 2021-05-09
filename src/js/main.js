@@ -1,10 +1,11 @@
+import hello from './modules/hello.js?url';
+
 YUI({
   groups: {
     'local-modules': {
-      base: '/js/modules/',
       modules: {
         hello: {
-          path: 'hello.js',
+          fullpath: hello,
           requires: ['node-core'],
         },
       },

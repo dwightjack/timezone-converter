@@ -14,11 +14,11 @@
     "url": "https://github.com/dwightjack/yui3-demo"
   },
   "scripts": {
-    "start": "wds --watch --root-dir public --app-index public/index.html",
+    "dev": "vite",
+    "build": "npm run lint && vite build",
     "lint": "eslint && npx stylelint --aei '**/*.css'"
   },
   "devDependencies": {
-    "@web/dev-server": "^0.1.8",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-node": "^11.0.0",
@@ -27,6 +27,7 @@
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^21.0.0",
-    "stylelint-prettier": "^1.1.2"
+    "stylelint-prettier": "^1.1.2",
+    "vite": "^2.2.4"
   }
 }
