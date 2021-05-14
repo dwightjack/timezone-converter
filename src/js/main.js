@@ -1,5 +1,6 @@
 import hello from './modules/hello.js?url';
 import links from './modules/links.js?url';
+import users from './modules/users.js?url';
 
 YUI({
   modules: {
@@ -10,6 +11,10 @@ YUI({
     links: {
       fullpath: links,
       requires: ['node-base', 'node-event-delegate', 'base-build'],
+    },
+    users: {
+      fullpath: users,
+      requires: ['io-base', 'json-parse'],
     },
   },
 }).use('hello', 'links', 'node', 'transition', (Y) => {
@@ -80,4 +85,14 @@ YUI({
 
   const clicker = new Y.Links.Clicker();
   Y.one('body').append(clicker.$el);
+
+  Y.use('template', 'users', 'array-extras', () => {
+    const tmplEngine = new Y.Template();
+    const template = tmplEngine.compile(
+      Y.Lang.trim(Y.one('#user-list-tmpl').get('text')),
+    );
+    Y.Users.fetch((data) => {
+      Y.one('#user-list').setHTML(template({ users: data }));
+    });
+  });
 });
