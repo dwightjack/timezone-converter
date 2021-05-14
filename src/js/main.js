@@ -1,17 +1,18 @@
 import hello from './modules/hello.js?url';
+import links from './modules/links.js?url';
 
 YUI({
-  groups: {
-    'local-modules': {
-      modules: {
-        hello: {
-          fullpath: hello,
-          requires: ['node-core'],
-        },
-      },
+  modules: {
+    hello: {
+      fullpath: hello,
+      requires: ['node-base'],
+    },
+    links: {
+      fullpath: links,
+      requires: ['node-base', 'node-event-delegate', 'base-build'],
     },
   },
-}).use('hello', 'node', 'transition', (Y) => {
+}).use('hello', 'links', 'node', 'transition', (Y) => {
   Y.Hello.hello();
 
   const $list = Y.one('#list');
@@ -73,8 +74,10 @@ YUI({
 
   $container.on('scroll', () => {
     if ($container.one('> p:last-child').inRegion($container)) {
-      console.log('here');
       addNodes(10);
     }
   });
+
+  const clicker = new Y.Links.Clicker();
+  Y.one('body').append(clicker.$el);
 });
