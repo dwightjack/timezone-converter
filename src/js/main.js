@@ -85,6 +85,11 @@ YUI({
 
   Y.use('links', () => {
     const clicker = new Y.Links.Clicker();
+
+    Y.on('clicker:msgChange', ({ newVal }) => {
+      Y.log(newVal);
+    });
+
     clicker.render('#clicker');
   });
 

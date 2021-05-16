@@ -4,7 +4,7 @@ YUI.add(
     const Links = Y.namespace('Links');
 
     Links.Clicker = Y.Base.create(
-      'cliker',
+      'clicker',
       Y.Widget,
       [],
       {
@@ -56,6 +56,7 @@ YUI.add(
           },
           msg: {
             value: '...',
+            broadcast: 2,
           },
         },
       },
