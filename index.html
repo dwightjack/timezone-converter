@@ -38,10 +38,12 @@
 
     <div id="container"></div>
 
+    <div id="clicker"></div>
+
     <div id="user-list"></div>
     <script type="text/x-yui3-template" id="user-list-tmpl">
       <ul>
-        <% Y.Array.map(this.users, (user) => { %>
+        <% Y.Array.each(this.users, (user) => { %>
           <li><%= user.name %> <i>(<%= user.email %>)</i></li>
         <% }) %>
       </ul>

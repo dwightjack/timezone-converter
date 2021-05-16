@@ -17,7 +17,7 @@ YUI({
       requires: ['io-base', 'json-parse'],
     },
   },
-}).use('hello', 'links', 'node', 'transition', (Y) => {
+}).use('hello', 'node', 'transition', (Y) => {
   Y.Hello.hello();
 
   const $list = Y.one('#list');
@@ -83,16 +83,16 @@ YUI({
     }
   });
 
-  const clicker = new Y.Links.Clicker();
-  Y.one('body').append(clicker.$el);
+  Y.use('links', () => {
+    const clicker = new Y.Links.Clicker();
+    clicker.render('#clicker');
+  });
 
   Y.use('template', 'users', 'array-extras', () => {
-    const tmplEngine = new Y.Template();
-    const template = tmplEngine.compile(
-      Y.Lang.trim(Y.one('#user-list-tmpl').get('text')),
-    );
+    const template = Y.Lang.trim(Y.one('#user-list-tmpl').get('text'));
+    const micro = new Y.Template();
     Y.Users.fetch((data) => {
-      Y.one('#user-list').setHTML(template({ users: data }));
+      Y.one('#user-list').setHTML(micro.render(template, { users: data }));
     });
   });
 });
