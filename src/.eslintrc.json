@@ -15,11 +15,5 @@
     "block-scoped-var": "error",
     "consistent-return": "error",
     "eqeqeq": "error"
-  },
-  "overrides": [
-    {
-      "files": ["**/*.test.js", "**/*.spec.js"],
-      "env": { "jest": true }
-    }
-  ]
+  }
 }

@@ -1,0 +1,12 @@
+@import 'sanitize.css/evergreen.css';
+@import 'sanitize.css/reduce-motion.css';
+@import './tokens';
+@import 'components/timezone.css';
+@import 'components/input.css';
+@import './utilities.css';
+
+html {
+  font-family: var(--font-family-sans);
+  font-size: 100%;
+  line-height: 1.5;
+}

@@ -5,7 +5,9 @@
   "author": "Marco Solazzi",
   "homepage": "https://github.com/dwightjack/yui3-demo",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "sanitize.css": "12.0.1"
+  },
   "engines": {
     "node": ">=14.0.0"
   },
@@ -19,15 +21,15 @@
     "lint": "eslint && npx stylelint --aei '**/*.css'"
   },
   "devDependencies": {
-    "eslint": "^7.22.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^2.2.1",
-    "stylelint": "^13.0.0",
-    "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-prettier": "^1.1.2",
-    "vite": "^2.2.4"
+    "eslint": "7.30.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "prettier": "2.3.2",
+    "stylelint": "13.13.1",
+    "stylelint-config-prettier": "8.0.1",
+    "stylelint-config-standard": "22.0.0",
+    "stylelint-prettier": "1.1.2",
+    "vite": "2.3.8"
   }
 }

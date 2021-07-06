@@ -1,0 +1,28 @@
+.c-timezone {
+  --timezone-color-background: var(--color-background-primary);
+  background-color: var(--timezone-color-background);
+  color: var(--color-text-primary);
+  border-radius: var(--size-border-radius-m);
+  padding: var(--s-3) var(--s-4);
+  font-size: var(--font-size-m);
+}
+
+.c-timezone__title {
+  margin-top: var(--s-0);
+  margin-bottom: var(--s-0);
+  font-weight: var(--font-weight-semibold);
+  font-size: inherit;
+}
+
+.c-timezone__zone {
+  margin-top: var(--s-0);
+  margin-bottom: var(--s-0);
+  font-size: var(--font-size-s);
+}
+
+.c-timezone__fieldset {
+  border: 0;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}

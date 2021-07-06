@@ -1,0 +1,36 @@
+:root {
+  --color-white: 255, 255, 255;
+  --color-gray-700: 56, 56, 56;
+  --color-green-900: 37, 89, 87;
+  --color-green-500: 42, 157, 143;
+  --color-red-400: 231, 111, 81;
+  --color-yellow-400: 233, 196, 106;
+  --color-background-canvas: rgb(var(--color-white));
+  --color-background-primary: rgb(var(--color-gray-700));
+  --color-text-canvas: rgb(var(--color-gray-700));
+  --color-text-primary: rgb(var(--color-white));
+
+  /* Font sizes */
+  --font-size-s: 0.75rem;
+  --font-size-m: 1.125rem;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-family-sans: 'Inter', sans-serif;
+  --font-family-mono: 'Roboto Mono', monospace;
+
+  /* Size */
+  --size-spacing-0: 0;
+  --size-spacing-1: 0.25rem;
+  --size-spacing-2: 0.5rem;
+  --size-spacing-3: 0.75rem;
+  --size-spacing-4: 1rem;
+  --size-border-radius-s: 0.25rem;
+  --size-border-radius-m: 0.5rem;
+
+  /* Size shortcuts */
+  --s-0: var(--size-spacing-0);
+  --s-1: var(--size-spacing-1);
+  --s-2: var(--size-spacing-2);
+  --s-3: var(--size-spacing-3);
+  --s-4: var(--size-spacing-4);
+}

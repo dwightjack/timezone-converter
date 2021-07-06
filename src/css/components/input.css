@@ -1,0 +1,33 @@
+.c-input {
+  display: grid;
+  grid-template-columns: [input-start] 1fr [input-end];
+  grid-template-rows: [input-start] 1fr [input-end];
+  border: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.c-input::after {
+  content: '';
+  display: block;
+  grid-area: input;
+  background-color: currentColor;
+  opacity: 0.1;
+  border-radius: var(--size-border-radius-s);
+  padding: var(--s-1) var(--s-2);
+}
+
+.c-input__field {
+  border: 0;
+  grid-area: input;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  padding: var(--s-1) var(--s-2);
+  font-family: var(--font-family-mono);
+  min-width: 0;
+}
+
+.c-input.-reset {
+  appearance: none;
+}

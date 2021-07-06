@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YUI3 Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://yui-s.yahooapis.com/3.18.1/build/yui/yui-min.js"
       defer
     ></script>
     <script src="/src/js/main.js" type="module"></script>
-    <style>
+    <!-- <style>
       #box {
         width: 200px;
         height: 200px;
@@ -23,10 +29,10 @@
         height: 300px;
         overflow: auto;
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    <div id="app"></div>
+    <!-- <div id="app"></div>
     <ul id="list">
       <li>first</li>
       <li>second</li>
@@ -47,6 +53,24 @@
           <li><%= user.name %> <i>(<%= user.email %>)</i></li>
         <% }) %>
       </ul>
-    </script>
+    </script> -->
+    <main>
+      <h1>Time Zones</h1>
+      <article class="c-timezone">
+        <h2 class="c-timezone__title">Amsterdam, Netherlands</h2>
+        <p class="c-timezone__zone">JST (UTC +9)</p>
+        <fieldset class="c-timezone__fieldset">
+          <legend class="u-visually-hidden">Date and time</legend>
+          <div class="c-input">
+            <input class="c-input__field" type="date" value="2020-10-10" />
+          </div>
+          <div class="c-input">
+            <input class="c-input__field" type="time" value="23:24" />
+          </div>
+        </fieldset>
+        <button type="button">Remove</button>
+      </article>
+      <button type="button">Add</button>
+    </main>
   </body>
 </html>
