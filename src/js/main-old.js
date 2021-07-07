@@ -1,6 +1,7 @@
 import hello from './modules/hello.js?url';
 import links from './modules/links.js?url';
 import users from './modules/users.js?url';
+import modelsUser from './modules/models/user.js?url';
 
 YUI({
   modules: {
@@ -15,6 +16,10 @@ YUI({
     users: {
       fullpath: users,
       requires: ['io-base', 'json-parse'],
+    },
+    'models-user': {
+      fullpath: modelsUser,
+      requires: ['model'],
     },
   },
 }).use('hello', 'node', 'transition', (Y) => {
@@ -93,10 +98,13 @@ YUI({
     clicker.render('#clicker');
   });
 
-  Y.use('template', 'users', 'array-extras', () => {
+  Y.use('template', 'users', 'models-user', 'array-extras', () => {
     const template = Y.Lang.trim(Y.one('#user-list-tmpl').get('text'));
     const micro = new Y.Template();
     Y.Users.fetch((data) => {
+      for (const { id, name, email } of data) {
+        console.log(new Y.Models.User().setAttrs({ id, name, email }).toJSON());
+      }
       Y.one('#user-list').setHTML(micro.render(template, { users: data }));
     });
   });
