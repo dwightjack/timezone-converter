@@ -13,6 +13,8 @@
   /* Font sizes */
   --font-size-s: 0.75rem;
   --font-size-m: 1.125rem;
+  --font-size-l: 1.25rem;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-family-sans: 'Inter', sans-serif;
