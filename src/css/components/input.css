@@ -30,10 +30,13 @@
   font-size: inherit;
   color: inherit;
   padding: var(--s-1) var(--s-2);
-  font-family: var(--font-family-mono);
-  font-weight: var(--font-weight-light);
   min-width: 0;
   order: 1;
+}
+
+.c-field__input:is([type='date'], [type='time']) {
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-light);
 }
 
 .c-field__input.-reset {

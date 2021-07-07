@@ -1,9 +1,4 @@
 .c-timezone {
-  --timezone-color-background: var(--color-background-primary);
-  background-color: var(--timezone-color-background);
-  color: var(--color-text-primary);
-  border-radius: var(--size-border-radius-m);
-  padding: var(--s-3) var(--s-4);
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: repeat(2, auto);
@@ -29,9 +24,13 @@
 
 .c-timezone__cta {
   grid-area: cta;
-  padding: 0;
+  margin: calc(var(--s-2) * -1);
+  padding: var(--s-2);
   border: 0;
   border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: var(--font-size-l);
 }
 
 .c-timezone__fieldset {

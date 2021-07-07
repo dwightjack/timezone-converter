@@ -1,0 +1,12 @@
+#main {
+  padding: var(--s-5) var(--s-4);
+}
+
+.l-stack {
+  --stack-spacing: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: var(--stack-spacing);
+}

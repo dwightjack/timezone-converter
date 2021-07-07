@@ -1,0 +1,7 @@
+.c-panel {
+  --panel-color-background: var(--color-background-primary);
+  background-color: var(--panel-color-background);
+  color: var(--color-text-primary);
+  border-radius: var(--size-border-radius-m);
+  padding: var(--s-3) var(--s-4);
+}

@@ -2,7 +2,10 @@
 @import 'sanitize.css/reduce-motion.css';
 @import './tokens';
 @import 'components/timezone.css';
+@import 'components/icon.css';
+@import 'components/panel.css';
 @import 'components/input.css';
+@import 'layout.css';
 @import './utilities.css';
 
 html {
