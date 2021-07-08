@@ -3,8 +3,9 @@
 @import './tokens';
 @import 'components/timezone.css';
 @import 'components/icon.css';
-@import 'components/panel.css';
-@import 'components/input.css';
+@import 'components/tile.css';
+@import 'components/field.css';
+@import 'components/button.css';
 @import 'layout.css';
 @import './utilities.css';
 

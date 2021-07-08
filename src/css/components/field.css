@@ -39,6 +39,11 @@
   font-weight: var(--font-weight-light);
 }
 
+.c-field__input::placeholder {
+  opacity: 1;
+  color: inherit;
+}
+
 .c-field__input.-reset {
   appearance: textfield;
 }

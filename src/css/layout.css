@@ -10,3 +10,10 @@
   justify-content: flex-start;
   gap: var(--stack-spacing);
 }
+
+.l-cluster {
+  --cluster-spacing: var(--s-5);
+  display: flex;
+  place-items: flex-start;
+  gap: var(--stack-spacing);
+}

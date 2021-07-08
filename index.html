@@ -68,12 +68,24 @@
         <line x1="15" y1="9" x2="9" y2="15"></line>
         <line x1="9" y1="9" x2="15" y2="15"></line>
       </symbol>
+      <symbol
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        id="icon-plus"
+      >
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </symbol>
     </svg>
     <main id="main">
       <h1 class="u-visually-hidden">Time Zones</h1>
       <div class="l-stack">
         <div id="timezone-list" class="u-contents">
-          <article class="c-timezone c-panel">
+          <article class="c-timezone c-tile">
             <h2 class="c-timezone__title">Amsterdam, Netherlands</h2>
             <p class="c-timezone__zone">JST (UTC +9)</p>
             <button type="button" class="c-timezone__cta">
@@ -103,7 +115,7 @@
             </fieldset>
           </article>
 
-          <article class="c-timezone c-panel">
+          <article class="c-timezone c-tile">
             <h2 class="c-timezone__title">Amsterdam, Netherlands</h2>
             <p class="c-timezone__zone">JST (UTC +9)</p>
             <button type="button" class="c-timezone__cta">
@@ -133,7 +145,7 @@
             </fieldset>
           </article>
         </div>
-        <div class="c-panel">
+        <div class="c-tile">
           <label class="c-field -compact">
             <input
               class="c-field__input -reset"
@@ -142,7 +154,7 @@
             />
             <span class="c-field__label">City name</span>
           </label>
-          <button type="button">Add</button>
+          <button type="button" class="c-button">Add</button>
         </div>
       </div>
     </main>

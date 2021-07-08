@@ -5,10 +5,14 @@
   --color-green-500: 42, 157, 143;
   --color-red-400: 231, 111, 81;
   --color-yellow-400: 233, 196, 106;
+  --color-yellow-300: 248, 212, 121;
   --color-background-canvas: rgb(var(--color-white));
   --color-background-primary: rgb(var(--color-gray-700));
+  --color-background-action: rgb(var(--color-yellow-400));
+  --color-background-action-active: rgb(var(--color-yellow-300));
   --color-text-canvas: rgb(var(--color-gray-700));
   --color-text-primary: rgb(var(--color-white));
+  --color-text-action: rgb(var(--color-gray-700));
 
   /* Font sizes */
   --font-size-s: 0.75rem;
