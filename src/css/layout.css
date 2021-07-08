@@ -13,7 +13,8 @@
 
 .l-cluster {
   --cluster-spacing: var(--s-5);
+  --cluster-align: flex-start;
   display: flex;
-  place-items: flex-start;
+  place-items: var(--cluster-align);
   gap: var(--stack-spacing);
 }

@@ -43,4 +43,5 @@
   grid-area: fields;
   font-size: var(--font-size-m);
   justify-self: end;
+  align-items: flex-end;
 }

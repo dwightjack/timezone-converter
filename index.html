@@ -96,65 +96,41 @@
             </button>
             <fieldset class="c-timezone__fieldset">
               <legend class="u-visually-hidden">Date and time</legend>
-              <label class="c-field -compact">
+              <div class="c-field c-field--compact">
                 <input
-                  class="c-field__input -reset"
+                  class="c-field__input c-field__input--reset"
                   type="date"
+                  id="date-1"
                   value="2020-10-10"
                 />
-                <span class="c-field__label">Date</span>
-              </label>
-              <label class="c-field -compact">
+                <label class="c-field__label" for="date-1">Date</label>
+              </div>
+              <div class="c-field c-field--compact">
                 <input
-                  class="c-field__input -reset"
+                  class="c-field__input c-field__input--reset"
                   type="time"
+                  id="time-1"
                   value="23:24"
                 />
-                <span class="c-field__label">Time</span>
-              </label>
-            </fieldset>
-          </article>
-
-          <article class="c-timezone c-tile">
-            <h2 class="c-timezone__title">Amsterdam, Netherlands</h2>
-            <p class="c-timezone__zone">JST (UTC +9)</p>
-            <button type="button" class="c-timezone__cta">
-              <svg class="c-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#icon-close" />
-              </svg>
-              <span class="u-visually-hidden">Remove</span>
-            </button>
-            <fieldset class="c-timezone__fieldset">
-              <legend class="u-visually-hidden">Date and time</legend>
-              <label class="c-field -compact">
-                <input
-                  class="c-field__input -reset"
-                  type="date"
-                  value="2020-10-10"
-                />
-                <span class="c-field__label">Date</span>
-              </label>
-              <label class="c-field -compact">
-                <input
-                  class="c-field__input -reset"
-                  type="time"
-                  value="23:24"
-                />
-                <span class="c-field__label">Time</span>
-              </label>
+                <label class="c-field__label" for="time-1">Time</label>
+              </div>
             </fieldset>
           </article>
         </div>
-        <div class="c-tile">
-          <label class="c-field -compact">
+        <div
+          class="c-tile l-cluster"
+          style="--cluster-spacing: --s-0; --cluster-align: stretch"
+        >
+          <div class="c-field c-field--compound">
             <input
-              class="c-field__input -reset"
+              class="c-field__input c-field__input--reset"
               type="text"
+              id="city-name"
               placeholder="Add a new city..."
             />
-            <span class="c-field__label">City name</span>
-          </label>
-          <button type="button" class="c-button">Add</button>
+            <label class="c-field__label" for="city-name">City name</label>
+            <button type="button" class="c-button c-field__action">Add</button>
+          </div>
         </div>
       </div>
     </main>
