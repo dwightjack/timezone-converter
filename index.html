@@ -117,11 +117,8 @@
             </fieldset>
           </article>
         </div>
-        <div
-          class="c-tile l-cluster"
-          style="--cluster-spacing: --s-0; --cluster-align: stretch"
-        >
-          <div class="c-field c-field--compound">
+        <div class="c-tile">
+          <div class="c-field c-field--compact">
             <input
               class="c-field__input c-field__input--reset"
               type="text"
@@ -129,7 +126,16 @@
               placeholder="Add a new city..."
             />
             <label class="c-field__label" for="city-name">City name</label>
-            <button type="button" class="c-button c-field__action">Add</button>
+            <button type="button" class="c-button c-field__action">
+              <span class="u-visually-hidden">Add</span>
+              <svg
+                class="c-icon c-icon--large"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <use xlink:href="#icon-plus" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

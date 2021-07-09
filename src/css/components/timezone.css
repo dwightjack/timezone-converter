@@ -31,6 +31,7 @@
   background: transparent;
   color: inherit;
   font-size: var(--font-size-l);
+  cursor: pointer;
 }
 
 .c-timezone__fieldset {
@@ -44,4 +45,8 @@
   font-size: var(--font-size-m);
   justify-self: end;
   align-items: flex-end;
+}
+
+.c-timezone__fieldset > * {
+  flex-shrink: 1;
 }

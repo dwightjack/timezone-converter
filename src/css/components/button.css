@@ -1,4 +1,6 @@
 .c-button {
+  display: flex;
+  gap: var(--s-1);
   background-color: var(--color-background-action);
   color: var(--color-text-action);
   border: 0;
@@ -7,6 +9,7 @@
   font-weight: var(--font-weight-semibold);
   cursor: pointer;
   transition: background-color 200ms ease-out;
+  align-items: center;
 }
 
 .c-button:where(:hover, :focus) {
