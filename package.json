@@ -6,6 +6,8 @@
   "homepage": "https://github.com/dwightjack/yui3-demo",
   "license": "MIT",
   "dependencies": {
+    "@netlify/functions": "0.7.2",
+    "@vvo/tzdb": "6.7.0",
     "sanitize.css": "12.0.1"
   },
   "engines": {
@@ -25,11 +27,15 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-node": "11.0.0",
     "eslint-plugin-prettier": "3.4.0",
+    "msw": "0.31.0",
     "prettier": "2.3.2",
     "stylelint": "13.13.1",
     "stylelint-config-prettier": "8.0.1",
     "stylelint-config-standard": "22.0.0",
     "stylelint-prettier": "1.1.2",
     "vite": "2.3.8"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

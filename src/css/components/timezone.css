@@ -1,10 +1,11 @@
 .c-timezone {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: 'title cta' 'zone cta' 'fields fields';
+  grid-template-areas: 'title interval cta' 'zone zone cta' 'fields fields fields';
   place-items: start;
-  gap: var(--s-4);
+  row-gap: var(--s-4);
+  column-gap: var(--s-2);
 }
 
 .c-timezone__title {
@@ -13,6 +14,15 @@
   margin-bottom: var(--s-0);
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-l);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-self: stretch;
+}
+
+.c-timezone__interval {
+  grid-area: interval;
+  align-self: center;
 }
 
 .c-timezone__zone {
@@ -25,6 +35,7 @@
 .c-timezone__cta {
   grid-area: cta;
   margin: calc(var(--s-2) * -1);
+  justify-self: end;
   padding: var(--s-2);
   border: 0;
   border-radius: 0;
@@ -45,8 +56,4 @@
   font-size: var(--font-size-m);
   justify-self: end;
   align-items: flex-end;
-}
-
-.c-timezone__fieldset > * {
-  flex-shrink: 1;
 }
