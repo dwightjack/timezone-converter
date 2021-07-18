@@ -29,8 +29,7 @@ YUI.add(
        * @return {Promise<string[]>}
        */
       fetchList() {
-        console.log('xxx');
-        return Y.Promise((resolve, reject) => {
+        return new Y.Promise((resolve, reject) => {
           function success({ response }) {
             try {
               resolve(response.results);

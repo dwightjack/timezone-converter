@@ -126,7 +126,7 @@
             </fieldset>
           </article>
         </div>
-        <div class="c-tile">
+        <form class="c-tile" id="tz-select" action="" method="get">
           <div class="c-field c-field--compact">
             <input
               class="c-field__input c-field__input--reset"
@@ -134,11 +134,11 @@
               type="text"
               id="city-name"
               placeholder="Add a new city..."
+              autocomplete="off"
             />
             <datalist id="timezone-cities"> </datalist>
-
             <label class="c-field__label" for="city-name">City name</label>
-            <button type="button" class="c-button c-field__action">
+            <button type="submit" class="c-button c-field__action">
               <span class="u-visually-hidden">Add</span>
               <svg
                 class="c-icon c-icon--large"
@@ -149,7 +149,7 @@
               </svg>
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </main>
   </body>
