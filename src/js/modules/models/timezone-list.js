@@ -1,23 +1,30 @@
 YUI.add(
-  'tzc.models.timezoneList',
+  'tzc.models.timeZoneList',
   (Y) => {
     const Models = Y.namespace('TZC.Models');
 
-    Models.Timezone = Y.Base.create(
-      'timezone',
+    Models.TimeZone = Y.Base.create(
+      'timeZone',
       Y.Model,
       [],
-      { root: 'timezones' },
+      { root: 'timeZones' },
       {
         ATTRS: {
+          id: {
+            readOnly: true,
+            getter() {
+              return this.get('name').toLowerCase().replace(/\W/, '-');
+            },
+          },
+          label: '',
           name: '',
           selected: false,
         },
       },
     );
 
-    Models.TimezoneList = Y.Base.create('timezoneList', Y.ModelList, [], {
-      model: Models.Timezone,
+    Models.TimeZoneList = Y.Base.create('timeZoneList', Y.ModelList, [], {
+      model: Models.TimeZone,
       getUnselected() {
         return this.filter((model) => !model.get('selected'));
       },

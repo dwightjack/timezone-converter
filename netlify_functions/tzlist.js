@@ -1,9 +1,9 @@
-import { timeZonesNames } from '@vvo/tzdb';
+import { getTimeZones } from '@vvo/tzdb';
 
 const handler = async () => {
   return {
     statusCode: 200,
-    body: JSON.stringify({ zones: timeZonesNames }),
+    body: JSON.stringify({ zones: getTimeZones() }),
   };
 };
 

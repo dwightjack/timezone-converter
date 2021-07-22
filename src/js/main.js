@@ -1,5 +1,6 @@
 import api from './modules/api.js?url';
-import timezones from './modules/models/timezone-list.js?url';
+import timeZoneModule from './modules/models/timezone-list.js?url';
+import timeCardModule from './modules/models/timecard-list.js?url';
 import appView from './modules/views/app.js?url';
 import '../css/main.css';
 
@@ -14,52 +15,41 @@ YUI({
       fullpath: api,
       requires: ['datasource', 'dataschema', 'promise', 'cache'],
     },
-    'tzc.models.timezoneList': {
-      fullpath: timezones,
+    'tzc.models.timeZoneList': {
+      fullpath: timeZoneModule,
+      requires: ['app'],
+    },
+    'tzc.models.timeCardList': {
+      fullpath: timeCardModule,
       requires: ['app'],
     },
     'tzc.views.app': {
       fullpath: appView,
       requires: ['app'],
     },
-    'mydemo-models-user': {
-      fullpath: modelsUser,
-      requires: ['model'],
-    },
-    'mydemo-models-userlist': {
-      fullpath: modelsUserList,
-      requires: ['model-list', 'mydemo-models-user'],
-    },
-    'mydemo-views-user': {
-      fullpath: viewsUser,
-      requires: ['view', 'template-micro'],
-    },
-    'mydemo-views-userlist': {
-      fullpath: viewsUserList,
-      requires: ['view', 'mydemo-views-user'],
-    },
   },
 }).use(
   'tzc.api',
-  'tzc.models.timezoneList',
+  'tzc.models.timeZoneList',
+  'tzc.models.timeCardList',
   'tzc.views.app',
   'promise',
   (Y) => {
-    const timeZones = new Y.TZC.Models.TimezoneList();
-    new Y.TZC.Views.App({
-      container: '#main',
-      timeZones,
-    }).render();
+    const timeZones = new Y.TZC.Models.TimeZoneList();
 
     Y.when(init)
       .then(() => Y.TZC.Api.fetchList())
       .then((zones) => {
-        const items = zones.map((name, i) => ({
-          id: 'tz-' + i,
+        const items = zones.map(({ name }) => ({
+          label: name.replace(/_/g, ' '),
           name,
           selected: false,
         }));
         timeZones.reset(items);
+        new Y.TZC.Views.App({
+          container: '#main',
+          timeZones,
+        }).render();
       })
       .catch(console.error);
   },
