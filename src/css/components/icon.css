@@ -1,0 +1,19 @@
+.c-icon {
+  --icon-size-ratio: 1;
+  display: inline-block;
+  width: calc(var(--icon-size-ratio) * 1em);
+  height: calc(var(--icon-size-ratio) * 1em);
+  line-height: inherit;
+}
+
+svg.c-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.c-icon--large {
+  --icon-size-ratio: 1.25;
+}

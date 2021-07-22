@@ -1,0 +1,8 @@
+.c-tile {
+  --tile-color-background: var(--color-background-primary);
+  display: block;
+  background-color: var(--tile-color-background);
+  color: var(--color-text-primary);
+  border-radius: var(--size-border-radius-m);
+  padding: var(--s-3) var(--s-4);
+}

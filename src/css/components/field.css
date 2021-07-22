@@ -1,0 +1,84 @@
+.c-field {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'label label'
+    'input action';
+  border: 0;
+  row-gap: var(--s-1);
+  font-size: inherit;
+  color: inherit;
+  align-items: stretch;
+}
+
+.c-field::before {
+  content: '';
+  display: block;
+  grid-area: input;
+  background-color: currentColor;
+  opacity: 0.1;
+  border-radius: var(--size-border-radius-s);
+  padding: var(--s-1) var(--s-2);
+  pointer-events: none;
+}
+
+.c-field__input {
+  grid-area: input;
+  color: inherit;
+  min-width: 0;
+  order: 1;
+  border: 0;
+  background-color: transparent;
+  letter-spacing: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  padding: var(--s-1) var(--s-2);
+}
+
+.c-field__input:is([type='date'], [type='time']) {
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-light);
+  width: auto;
+}
+
+.c-field__input::placeholder {
+  opacity: 1;
+  color: inherit;
+}
+
+.c-field__input--reset {
+  appearance: textfield;
+}
+
+.c-field__input--reset::-webkit-calendar-picker-indicator,
+.c-field__input--reset::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.c-field__action {
+  grid-area: action;
+  margin-left: calc(var(--size-border-radius-s) * -1);
+  z-index: 1;
+}
+
+.c-field__label {
+  grid-area: label;
+}
+
+.c-field--compact {
+  row-gap: 0;
+}
+
+.c-field--compact .c-field__label {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

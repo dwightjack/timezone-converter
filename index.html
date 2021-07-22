@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YUI3 Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://yui-s.yahooapis.com/3.18.1/build/yui/yui-min.js"
       defer
     ></script>
     <script src="/src/js/main.js" type="module"></script>
-    <style>
+    <!-- <style>
       #box {
         width: 200px;
         height: 200px;
@@ -23,10 +29,10 @@
         height: 300px;
         overflow: auto;
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    <div id="app"></div>
+    <!-- <div id="app"></div>
     <ul id="list">
       <li>first</li>
       <li>second</li>
@@ -44,5 +50,110 @@
     <script type="text/x-yui3-template" id="user-tmpl">
       <b><%= this.name %></b> <i>(<%= this.email %>)</i>
     </script>
+    <script type="text/x-yui3-template" id="user-list-tmpl">
+      <ul>
+        <% Y.Array.each(this.users, (user) => { %>
+          <li><%= user.name %> <i>(<%= user.email %>)</i></li>
+        <% }) %>
+      </ul>
+    </script> -->
+    <svg display="none" id="icons">
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M15 9l-6 6M9 9l6 6" />
+      </symbol>
+      <symbol viewBox="0 0 24 24" id="icon-plus">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+      </symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" />
+        <path
+          d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+        />
+      </symbol>
+      <symbol id="icon-sunset" viewBox="0 0 24 24">
+        <path
+          d="M17 18a5 5 0 00-10 0M12 9V2M4.22 10.22l1.42 1.42M1 18h2M21 18h2M18.36 11.64l1.42-1.42M23 22H1M16 5l-4 4-4-4"
+        />
+      </symbol>
+      <symbol id="icon-sunrise" viewBox="0 0 24 24">
+        <path
+          d="M17 18a5 5 0 00-10 0M12 2v7M4.22 10.22l1.42 1.42M1 18h2M21 18h2M18.36 11.64l1.42-1.42M23 22H1M8 6l4-4 4 4"
+        />
+      </symbol>
+    </svg>
+
+    <main id="main">
+      <h1 class="u-visually-hidden">Time Zones</h1>
+      <div class="l-stack">
+        <div id="timezone-list" class="u-contents">
+          <article class="c-timezone c-tile">
+            <h2 class="c-timezone__title">Amsterdam, Netherlands</h2>
+            <svg
+              class="c-icon c-timezone__interval"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <use xlink:href="#icon-sunset" />
+            </svg>
+            <p class="c-timezone__zone">JST (UTC +9)</p>
+            <button type="button" class="c-timezone__cta">
+              <svg class="c-icon" focusable="false" aria-hidden="true">
+                <use xlink:href="#icon-close" />
+              </svg>
+              <span class="u-visually-hidden">Remove</span>
+            </button>
+            <fieldset class="c-timezone__fieldset">
+              <legend class="u-visually-hidden">Date and time</legend>
+              <div class="c-field c-field--compact">
+                <input
+                  class="c-field__input c-field__input--reset"
+                  type="date"
+                  id="date-1"
+                  value="2020-10-10"
+                />
+                <label class="c-field__label" for="date-1">Date</label>
+              </div>
+              <div class="c-field c-field--compact">
+                <input
+                  class="c-field__input c-field__input--reset"
+                  type="time"
+                  id="time-1"
+                  value="23:24"
+                />
+                <label class="c-field__label" for="time-1">Time</label>
+              </div>
+            </fieldset>
+          </article>
+        </div>
+        <form class="c-tile" id="tz-select" action="" method="get">
+          <div class="c-field c-field--compact">
+            <input
+              class="c-field__input c-field__input--reset"
+              list="timezone-cities"
+              type="text"
+              id="city-name"
+              placeholder="Add a new city..."
+              autocomplete="off"
+            />
+            <datalist id="timezone-cities"> </datalist>
+            <label class="c-field__label" for="city-name">City name</label>
+            <button type="submit" class="c-button c-field__action">
+              <span class="u-visually-hidden">Add</span>
+              <svg
+                class="c-icon c-icon--large"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <use xlink:href="#icon-plus" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
   </body>
 </html>

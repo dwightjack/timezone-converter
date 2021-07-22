@@ -1,0 +1,54 @@
+:root {
+  /* Palette */
+  --color-white: 0, 0%, 100%;
+  --color-gray-800: 0, 0%, 22%;
+  --color-blue-700: 220, 49%, 35%;
+  --color-blue-600: 205, 64%, 43%;
+  --color-blue-500: 202, 50%, 47%;
+  --color-orange-500: 30, 71%, 49%;
+  --color-yellow-400: 43, 74%, 66%;
+  --color-yellow-300: 43, 90%, 72%;
+
+  /* UI colors */
+  --color-background-canvas: hsl(var(--color-white));
+  --color-background-primary: hsl(var(--color-gray-800));
+  --color-background-action: hsl(var(--color-yellow-400));
+  --color-background-action-active: hsl(var(--color-yellow-300));
+  --color-text-canvas: hsl(var(--color-gray-800));
+  --color-text-primary: hsl(var(--color-white));
+  --color-text-action: hsl(var(--color-gray-800));
+
+  /* Day intervals */
+  --color-background-interval-morning: hsl(var(--color-blue-500));
+  --color-background-interval-day: hsl(var(--color-blue-600));
+  --color-background-interval-evening: hsl(var(--color-orange-500));
+  --color-background-interval-night: hsl(var(--color-blue-700));
+
+  /* Font sizes */
+  --font-size-s: 0.75rem;
+  --font-size-m: 1.125rem;
+  --font-size-l: 1.25rem;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-family-sans: 'Inter', sans-serif;
+  --font-family-mono: 'Roboto Mono', monospace;
+
+  /* Size */
+  --size-spacing-0: 0;
+  --size-spacing-1: 0.25rem;
+  --size-spacing-2: 0.5rem;
+  --size-spacing-3: 0.75rem;
+  --size-spacing-4: 1rem;
+  --size-spacing-5: 1.25rem;
+  --size-border-radius-s: 0.25rem;
+  --size-border-radius-m: 0.5rem;
+
+  /* Size shortcuts */
+  --s-0: var(--size-spacing-0);
+  --s-1: var(--size-spacing-1);
+  --s-2: var(--size-spacing-2);
+  --s-3: var(--size-spacing-3);
+  --s-4: var(--size-spacing-4);
+  --s-5: var(--size-spacing-5);
+}

@@ -1,0 +1,59 @@
+.c-timezone {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 'title interval cta' 'zone zone cta' 'fields fields fields';
+  place-items: start;
+  row-gap: var(--s-4);
+  column-gap: var(--s-2);
+}
+
+.c-timezone__title {
+  grid-area: title;
+  margin-top: var(--s-0);
+  margin-bottom: var(--s-0);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-l);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-self: stretch;
+}
+
+.c-timezone__interval {
+  grid-area: interval;
+  align-self: center;
+}
+
+.c-timezone__zone {
+  grid-area: zone;
+  margin-top: calc(var(--s-3) * -1);
+  margin-bottom: var(--s-0);
+  font-size: var(--font-size-s);
+}
+
+.c-timezone__cta {
+  grid-area: cta;
+  margin: calc(var(--s-2) * -1);
+  justify-self: end;
+  padding: var(--s-2);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: var(--font-size-l);
+  cursor: pointer;
+}
+
+.c-timezone__fieldset {
+  border: 0;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  gap: var(--s-2);
+  grid-area: fields;
+  font-size: var(--font-size-m);
+  justify-self: end;
+  align-items: flex-end;
+}
