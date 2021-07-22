@@ -2,6 +2,9 @@ import hello from './modules/hello.js?url';
 import links from './modules/links.js?url';
 import users from './modules/users.js?url';
 import modelsUser from './modules/models/user.js?url';
+import modelsUserList from './modules/models/user-list.js?url';
+import viewsUser from './modules/views/user.js?url';
+import viewsUserList from './modules/views/user-list.js?url';
 
 YUI({
   modules: {
@@ -17,9 +20,21 @@ YUI({
       fullpath: users,
       requires: ['io-base', 'json-parse'],
     },
-    'models-user': {
+    'mydemo-models-user': {
       fullpath: modelsUser,
       requires: ['model'],
+    },
+    'mydemo-models-userlist': {
+      fullpath: modelsUserList,
+      requires: ['model-list', 'mydemo-models-user'],
+    },
+    'mydemo-views-user': {
+      fullpath: viewsUser,
+      requires: ['view', 'template-micro'],
+    },
+    'mydemo-views-userlist': {
+      fullpath: viewsUserList,
+      requires: ['view', 'mydemo-views-user'],
     },
   },
 }).use('hello', 'node', 'transition', (Y) => {
@@ -88,24 +103,31 @@ YUI({
     }
   });
 
-  Y.use('links', () => {
-    const clicker = new Y.Links.Clicker();
+  // Y.use('links', () => {
+  //   const clicker = new Y.Links.Clicker();
 
-    Y.on('clicker:msgChange', ({ newVal }) => {
-      Y.log(newVal);
-    });
+  //   Y.on('clicker:msgChange', ({ newVal }) => {
+  //     Y.log(newVal);
+  //   });
 
-    clicker.render('#clicker');
-  });
+  //   clicker.render('#clicker');
+  // });
 
-  Y.use('template', 'users', 'models-user', 'array-extras', () => {
-    const template = Y.Lang.trim(Y.one('#user-list-tmpl').get('text'));
-    const micro = new Y.Template();
-    Y.Users.fetch((data) => {
-      for (const { id, name, email } of data) {
-        console.log(new Y.Models.User().setAttrs({ id, name, email }).toJSON());
-      }
-      Y.one('#user-list').setHTML(micro.render(template, { users: data }));
-    });
-  });
+  Y.use(
+    'users',
+    'mydemo-models-user',
+    'mydemo-models-userlist',
+    'mydemo-views-userlist',
+    () => {
+      const userList = new Y.MyDemo.Models.UserList();
+      const userListView = new Y.MyDemo.Views.UserList({
+        list: userList,
+      });
+      Y.one('#user-list').append(userListView.get('container'));
+      Y.Users.fetch((data) => {
+        const models = data.map(({ id, name, email }) => ({ id, name, email }));
+        userList.add(models);
+      });
+    },
+  );
 });

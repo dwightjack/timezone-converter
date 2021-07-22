@@ -1,7 +1,7 @@
 YUI.add(
-  'models-user',
+  'mydemo-models-user',
   (Y) => {
-    const Models = Y.namespace('Models');
+    const Models = Y.namespace('MyDemo.Models');
 
     Models.User = Y.Base.create(
       'user',
