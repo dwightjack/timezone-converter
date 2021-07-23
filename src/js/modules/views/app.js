@@ -4,59 +4,68 @@ YUI.add(
     const Views = Y.namespace('TZC.Views');
 
     Views.App = Y.Base.create('appView', Y.View, [], {
-      events: {
-        // '#tz-select': { submit: 'selectZone' },
-      },
-      selectZone(e) {
-        e.preventDefault();
-        const tz = Y.one('#city-name').get('value');
-        this.get('timeZones').toggleSelected(tz, true);
-        Y.one('#city-name').set('value', '');
-      },
       initializer() {
-        if (!this.get('timeZones')) {
-          throw new Error('Timezones model list not defined!');
-        }
-        this.get('container').delegate('submit', this.selectZone, 'form', this);
-        this.get('timeZones').after('reset', this.renderSelect, this);
-        this.get('timeZones').after(
-          'timeZone:selectedChange',
-          this.toggleSelectOption,
-          this,
-        );
-      },
+        const zoneList = (this.zoneList = new Y.TZC.Models.TimeZoneList({
+          items: this.getZoneItems(),
+        }));
+        const cardList = (this.cardList = new Y.TZC.Models.TimeCardList());
 
-      toggleSelectOption({ target }) {
-        Y.one(`option[data-id="${target.get('id')}"]`).set(
-          'disabled',
-          target.get('selected'),
-        );
+        this.cardListView = new Views.TimeCardListView({
+          cardList,
+          container: Y.one('#timezone-list'),
+        });
+
+        this.selectView = new Views.Select({
+          container: Y.one('#tz-select'),
+          zoneList,
+        });
+
+        zoneList.after('select', ({ name }) => this.addCard(name));
+
+        cardList.after('remove', ({ model }) => {
+          zoneList.toggleSelected(model.get('name'), false);
+        });
       },
 
       render() {
-        const models = this.get('timeZones').toArray();
-        this.renderSelect({ models });
+        this.selectView.render();
+        this.cardListView.render();
         return this;
       },
 
-      renderSelect({ models }) {
-        const $datalist = Y.one('#timezone-cities');
+      getZoneItems() {
+        return Y.Array.map(this.get('zonesDB'), ({ label, name }) => ({
+          label,
+          name,
+        }));
+      },
 
-        models.forEach((zone) => {
-          const $option = Y.Node.create(
-            `<option value="${zone.getAsHTML('name')}" data-id="${zone.get(
-              'id',
-            )}">${zone.getAsHTML('label')}</option>`,
-          );
-
-          $option.set('disabled', zone.get('selected'));
-          $datalist.append($option);
+      addCard(timezone) {
+        const zoneData = Y.Array.find(this.get('zonesDB'), (zone) => {
+          return zone.name === timezone;
+        });
+        if (!zoneData) {
+          alert(`Unable to find details for timezone "${timezone}"`);
+          return;
+        }
+        const { currentTimeOffsetInMinutes, name, abbreviation } = zoneData;
+        this.cardList.add({
+          name,
+          label: name.replace(/_/g, ' '),
+          abbreviation,
+          offset: currentTimeOffsetInMinutes,
         });
       },
     });
   },
   __APP_VERSION__,
   {
-    requires: ['app'],
+    requires: [
+      'app',
+      'tzc.models.timeZoneList',
+      'tzc.models.timeCardList',
+      'tzc.views.select',
+      'tzc.views.timeCardList',
+    ],
   },
 );

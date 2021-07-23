@@ -1,7 +1,7 @@
 @import 'sanitize.css/evergreen.css';
 @import 'sanitize.css/reduce-motion.css';
 @import './tokens';
-@import 'components/timezone.css';
+@import 'components/timecard.css';
 @import 'components/icon.css';
 @import 'components/tile.css';
 @import 'components/field.css';

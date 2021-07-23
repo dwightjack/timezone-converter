@@ -32,6 +32,9 @@ YUI.add(
         return new Y.Promise((resolve, reject) => {
           function success({ response }) {
             try {
+              Y.Array.each(response.results, (item) => {
+                item.label = name.replace(/_/g, ' ');
+              });
               resolve(response.results);
             } catch (error) {
               reject(error);
@@ -52,5 +55,5 @@ YUI.add(
     });
   },
   __APP_VERSION__,
-  { requires: ['datasource', 'dataschema', 'promise', 'cache'] },
+  { requires: ['datasource', 'dataschema', 'promise', 'cache', 'array'] },
 );

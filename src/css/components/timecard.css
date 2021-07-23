@@ -1,14 +1,14 @@
-.c-timezone {
+.c-timecard {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: 'title interval cta' 'zone zone cta' 'fields fields fields';
+  grid-template-areas: 'title interval close' 'zone zone close' 'fields fields fields';
   place-items: start;
   row-gap: var(--s-4);
   column-gap: var(--s-2);
 }
 
-.c-timezone__title {
+.c-timecard__title {
   grid-area: title;
   margin-top: var(--s-0);
   margin-bottom: var(--s-0);
@@ -20,20 +20,20 @@
   justify-self: stretch;
 }
 
-.c-timezone__interval {
+.c-timecard__interval {
   grid-area: interval;
   align-self: center;
 }
 
-.c-timezone__zone {
+.c-timecard__zone {
   grid-area: zone;
   margin-top: calc(var(--s-3) * -1);
   margin-bottom: var(--s-0);
   font-size: var(--font-size-s);
 }
 
-.c-timezone__cta {
-  grid-area: cta;
+.c-timecard__close {
+  grid-area: close;
   margin: calc(var(--s-2) * -1);
   justify-self: end;
   padding: var(--s-2);
@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-.c-timezone__fieldset {
+.c-timecard__fieldset {
   border: 0;
   padding: 0;
   margin-left: 0;

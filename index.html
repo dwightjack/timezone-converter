@@ -47,9 +47,6 @@
     <div id="clicker"></div>
 
     <div id="user-list"></div>
-    <script type="text/x-yui3-template" id="user-tmpl">
-      <b><%= this.name %></b> <i>(<%= this.email %>)</i>
-    </script>
     <script type="text/x-yui3-template" id="user-list-tmpl">
       <ul>
         <% Y.Array.each(this.users, (user) => { %>
@@ -89,46 +86,7 @@
     <main id="main">
       <h1 class="u-visually-hidden">Time Zones</h1>
       <div class="l-stack">
-        <div id="timezone-list" class="u-contents">
-          <article class="c-timezone c-tile">
-            <h2 class="c-timezone__title">Amsterdam, Netherlands</h2>
-            <svg
-              class="c-icon c-timezone__interval"
-              focusable="false"
-              aria-hidden="true"
-            >
-              <use xlink:href="#icon-sunset" />
-            </svg>
-            <p class="c-timezone__zone">JST (UTC +9)</p>
-            <button type="button" class="c-timezone__cta">
-              <svg class="c-icon" focusable="false" aria-hidden="true">
-                <use xlink:href="#icon-close" />
-              </svg>
-              <span class="u-visually-hidden">Remove</span>
-            </button>
-            <fieldset class="c-timezone__fieldset">
-              <legend class="u-visually-hidden">Date and time</legend>
-              <div class="c-field c-field--compact">
-                <input
-                  class="c-field__input c-field__input--reset"
-                  type="date"
-                  id="date-1"
-                  value="2020-10-10"
-                />
-                <label class="c-field__label" for="date-1">Date</label>
-              </div>
-              <div class="c-field c-field--compact">
-                <input
-                  class="c-field__input c-field__input--reset"
-                  type="time"
-                  id="time-1"
-                  value="23:24"
-                />
-                <label class="c-field__label" for="time-1">Time</label>
-              </div>
-            </fieldset>
-          </article>
-        </div>
+        <div id="timezone-list" class="u-contents"></div>
         <form class="c-tile" id="tz-select" action="" method="get">
           <div class="c-field c-field--compact">
             <input
@@ -155,5 +113,45 @@
         </form>
       </div>
     </main>
+    <script type="text/x-yui3-template" id="timezone-tmpl">
+      <article class="c-timecard" id="<%= this.id %>">
+        <h2 class="c-timecard__title"><%= this.label %></h2>
+        <svg
+          class="c-icon c-timecard__interval"
+          focusable="false"
+          aria-hidden="true"
+        >
+          <use xlink:href="#icon-sunset" />
+        </svg>
+        <p class="c-timecard__zone"><%= this.abbreviation %> (UTC <%= this.offsetLabel %>)</p>
+        <button type="button" class="c-timecard__close">
+          <svg class="c-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#icon-close" />
+          </svg>
+          <span class="u-visually-hidden">Remove</span>
+        </button>
+        <fieldset class="c-timecard__fieldset">
+          <legend class="u-visually-hidden">Date and time</legend>
+          <div class="c-field c-field--compact">
+            <input
+              class="c-field__input c-field__input--reset"
+              type="date"
+              id="date-1"
+              value="2020-10-10"
+            />
+            <label class="c-field__label" for="date-1">Date</label>
+          </div>
+          <div class="c-field c-field--compact">
+            <input
+              class="c-field__input c-field__input--reset"
+              type="time"
+              id="time-1"
+              value="23:24"
+            />
+            <label class="c-field__label" for="time-1">Time</label>
+          </div>
+        </fieldset>
+      </article>
+    </script>
   </body>
 </html>

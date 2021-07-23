@@ -25,6 +25,11 @@ YUI.add(
 
     Models.TimeZoneList = Y.Base.create('timeZoneList', Y.ModelList, [], {
       model: Models.TimeZone,
+      initializer() {
+        this.after('timeZone:selectedChange', ({ target }) =>
+          this.fire('select', target.toJSON()),
+        );
+      },
       getUnselected() {
         return this.filter((model) => !model.get('selected'));
       },
