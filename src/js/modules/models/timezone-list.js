@@ -33,9 +33,9 @@ YUI.add(
       getUnselected() {
         return this.filter((model) => !model.get('selected'));
       },
-      toggleSelected(name, toggle) {
+      toggleSelected(label, toggle) {
         this.some((model) => {
-          if (model.get('name') === name) {
+          if (model.get('label') === label) {
             model.set(
               'selected',
               toggle !== undefined ? toggle : !this.get('selected'),

@@ -35,9 +35,9 @@ YUI.add(
 
         models.forEach((zone) => {
           const $option = Y.Node.create(
-            `<option value="${zone.getAsHTML('name')}" data-id="${zone.get(
+            `<option value="${zone.get('label')}" data-id="${zone.get(
               'id',
-            )}">${zone.getAsHTML('label')}</option>`,
+            )}" />`,
           );
 
           $option.set('disabled', zone.get('selected'));

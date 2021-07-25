@@ -136,19 +136,19 @@
             <input
               class="c-field__input c-field__input--reset"
               type="date"
-              id="date-1"
-              value="2020-10-10"
+              id="date-<%= this.id %>"
+              value="<%= this.dateStrings.date %>"
             />
-            <label class="c-field__label" for="date-1">Date</label>
+            <label class="c-field__label" for="date-<%= this.id %>">Date</label>
           </div>
           <div class="c-field c-field--compact">
             <input
               class="c-field__input c-field__input--reset"
               type="time"
-              id="time-1"
-              value="23:24"
+              id="time-<%= this.id %>"
+              value="<%= this.dateStrings.time %>"
             />
-            <label class="c-field__label" for="time-1">Time</label>
+            <label class="c-field__label" for="time-<%= this.id %>">Time</label>
           </div>
         </fieldset>
       </article>

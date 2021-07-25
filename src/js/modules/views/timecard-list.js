@@ -16,7 +16,10 @@ YUI.add(
       },
 
       renderCard(card) {
-        const cardView = new Y.TZC.Views.TimeCard({ model: card });
+        const cardView = new Y.TZC.Views.TimeCard({
+          model: card,
+          list: this.get('cardList'),
+        });
         return cardView.render().get('container');
       },
 

@@ -33,7 +33,7 @@ YUI.add(
           function success({ response }) {
             try {
               Y.Array.each(response.results, (item) => {
-                item.label = name.replace(/_/g, ' ');
+                item.label = item.name.replace(/_/g, ' ');
               });
               resolve(response.results);
             } catch (error) {

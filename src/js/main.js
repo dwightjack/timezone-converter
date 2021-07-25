@@ -1,4 +1,5 @@
 import api from './modules/api.js?url';
+import day from './modules/day.js?url';
 import timeZoneModule from './modules/models/timezone-list.js?url';
 import timeCardModule from './modules/models/timecard-list.js?url';
 import appView from './modules/views/app.js?url';
@@ -12,11 +13,34 @@ if (import.meta.env.DEV) {
   init = import('./dev/msw').then(({ worker }) => worker.start());
 }
 YUI({
+  groups: {
+    dayjs: {
+      base: 'https://unpkg.com/dayjs@1.10.6/',
+      async: false,
+      modules: {
+        dayjs: {
+          path: 'dayjs.min.js',
+        },
+        'dayjs-utc': {
+          path: 'plugin/utc.js',
+          requires: ['dayjs'],
+        },
+        'dayjs-timezone': {
+          path: 'plugin/timezone.js',
+          requires: ['dayjs', 'dayjs-utc'],
+        },
+      },
+    },
+  },
   filter: 'raw',
   modules: {
     'tzc.api': {
       fullpath: api,
       requires: ['datasource', 'dataschema', 'promise', 'cache'],
+    },
+    'tzc.day': {
+      fullpath: day,
+      requires: ['dayjs-timezone'],
     },
     'tzc.models.timeZoneList': {
       fullpath: timeZoneModule,
@@ -24,7 +48,7 @@ YUI({
     },
     'tzc.models.timeCardList': {
       fullpath: timeCardModule,
-      requires: ['app'],
+      requires: ['app', 'tzc.day'],
     },
     'tzc.views.select': {
       fullpath: selectView,

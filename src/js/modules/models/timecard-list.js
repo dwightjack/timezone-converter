@@ -23,6 +23,10 @@ YUI.add(
       [],
       {
         root: 'timeCards',
+        setDatetime(day) {
+          this.set('datetime', day.tz(this.get('name')));
+          console.log(this.get('datetime').format());
+        },
       },
       {
         ATTRS: {
@@ -36,6 +40,20 @@ YUI.add(
           label: '',
           abbreviation: '',
           offset: 0,
+          datetime: null,
+          dateStrings: {
+            readOnly: true,
+            getter() {
+              const datetime = this.get('datetime');
+              if (!datetime) {
+                return {};
+              }
+              return {
+                date: datetime.format('YYYY-MM-DD'),
+                time: datetime.format('HH:mm'),
+              };
+            },
+          },
           offsetLabel: {
             readOnly: true,
             getter() {
@@ -62,16 +80,30 @@ YUI.add(
       [],
       {
         model: Models.TimeCard,
+        initializer() {
+          this.after('add', ({ model }) => {
+            if (!this.get('referenceDatetime')) {
+              this.set('referenceDatetime', Y.TZC.Day().utc());
+            }
+            model.setDatetime(this.get('referenceDatetime'));
+          });
+
+          this.after('referenceDatetime:change', (e) => {
+            console.log(e);
+          });
+        },
+        setDateTime(value, tz) {
+          const day = Y.TZC.Day.tz(value, tz).utc();
+          this.set('referenceDatetime', day);
+        },
       },
       {
         ATTRS: {
-          datetime: {
-            valueFn: () => new Date(),
-          },
+          referenceDatetime: null,
         },
       },
     );
   },
   __APP_VERSION__,
-  { requires: ['app'] },
+  { requires: ['app', 'tzc.day'] },
 );

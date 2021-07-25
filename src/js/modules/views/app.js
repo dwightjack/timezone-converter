@@ -20,10 +20,12 @@ YUI.add(
           zoneList,
         });
 
+        window.cardList = cardList;
+
         zoneList.after('select', ({ name }) => this.addCard(name));
 
         cardList.after('remove', ({ model }) => {
-          zoneList.toggleSelected(model.get('name'), false);
+          zoneList.toggleSelected(model.get('label'), false);
         });
       },
 
@@ -48,7 +50,9 @@ YUI.add(
           alert(`Unable to find details for timezone "${timezone}"`);
           return;
         }
+
         const { currentTimeOffsetInMinutes, name, abbreviation } = zoneData;
+
         this.cardList.add({
           name,
           label: name.replace(/_/g, ' '),

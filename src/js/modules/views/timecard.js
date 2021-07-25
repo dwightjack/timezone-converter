@@ -9,6 +9,7 @@ YUI.add(
 
       events: {
         '.c-timecard__close': { click: 'remove' },
+        '.c-timecard__fieldset input': { change: 'updateDateTime' },
       },
       initializer() {
         const model = this.get('model');
@@ -29,6 +30,16 @@ YUI.add(
         const $container = this.get('container');
         $container.setHTML(this.template(data));
         return this;
+      },
+
+      updateDateTime() {
+        const $container = this.get('container');
+        const date = $container.one('input[type="date"]').get('value');
+        const time = $container.one('input[type="time"]').get('value');
+        this.get('list').setDateTime(
+          `${date}T${time}:00`,
+          this.get('model').get('name'),
+        );
       },
 
       remove() {
