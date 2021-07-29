@@ -24,8 +24,16 @@ YUI.add(
       {
         root: 'timeCards',
         setDatetime(day) {
-          this.set('datetime', day.tz(this.get('name')));
-          console.log(this.get('datetime').format());
+          const datetime = this.get('datetime');
+          if (datetime && datetime.isSame(day, 'm')) {
+            return;
+          }
+          const newDatetime = day.tz(this.get('name'));
+          // change event fires a re-render
+          // but we want to avoid that because input fields will loose focus
+          // so instead we fire a custom event
+          this.set('datetime', newDatetime, { silent: true });
+          this.fire('datetimeUpdate', newDatetime);
         },
       },
       {
@@ -88,8 +96,8 @@ YUI.add(
             model.setDatetime(this.get('referenceDatetime'));
           });
 
-          this.after('referenceDatetime:change', (e) => {
-            console.log(e);
+          this.after('referenceDatetimeChange', ({ newVal }) => {
+            this.invoke('setDatetime', newVal);
           });
         },
         setDateTime(value, tz) {

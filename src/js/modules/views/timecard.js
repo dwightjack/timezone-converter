@@ -14,7 +14,9 @@ YUI.add(
       initializer() {
         const model = this.get('model');
 
-        model.after('change', this.render, this);
+        model.after('datetime', this.render, this);
+
+        model.after('datetimeUpdate', this.updateFields, this);
 
         model.after(
           'destroy',
@@ -40,6 +42,13 @@ YUI.add(
           `${date}T${time}:00`,
           this.get('model').get('name'),
         );
+      },
+
+      updateFields() {
+        const { date, time } = this.get('model').get('dateStrings');
+        const $container = this.get('container');
+        $container.one('input[type="date"]').set('value', date);
+        $container.one('input[type="time"]').set('value', time);
       },
 
       remove() {

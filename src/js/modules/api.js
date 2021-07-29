@@ -55,5 +55,5 @@ YUI.add(
     });
   },
   __APP_VERSION__,
-  { requires: ['datasource', 'dataschema', 'promise', 'cache', 'array'] },
+  { requires: ['datasource', 'dataschema', 'promise', 'cache'] },
 );
