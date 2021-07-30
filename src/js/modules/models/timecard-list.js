@@ -30,11 +30,11 @@ YUI.add(
               return this.get('name').toLowerCase().replace(/\W/, '-');
             },
           },
-          name: '',
-          label: '',
-          abbreviation: '',
-          offset: 0,
-          datetime: null,
+          name: { value: '' },
+          label: { value: '' },
+          abbreviation: { value: '' },
+          offset: { value: 0 },
+          datetime: { value: null },
           dayPart: {
             readOnly: true,
             getter() {
@@ -119,7 +119,7 @@ YUI.add(
       },
       {
         ATTRS: {
-          referenceDatetime: null,
+          referenceDatetime: { value: null },
         },
       },
     );

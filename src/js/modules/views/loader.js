@@ -12,7 +12,8 @@ YUI.add(
         return this;
       },
 
-      toggle(status) {
+      toggle(status, prevStatus) {
+        console.log(status, prevStatus);
         this.get('container').toggleClass(
           'c-loader--visible',
           status === 'loading',

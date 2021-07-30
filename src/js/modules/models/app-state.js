@@ -11,17 +11,14 @@ YUI.add(
         root: 'appState',
         initializer() {
           Y.Global.after('app:load', this.updateQueue, this);
-          this.after('statusChange', ({ newVal }) => {
-            Y.Global.fire('app:status', newVal);
-          });
           this.after('change', ({ changed }) => {
-            Y.Object.each(changed, ({ newVal }, key) => {
-              Y.Global.fire(`app:${key}`, newVal);
+            Y.Object.each(changed, ({ newVal, prevVal }, key) => {
+              Y.Global.fire(`app:${key}`, newVal, prevVal);
             });
           });
         },
         updateQueue(bump) {
-          const q = Math.min(0, (this.get('loadQueue') || 0) + (bump ? 1 : -1));
+          const q = Math.max(0, this.get('loadQueue') + (bump ? 1 : -1));
           this.setAttrs({
             loadQueue: q,
             status: q > 0 ? 'loading' : 'loaded',
@@ -33,9 +30,9 @@ YUI.add(
       },
       {
         ATTRS: {
-          loadQueue: null,
-          status: 'idle',
-          ready: false,
+          loadQueue: { value: 0 },
+          status: { value: 'idle' },
+          ready: { value: false },
         },
       },
     );
