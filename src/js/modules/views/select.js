@@ -8,7 +8,6 @@ YUI.add(
         e.preventDefault();
         const timezone = Y.one('#city-name').get('value');
         this.get('zoneList').toggleSelected(timezone, true);
-        this.fire('select', { timezone });
         Y.one('#city-name').set('value', '');
       },
       initializer() {

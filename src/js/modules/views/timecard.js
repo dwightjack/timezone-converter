@@ -8,7 +8,7 @@ YUI.add(
       template: Y.Template.Micro.compile(Y.one('#timezone-tmpl').getHTML()),
 
       events: {
-        '.c-timecard__close': { click: 'remove' },
+        '.c-timecard__close': { click: 'close' },
         '.c-timecard__fieldset input': { change: 'updateDateTime' },
       },
       initializer() {
@@ -18,13 +18,9 @@ YUI.add(
 
         model.after('datetimeUpdate', this.updateFields, this);
 
-        model.after(
-          'destroy',
-          function () {
-            this.destroy({ remove: true });
-          },
-          this,
-        );
+        model.after('destroy', () => {
+          this.destroy({ remove: true });
+        });
       },
 
       render() {
@@ -51,7 +47,7 @@ YUI.add(
         $container.one('input[type="time"]').set('value', time);
       },
 
-      remove() {
+      close() {
         this.get('model').destroy();
       },
     });
