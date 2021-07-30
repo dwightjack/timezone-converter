@@ -6,9 +6,9 @@ YUI.add(
     Views.Select = Y.Base.create('selectView', Y.View, [], {
       selectZone(e) {
         e.preventDefault();
-        const timezone = Y.one('#city-name').get('value');
+        const timezone = Y.one('#tz-name').get('value');
         this.get('zoneList').toggleSelected(timezone, true);
-        Y.one('#city-name').set('value', '');
+        Y.one('#tz-name').set('value', '');
       },
       initializer() {
         if (!this.get('zoneList')) {
@@ -31,7 +31,7 @@ YUI.add(
       },
 
       renderSelect({ models }) {
-        const $datalist = Y.one('#timezone-cities');
+        const $datalist = Y.one('#timezone-data');
 
         models.forEach((zone) => {
           const $option = Y.Node.create(

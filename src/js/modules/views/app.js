@@ -33,15 +33,18 @@ YUI.add(
           zoneList.toggleSelected(model.get('label'), true);
         });
 
-        const currentTz = Y.TZC.Day.tz.guess();
-        if (currentTz) {
-          this.addCard(currentTz);
-        }
+        this.onceAfter('rendered', () => {
+          const currentTz = Y.TZC.Day.tz.guess();
+          if (currentTz) {
+            this.addCard(currentTz);
+          }
+        });
       },
 
       render() {
         this.selectView.render();
         this.cardListView.render();
+        this.fire('rendered');
         return this;
       },
 

@@ -34,6 +34,11 @@ YUI.add(
         return this.filter((model) => !model.get('selected'));
       },
       toggleSelected(label, toggle) {
+        const labels = this.get('label');
+        if (!labels.includes(label)) {
+          alert(`Timezone ${label} is invalid`);
+          return;
+        }
         this.some((model) => {
           if (model.get('label') === label) {
             model.set(

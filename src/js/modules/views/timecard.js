@@ -14,7 +14,7 @@ YUI.add(
     };
 
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
-      containerTemplate: '<div class="c-tile" />',
+      containerTemplate: '<div class="c-tile a-fade-grow" />',
       template: Y.Template.Micro.compile(Y.one('#timezone-tmpl').getHTML()),
 
       events: {
@@ -30,8 +30,12 @@ YUI.add(
           debounce(() => this.setDayPart(), 300),
         );
 
+        this.onceAfter('rendered', this.enter, this);
+
         model.after('destroy', () => {
-          this.destroy({ remove: true });
+          this.leave().then(() => {
+            this.destroy({ remove: true });
+          });
         });
       },
 
@@ -40,7 +44,25 @@ YUI.add(
         const $container = this.get('container');
         $container.setHTML(this.template(data));
         this.setDayPart();
+        this.fire('rendered');
         return this;
+      },
+
+      enter() {
+        const $container = this.get('container');
+        return Y.TZC.Utils.transition(() => {
+          $container && $container.addClass('a-fade-grow--in');
+        }, 200).then(() => {
+          $container && $container.removeClass('a-fade-grow a-fade-grow--in');
+        });
+      },
+
+      leave() {
+        const $container = this.get('container');
+        $container.addClass('a-fade-grow a-fade-grow--in');
+        return Y.TZC.Utils.transition(() => {
+          $container && $container.removeClass('a-fade-grow--in');
+        }, 250);
       },
 
       updateDateTime() {
@@ -64,22 +86,11 @@ YUI.add(
         const $container = this.get('container');
         const part = this.get('model').get('dayPart');
         if (!part) {
-          $container
-            .removeAttribute('style')
-            .one('.c-timecard__interval')
-            .hide();
+          $container.removeAttribute('data-theme');
           return;
         }
 
-        $container
-          .setAttribute(
-            'style',
-            `--tile-color-background: var(--color-background-interval-${part})`,
-          )
-          .one('.c-timecard__interval')
-          .show()
-          .one('use')
-          .setAttribute('xlink:href', `#icon-${part}`);
+        $container.setAttribute('data-theme', part);
       },
 
       close() {
@@ -89,6 +100,6 @@ YUI.add(
   },
   __APP_VERSION__,
   {
-    requires: ['app', 'template-micro'],
+    requires: ['app', 'template-micro', 'tzc.utils', 'anim'],
   },
 );

@@ -55,14 +55,14 @@
           <div class="c-field c-field--compact">
             <input
               class="c-field__input c-field__input--reset"
-              list="timezone-cities"
+              list="timezone-data"
               type="text"
-              id="city-name"
-              placeholder="Add a new city..."
+              id="tz-name"
+              placeholder="Add a new timezone..."
               autocomplete="off"
             />
-            <datalist id="timezone-cities"> </datalist>
-            <label class="c-field__label" for="city-name">City name</label>
+            <datalist id="timezone-data"> </datalist>
+            <label class="c-field__label" for="tz-name">Timezone name</label>
             <button type="submit" class="c-button c-field__action">
               <span class="u-visually-hidden">Add</span>
               <svg
@@ -83,15 +83,15 @@
     <script type="text/x-yui3-template" id="timezone-tmpl">
       <article class="c-timecard" id="<%= this.id %>">
         <h2 class="c-timecard__title"><%= this.label %></h2>
-        <% if(this.dayPart) { %>
+        <% Y.Array.each(['morning', 'daytime', 'evening', 'night'], (part) => { %>
           <svg
-            class="c-icon c-timecard__interval"
+            class="c-icon c-timecard__interval c-timecard__interval--<%= part %>"
             focusable="false"
             aria-hidden="true"
           >
-            <use xlink:href="#icon-<%= this.dayPart %>" />
+            <use xlink:href="#icon-<%= part %>" />
           </svg>
-        <% } %>
+        <% }) %>
         <p class="c-timecard__zone"><%= this.abbreviation %> (UTC <%= this.offsetLabel %>)</p>
         <button type="button" class="c-timecard__close">
           <svg class="c-icon" focusable="false" aria-hidden="true">

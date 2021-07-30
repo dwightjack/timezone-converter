@@ -1,0 +1,12 @@
+.a-fade-grow {
+  transform: scale(0.95);
+  transition: all 200ms cubic-bezier(0.83, 0.31, 0.38, 0.93);
+  transition-property: transform, opacity;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.a-fade-grow--in {
+  transform: none;
+  opacity: 1;
+}

@@ -23,6 +23,9 @@
 .c-timecard__interval {
   grid-area: interval;
   align-self: center;
+  transform: translateY(0.5em);
+  transition: all 150ms ease-out;
+  opacity: 0;
 }
 
 .c-timecard__zone {
@@ -56,4 +59,13 @@
   font-size: var(--font-size-m);
   gap: var(--s-2);
   justify-self: end;
+}
+
+[data-theme='morning'] .c-timecard__interval--morning,
+[data-theme='daytime'] .c-timecard__interval--daytime,
+[data-theme='evening'] .c-timecard__interval--evening,
+[data-theme='night'] .c-timecard__interval--night {
+  transform: none;
+  transition-delay: 100ms;
+  opacity: 1;
 }

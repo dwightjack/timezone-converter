@@ -1,9 +1,24 @@
 .c-tile {
-  --tile-color-background: var(--color-background-primary);
   display: block;
   padding: var(--s-3) var(--s-4);
   transition: background-color 200ms ease-out;
   border-radius: var(--size-border-radius-m);
-  background-color: var(--tile-color-background);
+  background-color: var(--color-background-primary);
   color: var(--color-text-primary);
+}
+
+.c-tile[data-theme='morning'] {
+  background-color: var(--color-background-interval-morning);
+}
+
+.c-tile[data-theme='daytime'] {
+  background-color: var(--color-background-interval-daytime);
+}
+
+.c-tile[data-theme='evening'] {
+  background-color: var(--color-background-interval-evening);
+}
+
+.c-tile[data-theme='night'] {
+  background-color: var(--color-background-interval-night);
 }
