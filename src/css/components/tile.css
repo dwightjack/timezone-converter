@@ -2,6 +2,7 @@
   --tile-color-background: var(--color-background-primary);
   display: block;
   padding: var(--s-3) var(--s-4);
+  transition: background-color 200ms ease-out;
   border-radius: var(--size-border-radius-m);
   background-color: var(--tile-color-background);
   color: var(--color-text-primary);

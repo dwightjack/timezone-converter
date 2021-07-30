@@ -6,6 +6,7 @@
 @import 'components/tile.css';
 @import 'components/field.css';
 @import 'components/button.css';
+@import 'components/loader.css';
 @import 'layout.css';
 @import './utilities.css';
 

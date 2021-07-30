@@ -20,21 +20,38 @@ YUI.add(
           zoneList,
         });
 
-        window.cardList = cardList;
+        Y.Global.after(['app:status', 'app:ready'], this.toggleBusy, this);
 
-        zoneList.after('select', ({ name }) => this.addCard(name));
+        zoneList.after('select', ({ name, selected }) => {
+          selected && this.addCard(name);
+        });
 
         cardList.after('remove', ({ model }) => {
           zoneList.toggleSelected(model.get('label'), false);
         });
+        cardList.after('add', ({ model }) => {
+          zoneList.toggleSelected(model.get('label'), true);
+        });
+
+        const currentTz = Y.TZC.Day.tz.guess();
+        if (currentTz) {
+          this.addCard(currentTz);
+        }
       },
 
       render() {
         this.selectView.render();
         this.cardListView.render();
-
-        this.get('container').removeAttribute('aria-busy');
         return this;
+      },
+
+      toggleBusy(status) {
+        const $container = this.get('container');
+        if (status === 'loading') {
+          $container.setAttribute('aria-busy', true);
+          return;
+        }
+        $container.removeAttribute('aria-busy');
       },
 
       getZoneItems() {
@@ -68,6 +85,7 @@ YUI.add(
   {
     requires: [
       'app',
+      'tzc.day',
       'tzc.models.timeZoneList',
       'tzc.models.timeCardList',
       'tzc.views.select',

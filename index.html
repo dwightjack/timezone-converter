@@ -26,30 +26,26 @@
       <symbol viewBox="0 0 24 24" id="icon-plus">
         <path d="M12 5v14M5 12h14" />
       </symbol>
-      <symbol id="icon-moon" viewBox="0 0 24 24">
+      <symbol id="icon-night" viewBox="0 0 24 24">
         <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
       </symbol>
-      <symbol id="icon-sun" viewBox="0 0 24 24">
+      <symbol id="icon-daytime" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="5" />
         <path
           d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
         />
       </symbol>
-      <symbol id="icon-sunset" viewBox="0 0 24 24">
+      <symbol id="icon-evening" viewBox="0 0 24 24">
         <path
           d="M17 18a5 5 0 00-10 0M12 9V2M4.22 10.22l1.42 1.42M1 18h2M21 18h2M18.36 11.64l1.42-1.42M23 22H1M16 5l-4 4-4-4"
         />
       </symbol>
-      <symbol id="icon-sunrise" viewBox="0 0 24 24">
+      <symbol id="icon-morning" viewBox="0 0 24 24">
         <path
           d="M17 18a5 5 0 00-10 0M12 2v7M4.22 10.22l1.42 1.42M1 18h2M21 18h2M18.36 11.64l1.42-1.42M23 22H1M8 6l4-4 4 4"
         />
       </symbol>
     </svg>
-
-    <div role="status" class="c-loader" id="loader">
-      <span class="u-visually-hidden">Loading...</span>
-    </div>
 
     <main id="main" aria-busy="true">
       <h1 class="u-visually-hidden">Time Zones</h1>
@@ -81,16 +77,21 @@
         </form>
       </div>
     </main>
+    <div role="status" class="c-loader c-loader--visible" id="loader">
+      <span class="u-visually-hidden">Loading...</span>
+    </div>
     <script type="text/x-yui3-template" id="timezone-tmpl">
       <article class="c-timecard" id="<%= this.id %>">
         <h2 class="c-timecard__title"><%= this.label %></h2>
-        <svg
-          class="c-icon c-timecard__interval"
-          focusable="false"
-          aria-hidden="true"
-        >
-          <use xlink:href="#icon-sunset" />
-        </svg>
+        <% if(this.dayPart) { %>
+          <svg
+            class="c-icon c-timecard__interval"
+            focusable="false"
+            aria-hidden="true"
+          >
+            <use xlink:href="#icon-<%= this.dayPart %>" />
+          </svg>
+        <% } %>
         <p class="c-timecard__zone"><%= this.abbreviation %> (UTC <%= this.offsetLabel %>)</p>
         <button type="button" class="c-timecard__close">
           <svg class="c-icon" focusable="false" aria-hidden="true">

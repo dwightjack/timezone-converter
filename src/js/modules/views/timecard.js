@@ -3,6 +3,16 @@ YUI.add(
   (Y) => {
     const Views = Y.namespace('TZC.Views');
 
+    const debounce = (callback, wait) => {
+      let timeoutId = null;
+      return (...args) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          callback.apply(null, args);
+        }, wait);
+      };
+    };
+
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
       containerTemplate: '<div class="c-tile" />',
       template: Y.Template.Micro.compile(Y.one('#timezone-tmpl').getHTML()),
@@ -14,9 +24,11 @@ YUI.add(
       initializer() {
         const model = this.get('model');
 
-        model.after('datetime', this.render, this);
-
         model.after('datetimeUpdate', this.updateFields, this);
+        model.after(
+          'datetimeUpdate',
+          debounce(() => this.setDayPart(), 300),
+        );
 
         model.after('destroy', () => {
           this.destroy({ remove: true });
@@ -27,6 +39,7 @@ YUI.add(
         const data = this.get('model').toJSON();
         const $container = this.get('container');
         $container.setHTML(this.template(data));
+        this.setDayPart();
         return this;
       },
 
@@ -41,10 +54,32 @@ YUI.add(
       },
 
       updateFields() {
-        const { date, time } = this.get('model').get('dateStrings');
         const $container = this.get('container');
+        const { date, time } = this.get('model').get('dateStrings');
         $container.one('input[type="date"]').set('value', date);
         $container.one('input[type="time"]').set('value', time);
+      },
+
+      setDayPart() {
+        const $container = this.get('container');
+        const part = this.get('model').get('dayPart');
+        if (!part) {
+          $container
+            .removeAttribute('style')
+            .one('.c-timecard__interval')
+            .hide();
+          return;
+        }
+
+        $container
+          .setAttribute(
+            'style',
+            `--tile-color-background: var(--color-background-interval-${part})`,
+          )
+          .one('.c-timecard__interval')
+          .show()
+          .one('use')
+          .setAttribute('xlink:href', `#icon-${part}`);
       },
 
       close() {

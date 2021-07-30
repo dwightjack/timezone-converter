@@ -3,20 +3,6 @@ YUI.add(
   (Y) => {
     const Models = Y.namespace('TZC.Models');
 
-    // function getDaySection() {
-    //   const time = parseInt(this.get('time').slice(0, 2), 10);
-    //   if (time > 6 && time <= 10) {
-    //     return 'morning';
-    //   }
-    //   if (time > 10 && time <= 17) {
-    //     return 'daytime';
-    //   }
-    //   if (time > 18 && time <= 21) {
-    //     return 'evening';
-    //   }
-    //   return 'night';
-    // }
-
     Models.TimeCard = Y.Base.create(
       'timeCard',
       Y.Model,
@@ -49,6 +35,26 @@ YUI.add(
           abbreviation: '',
           offset: 0,
           datetime: null,
+          dayPart: {
+            readOnly: true,
+            getter() {
+              const datetime = this.get('datetime');
+              if (!datetime) {
+                return '';
+              }
+              const time = parseInt(datetime.format('H'), 10);
+              if (time > 6 && time <= 10) {
+                return 'morning';
+              }
+              if (time > 10 && time <= 17) {
+                return 'daytime';
+              }
+              if (time > 18 && time <= 21) {
+                return 'evening';
+              }
+              return 'night';
+            },
+          },
           dateStrings: {
             readOnly: true,
             getter() {
@@ -94,6 +100,12 @@ YUI.add(
               this.set('referenceDatetime', Y.TZC.Day().utc());
             }
             model.setDatetime(this.get('referenceDatetime'));
+          });
+
+          this.after('remove', () => {
+            if (this.size() === 0) {
+              this.set('referenceDatetime', null, { silent: true });
+            }
           });
 
           this.after('referenceDatetimeChange', ({ newVal }) => {

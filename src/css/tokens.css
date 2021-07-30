@@ -20,7 +20,7 @@
 
   /* Day intervals */
   --color-background-interval-morning: hsl(var(--color-blue-500));
-  --color-background-interval-day: hsl(var(--color-blue-600));
+  --color-background-interval-daytime: hsl(var(--color-blue-600));
   --color-background-interval-evening: hsl(var(--color-orange-500));
   --color-background-interval-night: hsl(var(--color-blue-700));
 

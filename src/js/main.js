@@ -1,9 +1,11 @@
 import api from './modules/api.js?url';
 import day from './modules/day.js?url';
-import timeZoneModule from './modules/models/timezone-list.js?url';
-import timeCardModule from './modules/models/timecard-list.js?url';
+import timeZone from './modules/models/timezone-list.js?url';
+import timeCard from './modules/models/timecard-list.js?url';
+import appState from './modules/models/app-state.js?url';
 import appView from './modules/views/app.js?url';
 import selectView from './modules/views/select.js?url';
+import loaderView from './modules/views/loader.js?url';
 import timeCardView from './modules/views/timecard.js?url';
 import timeCardListView from './modules/views/timecard-list.js?url';
 import '../css/main.css';
@@ -42,16 +44,24 @@ YUI({
       fullpath: day,
       requires: ['dayjs-timezone'],
     },
+    'tzc.models.appState': {
+      fullpath: appState,
+      requires: ['app'],
+    },
     'tzc.models.timeZoneList': {
-      fullpath: timeZoneModule,
+      fullpath: timeZone,
       requires: ['app'],
     },
     'tzc.models.timeCardList': {
-      fullpath: timeCardModule,
+      fullpath: timeCard,
       requires: ['app', 'tzc.day'],
     },
     'tzc.views.select': {
       fullpath: selectView,
+      requires: ['app'],
+    },
+    'tzc.views.loader': {
+      fullpath: loaderView,
       requires: ['app'],
     },
     'tzc.views.timeCard': {
@@ -66,6 +76,7 @@ YUI({
       fullpath: appView,
       requires: [
         'app',
+        'tzc.day',
         'tzc.models.timeZoneList',
         'tzc.models.timeCardList',
         'tzc.views.select',
@@ -73,14 +84,26 @@ YUI({
       ],
     },
   },
-}).use('tzc.api', 'tzc.views.app', 'promise', (Y) => {
-  Y.when(init)
-    .then(() => Y.TZC.Api.fetchList())
-    .then((zonesDB) => {
-      new Y.TZC.Views.App({
-        container: '#main',
-        zonesDB,
-      }).render();
-    })
-    .catch(console.error);
-});
+}).use(
+  'tzc.api',
+  'tzc.views.app',
+  'tzc.views.loader',
+  'tzc.models.appState',
+  'promise',
+  (Y) => {
+    const rootState = new Y.TZC.Models.AppState();
+    new Y.TZC.Views.Loader({ container: '#loader' }).render();
+
+    Y.when(init)
+      .then(() => Y.TZC.Api.fetchList())
+      .then((zonesDB) => {
+        new Y.TZC.Views.App({
+          container: '#main',
+          zonesDB,
+        }).render();
+
+        rootState.ready();
+      })
+      .catch(console.error);
+  },
+);
