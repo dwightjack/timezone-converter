@@ -1,22 +1,22 @@
 .c-timecard {
   display: grid;
+  grid-template-areas: 'title interval close' 'zone zone close' 'fields fields fields';
   grid-template-columns: auto 1fr auto;
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: 'title interval close' 'zone zone close' 'fields fields fields';
+  column-gap: var(--s-2);
   place-items: start;
   row-gap: var(--s-4);
-  column-gap: var(--s-2);
 }
 
 .c-timecard__title {
   grid-area: title;
   margin-top: var(--s-0);
   margin-bottom: var(--s-0);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-l);
-  white-space: nowrap;
   overflow: hidden;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
   text-overflow: ellipsis;
+  white-space: nowrap;
   justify-self: stretch;
 }
 
@@ -46,14 +46,14 @@
 }
 
 .c-timecard__fieldset {
-  border: 0;
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
   display: flex;
-  gap: var(--s-2);
   grid-area: fields;
-  font-size: var(--font-size-m);
-  justify-self: end;
   align-items: flex-end;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+  border: 0;
+  font-size: var(--font-size-m);
+  gap: var(--s-2);
+  justify-self: end;
 }

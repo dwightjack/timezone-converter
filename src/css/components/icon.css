@@ -7,10 +7,10 @@
 }
 
 svg.c-icon {
-  fill: none;
-  stroke: currentColor;
   stroke-width: 2px;
   stroke-linecap: round;
+  stroke: currentColor;
+  fill: none;
   stroke-linejoin: round;
 }
 

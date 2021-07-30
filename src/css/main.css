@@ -10,7 +10,12 @@
 @import './utilities.css';
 
 html {
+  height: 100%;
   font-family: var(--font-family-sans);
   font-size: 100%;
   line-height: 1.5;
+}
+
+body {
+  min-height: 100%;
 }

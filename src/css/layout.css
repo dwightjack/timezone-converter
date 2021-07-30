@@ -2,6 +2,10 @@
   padding: var(--s-5) var(--s-4);
 }
 
+#main[aria-busy='true'] {
+  display: none;
+}
+
 .l-stack {
   --stack-spacing: var(--s-5);
   display: flex;

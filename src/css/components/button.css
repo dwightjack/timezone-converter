@@ -1,15 +1,15 @@
 .c-button {
   display: flex;
-  gap: var(--s-1);
-  background-color: var(--color-background-action);
-  color: var(--color-text-action);
+  align-items: center;
+  padding: var(--s-2);
+  transition: background-color 200ms ease-out;
   border: 0;
   border-radius: var(--size-border-radius-s);
-  padding: var(--s-2);
+  background-color: var(--color-background-action);
+  color: var(--color-text-action);
   font-weight: var(--font-weight-semibold);
   cursor: pointer;
-  transition: background-color 200ms ease-out;
-  align-items: center;
+  gap: var(--s-1);
 }
 
 .c-button:where(:hover, :focus) {
