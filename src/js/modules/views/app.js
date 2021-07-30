@@ -32,6 +32,8 @@ YUI.add(
       render() {
         this.selectView.render();
         this.cardListView.render();
+
+        this.get('container').removeAttribute('aria-busy');
         return this;
       },
 

@@ -16,44 +16,8 @@
       defer
     ></script>
     <script src="/src/js/main.js" type="module"></script>
-    <!-- <style>
-      #box {
-        width: 200px;
-        height: 200px;
-        background-color: red;
-        position: relative;
-      }
-
-      #container {
-        width: 300px;
-        height: 300px;
-        overflow: auto;
-      }
-    </style> -->
   </head>
   <body>
-    <!-- <div id="app"></div>
-    <ul id="list">
-      <li>first</li>
-      <li>second</li>
-    </ul>
-    <p>
-      <button type="button" id="btn">toggle</button>
-    </p>
-    <div id="box"></div>
-
-    <div id="container"></div>
-
-    <div id="clicker"></div>
-
-    <div id="user-list"></div>
-    <script type="text/x-yui3-template" id="user-list-tmpl">
-      <ul>
-        <% Y.Array.each(this.users, (user) => { %>
-          <li><%= user.name %> <i>(<%= user.email %>)</i></li>
-        <% }) %>
-      </ul>
-    </script> -->
     <svg display="none" id="icons">
       <symbol id="icon-close" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" />
@@ -83,7 +47,11 @@
       </symbol>
     </svg>
 
-    <main id="main">
+    <div role="status" class="c-loader" id="loader">
+      <span class="u-visually-hidden">Loading...</span>
+    </div>
+
+    <main id="main" aria-busy="true">
       <h1 class="u-visually-hidden">Time Zones</h1>
       <div class="l-stack">
         <div id="timezone-list" class="u-contents"></div>
