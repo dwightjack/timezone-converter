@@ -2,6 +2,7 @@
   /* Palette */
   --color-white: 0, 0%, 100%;
   --color-gray-800: 0, 0%, 22%;
+  --color-gray-50: 0, 0%, 96%;
   --color-blue-700: 220, 49%, 35%;
   --color-blue-600: 205, 64%, 43%;
   --color-blue-500: 202, 50%, 47%;
@@ -10,7 +11,7 @@
   --color-yellow-300: 43, 90%, 72%;
 
   /* UI colors */
-  --color-background-canvas: hsl(var(--color-white));
+  --color-background-canvas: hsl(var(--color-gray-50));
   --color-background-primary: hsl(var(--color-gray-800));
   --color-background-action: hsl(var(--color-yellow-400));
   --color-background-action-active: hsl(var(--color-yellow-300));

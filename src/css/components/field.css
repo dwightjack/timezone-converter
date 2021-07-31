@@ -12,15 +12,31 @@
   row-gap: var(--s-1);
 }
 
+.c-field::after,
 .c-field::before {
   content: '';
   display: block;
   grid-area: input;
+  border-radius: var(--size-border-radius-s);
+  pointer-events: none;
+}
+
+.c-field::before {
   padding: var(--s-1) var(--s-2);
   border-radius: var(--size-border-radius-s);
   opacity: 0.1;
   background-color: currentColor;
-  pointer-events: none;
+}
+
+.c-field::after {
+  transition: opacity 100ms ease-out;
+  border: 2px solid currentColor;
+  opacity: 0;
+}
+
+.c-field:focus-within::after {
+  border: 2px solid currentColor;
+  opacity: 0.5;
 }
 
 .c-field__input {
@@ -29,6 +45,7 @@
   min-width: 0;
   padding: var(--s-1) var(--s-2);
   border: 0;
+  outline: 0;
   background-color: transparent;
   color: inherit;
   font-family: inherit;
