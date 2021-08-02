@@ -7,8 +7,32 @@
   height: 100%;
 }
 
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
 .c-loader:not(.c-loader--visible) {
   display: none;
+}
+
+.c-loader::before {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: min(128px, 80vw);
+  transform: translate(-50%, -50%);
+  animation: pulse infinite 700ms alternate ease-in-out;
+  background: url('../../assets/logo.svg') no-repeat center;
+  background-size: cover;
+  aspect-ratio: 1/1;
 }
 
 .c-loader::after {
