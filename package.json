@@ -6,7 +6,7 @@
   "homepage": "https://github.com/dwightjack/yui3-demo",
   "license": "MIT",
   "dependencies": {
-    "@vvo/tzdb": "6.7.0",
+    "@vvo/tzdb": "6.8.0",
     "sanitize.css": "12.0.1"
   },
   "engines": {
