@@ -14,9 +14,11 @@ import '../css/main.css';
 import { registerSW } from 'virtual:pwa-register';
 
 let init = true;
+
 if (import.meta.env.DEV) {
   init = import('./dev/msw').then(({ worker }) => worker.start());
 }
+
 YUI({
   groups: {
     dayjs: {

@@ -1,4 +1,3 @@
-const pkg = require('./package.json');
 const { VitePWA } = require('vite-plugin-pwa');
 /**
  * @type {import('vite').UserConfig}
