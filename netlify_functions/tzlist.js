@@ -1,10 +1,8 @@
-import { getTimeZones } from '@vvo/tzdb';
+const { getTimeZones } = require('@vvo/tzdb');
 
-const handler = async () => {
+exports.handler = async () => {
   return {
     statusCode: 200,
     body: JSON.stringify({ zones: getTimeZones() }),
   };
 };
-
-export { handler };

@@ -13,12 +13,6 @@ import timeCardListView from './modules/views/timecard-list.js?url';
 import '../css/main.css';
 import { registerSW } from 'virtual:pwa-register';
 
-let init = true;
-
-if (import.meta.env.DEV) {
-  init = import('./dev/msw').then(({ worker }) => worker.start());
-}
-
 YUI({
   groups: {
     dayjs: {
@@ -103,7 +97,6 @@ YUI({
   'tzc.views.loader',
   'tzc.views.pwaToast',
   'tzc.models.appState',
-  'promise',
   (Y) => {
     const rootState = new Y.TZC.Models.AppState();
 
@@ -114,8 +107,7 @@ YUI({
       registerSW,
     }).render();
 
-    Y.when(init)
-      .then(() => Y.TZC.Api.fetchList())
+    Y.TZC.Api.fetchList()
       .then((zonesDB) => {
         new Y.TZC.Views.App({
           container: '#main',
