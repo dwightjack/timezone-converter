@@ -8,6 +8,8 @@
   outline: 0;
   background-color: var(--color-background-action);
   color: var(--color-text-action);
+  font-family: inherit;
+  font-size: var(--font-size-s);
   font-weight: var(--font-weight-semibold);
   cursor: pointer;
   gap: var(--s-1);

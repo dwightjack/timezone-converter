@@ -7,9 +7,11 @@ import appState from './modules/models/app-state.js?url';
 import appView from './modules/views/app.js?url';
 import selectView from './modules/views/select.js?url';
 import loaderView from './modules/views/loader.js?url';
+import pwaToastView from './modules/views/pwa-toast.js?url';
 import timeCardView from './modules/views/timecard.js?url';
 import timeCardListView from './modules/views/timecard-list.js?url';
 import '../css/main.css';
+import { registerSW } from 'virtual:pwa-register';
 
 let init = true;
 if (import.meta.env.DEV) {
@@ -69,6 +71,10 @@ YUI({
       fullpath: loaderView,
       requires: ['app'],
     },
+    'tzc.views.pwaToast': {
+      fullpath: pwaToastView,
+      requires: ['app'],
+    },
     'tzc.views.timeCard': {
       fullpath: timeCardView,
       requires: ['app', 'template-micro', 'tzc.utils', 'anim'],
@@ -93,11 +99,18 @@ YUI({
   'tzc.api',
   'tzc.views.app',
   'tzc.views.loader',
+  'tzc.views.pwaToast',
   'tzc.models.appState',
   'promise',
   (Y) => {
     const rootState = new Y.TZC.Models.AppState();
+
     new Y.TZC.Views.Loader({ container: '#loader' }).render();
+
+    new Y.TZC.Views.PwaToast({
+      container: '#toast',
+      registerSW,
+    }).render();
 
     Y.when(init)
       .then(() => Y.TZC.Api.fetchList())

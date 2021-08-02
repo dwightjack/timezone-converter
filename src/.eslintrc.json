@@ -9,7 +9,7 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "globals": { "YUI": true, "__APP_VERSION__": true },
+  "globals": { "YUI": true, "'1.0.0'": true },
   "rules": {
     "no-shadow": "warn",
     "block-scoped-var": "error",

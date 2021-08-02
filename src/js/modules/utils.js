@@ -21,6 +21,6 @@ YUI.add(
 
     TZC.Day = window.dayjs;
   },
-  __APP_VERSION__,
+  '1.0.0',
   { requires: ['promise'] },
 );

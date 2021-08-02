@@ -98,7 +98,7 @@ YUI.add(
       },
     });
   },
-  __APP_VERSION__,
+  '1.0.0',
   {
     requires: ['app', 'template-micro', 'tzc.utils', 'anim'],
   },

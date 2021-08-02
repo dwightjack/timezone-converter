@@ -1,0 +1,26 @@
+.c-toast {
+  --toast-breakpoint: calc(36rem - 100%);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: var(--s-2);
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-s);
+  gap: var(--s-2);
+}
+
+.c-toast__message {
+  flex-basis: calc(var(--toast-breakpoint) * 999);
+  flex-grow: 1;
+}
+
+.c-toast:not(.c-toast--visible) {
+  display: none;
+}

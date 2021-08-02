@@ -11,6 +11,7 @@ YUI.add(
         root: 'appState',
         initializer() {
           Y.Global.after('app:load', this.updateQueue, this);
+
           this.after('change', ({ changed }) => {
             Y.Object.each(changed, ({ newVal, prevVal }, key) => {
               Y.Global.fire(`app:${key}`, newVal, prevVal);
@@ -37,6 +38,6 @@ YUI.add(
       },
     );
   },
-  __APP_VERSION__,
+  '1.0.0',
   { requires: ['app'] },
 );
