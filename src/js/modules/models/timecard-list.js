@@ -46,7 +46,7 @@ YUI.add(
               if (time > 6 && time <= 10) {
                 return 'morning';
               }
-              if (time > 10 && time <= 17) {
+              if (time > 10 && time <= 18) {
                 return 'daytime';
               }
               if (time > 18 && time <= 21) {
