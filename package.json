@@ -36,8 +36,5 @@
     "stylelint-prettier": "1.1.2",
     "vite": "2.3.8",
     "vite-plugin-pwa": "0.9.3"
-  },
-  "msw": {
-    "workerDirectory": "public"
   }
 }
