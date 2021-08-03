@@ -6,7 +6,7 @@
   "homepage": "https://github.com/dwightjack/timezone-converter",
   "license": "MIT",
   "dependencies": {
-    "@vvo/tzdb": "6.7.0",
+    "@vvo/tzdb": "6.8.0",
     "sanitize.css": "12.0.1"
   },
   "engines": {
@@ -23,18 +23,18 @@
     "lint": "eslint && npx stylelint --aei '**/*.css'"
   },
   "devDependencies": {
-    "eslint": "7.30.0",
+    "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.4.0",
-    "netlify-cli": "5.4.1",
+    "netlify-cli": "5.4.7",
     "prettier": "2.3.2",
     "stylelint": "13.13.1",
-    "stylelint-config-prettier": "8.0.1",
+    "stylelint-config-prettier": "8.0.2",
     "stylelint-config-property-sort-order-smacss": "7.1.0",
     "stylelint-config-standard": "22.0.0",
-    "stylelint-prettier": "1.1.2",
-    "vite": "2.3.8",
+    "stylelint-prettier": "1.2.0",
+    "vite": "2.4.4",
     "vite-plugin-pwa": "0.9.3"
   }
 }
