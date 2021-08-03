@@ -17,9 +17,9 @@
     "url": "https://github.com/dwightjack/yui3-demo"
   },
   "scripts": {
-    "dev": "netlify dev",
-    "dev:vite": "vite",
+    "dev": "netlify dev -c \"npx vite\"",
     "build": "npm run lint && vite build",
+    "preview": "netlify dev -d dist",
     "lint": "eslint && npx stylelint --aei '**/*.css'"
   },
   "devDependencies": {

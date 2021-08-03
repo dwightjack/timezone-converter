@@ -9,8 +9,8 @@ YUI.add(
       [],
       {
         events: {
-          '.c-toast__confirm': 'confirm',
-          '.c-toast__close': 'close',
+          '.c-toast__confirm': { click: 'confirm' },
+          '.c-toast__close': { click: 'close' },
         },
         initializer() {
           const registerSW = this.get('registerSW');
