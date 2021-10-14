@@ -30,7 +30,7 @@
     "netlify-cli": "5.4.16",
     "prettier": "2.4.1",
     "stylelint": "13.13.1",
-    "stylelint-config-prettier": "8.0.2",
+    "stylelint-config-prettier": "9.0.3",
     "stylelint-config-property-sort-order-smacss": "7.1.0",
     "stylelint-config-standard": "22.0.0",
     "stylelint-prettier": "1.2.0",
