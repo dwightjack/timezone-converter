@@ -1,6 +1,7 @@
 import api from './modules/api.js?url';
 import day from './modules/day.js?url';
 import utils from './modules/utils.js?url';
+import cache from './modules/cache.js?url';
 import timeZone from './modules/models/timezone-list.js?url';
 import timeCard from './modules/models/timecard-list.js?url';
 import appState from './modules/models/app-state.js?url';
@@ -42,6 +43,10 @@ YUI({
     'tzc.utils': {
       fullpath: utils,
       requires: ['promise'],
+    },
+    'tzc.cache': {
+      fullpath: cache,
+      requires: ['json'],
     },
     'tzc.day': {
       fullpath: day,
@@ -88,6 +93,7 @@ YUI({
         'tzc.models.timeCardList',
         'tzc.views.select',
         'tzc.views.timeCardList',
+        'tzc.cache',
       ],
     },
   },

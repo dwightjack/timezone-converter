@@ -23,7 +23,16 @@ YUI.add(
         Y.Global.after(['app:status', 'app:ready'], this.toggleBusy, this);
 
         zoneList.after('select', ({ name, selected }) => {
-          selected && this.addCard(name);
+          if (selected) {
+            this.addCard(name);
+            Y.TZC.Cache.set('tzselect', (zones) => {
+              return Y.Array.unique((zones || []).concat(name));
+            });
+            return;
+          }
+          Y.TZC.Cache.set('tzselect', (zones) => {
+            return Y.Array.filter(zones || [], (zone) => zone !== name);
+          });
         });
 
         cardList.after('remove', ({ model }) => {
@@ -34,6 +43,13 @@ YUI.add(
         });
 
         this.onceAfter('rendered', () => {
+          // look for cached timezones
+          const cached = Y.TZC.Cache.get('tzselect');
+
+          if (Y.Lang.isArray(cached) && cached.length > 0) {
+            Y.Array.each(cached, (tz) => this.addCard(tz));
+            return;
+          }
           const currentTz = Y.TZC.Day.tz.guess();
           if (currentTz) {
             this.addCard(currentTz);
@@ -89,6 +105,7 @@ YUI.add(
     requires: [
       'app',
       'tzc.day',
+      'tzc.cache',
       'tzc.models.timeZoneList',
       'tzc.models.timeCardList',
       'tzc.views.select',

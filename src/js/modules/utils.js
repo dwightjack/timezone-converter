@@ -15,11 +15,6 @@ YUI.add(
         });
       },
     };
-
-    window.dayjs.extend(window.dayjs_plugin_utc);
-    window.dayjs.extend(window.dayjs_plugin_timezone);
-
-    TZC.Day = window.dayjs;
   },
   '1.0.0',
   { requires: ['promise'] },
