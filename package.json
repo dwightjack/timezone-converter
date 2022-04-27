@@ -27,7 +27,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
-    "netlify-cli": "8.4.2",
+    "netlify-cli": "10.0.0",
     "prettier": "2.5.1",
     "stylelint": "14.2.0",
     "stylelint-config-prettier": "9.0.3",
