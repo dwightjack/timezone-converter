@@ -9,7 +9,7 @@
 svg.c-icon {
   stroke-width: 2px;
   stroke-linecap: round;
-  stroke: currentColor;
+  stroke: currentcolor;
   fill: none;
   stroke-linejoin: round;
 }
