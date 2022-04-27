@@ -25,17 +25,17 @@
   padding: var(--s-1) var(--s-2);
   border-radius: var(--size-border-radius-s);
   opacity: 0.1;
-  background-color: currentColor;
+  background-color: currentcolor;
 }
 
 .c-field::after {
   transition: opacity 100ms ease-out;
-  border: 2px solid currentColor;
+  border: 2px solid currentcolor;
   opacity: 0;
 }
 
 .c-field:focus-within::after {
-  border: 2px solid currentColor;
+  border: 2px solid currentcolor;
   opacity: 0.5;
 }
 
