@@ -68,7 +68,10 @@
   appearance: textfield;
 }
 
-.c-field__input:is([type='date'], [type='time'])::-webkit-calendar-picker-indicator,
+.c-field__input:is(
+    [type='date'],
+    [type='time']
+  )::-webkit-calendar-picker-indicator,
 .c-field__input:is([type='date'], [type='time'])::-webkit-inner-spin-button {
   filter: invert(1);
 }

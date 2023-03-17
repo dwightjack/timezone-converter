@@ -15,11 +15,11 @@
   gap: var(--s-1);
 }
 
+.c-button:where(:hover, :focus) {
+  background-color: var(--color-background-action-active);
+}
+
 .c-button:focus-visible:focus {
   outline: 2px solid var(--color-background-action);
   outline-offset: 2px;
-}
-
-.c-button:where(:hover, :focus) {
-  background-color: var(--color-background-action-active);
 }
