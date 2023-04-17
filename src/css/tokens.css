@@ -2,6 +2,7 @@
   /* Palette */
   --color-white: 0 0% 100%;
   --color-gray-800: 0 0% 22%;
+  --color-gray-500: 0 0% 45%;
   --color-gray-50: 0 0% 96%;
   --color-blue-700: 220 49% 35%;
   --color-blue-600: 205 64% 43%;
@@ -20,10 +21,12 @@
   --color-text-action: hsl(var(--color-gray-800));
 
   /* Day intervals */
-  --color-background-interval-morning: hsl(var(--color-blue-500));
-  --color-background-interval-daytime: hsl(var(--color-blue-600));
-  --color-background-interval-evening: hsl(var(--color-orange-500));
-  --color-background-interval-night: hsl(var(--color-blue-700));
+  --color-background-accent: hsl(var(--color-gray-800));
+  --color-text-accent: hsl(var(--color-white));
+  --color-background-accent-morning: hsl(var(--color-blue-500));
+  --color-background-accent-daytime: hsl(var(--color-blue-600));
+  --color-background-accent-evening: hsl(var(--color-orange-500));
+  --color-background-accent-night: hsl(var(--color-blue-700));
 
   /* Font sizes */
   --font-size-s: 0.75rem;
@@ -52,4 +55,13 @@
   --s-3: var(--size-spacing-3);
   --s-4: var(--size-spacing-4);
   --s-5: var(--size-spacing-5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-canvas: hsl(var(--color-gray-800));
+    --color-background-primary: hsl(var(--color-gray-500));
+    --color-background-accent: hsl(var(--color-gray-500));
+    --color-text-canvas: hsl(var(--color-gray-50));
+  }
 }

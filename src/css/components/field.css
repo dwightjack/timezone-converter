@@ -67,12 +67,14 @@
   appearance: textfield;
 }
 
-.c-field__input:is(
-    [type='date'],
-    [type='time']
-  )::-webkit-calendar-picker-indicator,
-.c-field__input:is([type='date'], [type='time'])::-webkit-inner-spin-button {
-  filter: invert(1);
+@media (prefers-color-scheme: light) {
+  .c-field__input:is(
+      [type='date'],
+      [type='time']
+    )::-webkit-calendar-picker-indicator,
+  .c-field__input:is([type='date'], [type='time'])::-webkit-inner-spin-button {
+    filter: invert(1);
+  }
 }
 
 .c-field__action {

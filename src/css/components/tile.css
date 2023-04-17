@@ -3,22 +3,22 @@
   padding: var(--s-3) var(--s-4);
   transition: background-color 200ms ease-out;
   border-radius: var(--size-border-radius-m);
-  background-color: var(--color-background-primary);
-  color: var(--color-text-primary);
+  background-color: var(--color-background-accent);
+  color: var(--color-text-accent);
 }
 
 .c-tile[data-theme='morning'] {
-  background-color: var(--color-background-interval-morning);
+  --color-background-accent: var(--color-background-accent-morning);
 }
 
 .c-tile[data-theme='daytime'] {
-  background-color: var(--color-background-interval-daytime);
+  --color-background-accent: var(--color-background-accent-daytime);
 }
 
 .c-tile[data-theme='evening'] {
-  background-color: var(--color-background-interval-evening);
+  --color-background-accent: var(--color-background-accent-evening);
 }
 
 .c-tile[data-theme='night'] {
-  background-color: var(--color-background-interval-night);
+  --color-background-accent: var(--color-background-accent-night);
 }
