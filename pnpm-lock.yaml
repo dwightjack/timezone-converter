@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@playwright/test': ^1.32.3
   '@types/node': ^18.15.11
   '@vvo/tzdb': 6.106.0
   eslint: 8.38.0
   eslint-config-prettier: 8.8.0
   eslint-plugin-node: 11.1.0
   eslint-plugin-prettier: 4.2.1
+  mockdate: ^3.0.5
   netlify-cli: 13.2.2
   prettier: 2.8.7
   sanitize.css: 13.0.0
@@ -23,11 +25,13 @@ dependencies:
   sanitize.css: 13.0.0
 
 devDependencies:
+  '@playwright/test': 1.32.3
   '@types/node': 18.15.11
   eslint: 8.38.0
   eslint-config-prettier: 8.8.0_eslint@8.38.0
   eslint-plugin-node: 11.1.0_eslint@8.38.0
   eslint-plugin-prettier: 4.2.1_mrzcadguhkbme6yx3ehduvsjxu
+  mockdate: 3.0.5
   netlify-cli: 13.2.2_@types+node@18.15.11
   prettier: 2.8.7
   stylelint: 15.5.0
@@ -2499,6 +2503,17 @@ packages:
     resolution: {integrity: sha512-LUewfj94xCMH2rbD5YJ+6AQ4AVjFYTgpp6rboWM5T7N3IsIF65SBEOVcYMGAEzO/kKNiNaW4LoWtoThOhH06gw==}
     dependencies:
       '@octokit/openapi-types': 16.0.0
+    dev: true
+
+  /@playwright/test/1.32.3:
+    resolution: {integrity: sha512-BvWNvK0RfBriindxhLVabi8BRe3X0J9EVjKlcmhxjg4giWBD/xleLcg2dz7Tx0agu28rczjNIPQWznwzDwVsZQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.15.11
+      playwright-core: 1.32.3
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /@pnpm/config.env-replace/1.1.0:
@@ -7874,6 +7889,10 @@ packages:
     hasBin: true
     dev: true
 
+  /mockdate/3.0.5:
+    resolution: {integrity: sha512-iniQP4rj1FhBdBYS/+eQv7j1tadJ9lJtdzgOpvsOHng/GbcDh2Fhdeq+ZRldrPYdXvCyfFUmFeEwEGXZB5I/AQ==}
+    dev: true
+
   /module-definition/4.1.0:
     resolution: {integrity: sha512-rHXi/DpMcD2qcKbPCTklDbX9lBKJrUSl971TW5l6nMpqKCIlzJqmQ8cfEF5M923h2OOLHPDVlh5pJxNyV+AJlw==}
     engines: {node: '>=12'}
@@ -8859,6 +8878,12 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       find-up: 6.3.0
+    dev: true
+
+  /playwright-core/1.32.3:
+    resolution: {integrity: sha512-SB+cdrnu74ZIn5Ogh/8278ngEh9NEEV0vR4sJFmK04h2iZpybfbqBY0bX6+BLYWVdV12JLLI+JEFtSnYgR+mWg==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /posix-character-classes/0.1.1:

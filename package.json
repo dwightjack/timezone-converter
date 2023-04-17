@@ -22,14 +22,17 @@
     "dev": "netlify dev -c \"pnpm exec vite\"",
     "build": "pnpm run lint && vite build",
     "preview": "netlify dev -d dist",
-    "lint": "eslint && stylelint --aei '**/*.css'"
+    "lint": "eslint && stylelint --aei '**/*.css'",
+    "test": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.32.3",
     "@types/node": "^18.15.11",
     "eslint": "8.38.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.2.1",
+    "mockdate": "^3.0.5",
     "netlify-cli": "13.2.2",
     "prettier": "2.8.7",
     "stylelint": "15.5.0",
