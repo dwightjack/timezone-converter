@@ -13,7 +13,7 @@ specifiers:
   stylelint: 15.4.0
   stylelint-config-prettier: 9.0.5
   stylelint-config-property-sort-order-smacss: 9.1.0
-  stylelint-config-standard: 32.0.0
+  stylelint-config-standard: 33.0.0
   stylelint-prettier: 3.0.0
   vite: 4.2.1
   vite-plugin-pwa: 0.14.7
@@ -33,7 +33,7 @@ devDependencies:
   stylelint: 15.4.0
   stylelint-config-prettier: 9.0.5_stylelint@15.4.0
   stylelint-config-property-sort-order-smacss: 9.1.0_stylelint@15.4.0
-  stylelint-config-standard: 32.0.0_stylelint@15.4.0
+  stylelint-config-standard: 33.0.0_stylelint@15.4.0
   stylelint-prettier: 3.0.0_pz5unyfruaaajn3vnqqiy7qrai
   vite: 4.2.1_@types+node@18.15.11
   vite-plugin-pwa: 0.14.7_vite@4.2.1
@@ -10191,21 +10191,21 @@ packages:
       stylelint-order: 6.0.3_stylelint@15.4.0
     dev: true
 
-  /stylelint-config-recommended/11.0.0_stylelint@15.4.0:
-    resolution: {integrity: sha512-SoGIHNI748OCZn6BxFYT83ytWoYETCINVHV3LKScVAWQQauWdvmdDqJC5YXWjpBbxg2E761Tg5aUGKLFOVhEkA==}
+  /stylelint-config-recommended/12.0.0_stylelint@15.4.0:
+    resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
-      stylelint: ^15.3.0
+      stylelint: ^15.5.0
     dependencies:
       stylelint: 15.4.0
     dev: true
 
-  /stylelint-config-standard/32.0.0_stylelint@15.4.0:
-    resolution: {integrity: sha512-UnGJxYDyYFrIE9CjDMZRkrNh2o4lOtO+MVZ9qG5b8yARfsWho0GMx4YvhHfsv8zKKgHeWX2wfeyxmuoqcaYZ4w==}
+  /stylelint-config-standard/33.0.0_stylelint@15.4.0:
+    resolution: {integrity: sha512-eyxnLWoXImUn77+ODIuW9qXBDNM+ALN68L3wT1lN2oNspZ7D9NVGlNHb2QCUn4xDug6VZLsh0tF8NyoYzkgTzg==}
     peerDependencies:
-      stylelint: ^15.4.0
+      stylelint: ^15.5.0
     dependencies:
       stylelint: 15.4.0
-      stylelint-config-recommended: 11.0.0_stylelint@15.4.0
+      stylelint-config-recommended: 12.0.0_stylelint@15.4.0
     dev: true
 
   /stylelint-order/6.0.3_stylelint@15.4.0:
