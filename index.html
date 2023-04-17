@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timezone Converter</title>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <meta
-      name="theme-color"
-      content="#ffffff"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="{{darkTheme}}"
-      media="(prefers-color-scheme: dark)"
-    />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="dark light" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,7 +54,7 @@
     <main id="main" aria-busy="true">
       <h1 class="u-visually-hidden">Time Zones</h1>
       <div class="l-stack">
-        <div id="timezone-list" class="u-contents"></div>
+        <div id="timecard-list" class="u-contents"></div>
         <form class="c-tile" id="tz-select" action="" method="get">
           <div class="c-field c-field--compact">
             <input
@@ -123,7 +112,7 @@
           <span class="u-visually-hidden">Remove</span>
         </button>
         <fieldset class="c-timecard__fieldset">
-          <legend class="u-visually-hidden">Date and time</legend>
+          <legend class="u-visually-hidden">Date and time for <%= this.label %></legend>
           <div class="c-field c-field--compact">
             <input
               class="c-field__input"

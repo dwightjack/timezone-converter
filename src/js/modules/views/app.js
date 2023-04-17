@@ -12,7 +12,7 @@ YUI.add(
 
         this.cardListView = new Views.TimeCardListView({
           cardList,
-          container: Y.one('#timezone-list'),
+          container: Y.one('#timecard-list'),
         });
 
         this.selectView = new Views.Select({
