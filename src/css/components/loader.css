@@ -1,10 +1,10 @@
 .c-loader {
   position: fixed;
   z-index: 10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  block-size: 100%;
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 }
 
 @keyframes pulse {
@@ -25,9 +25,9 @@
   display: block;
   position: fixed;
   z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: min(128px, 80vw);
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  inline-size: min(128px, 80vw);
   transform: translate(-50%, -50%);
   animation: pulse infinite 700ms alternate ease-in-out;
   background: url('../../assets/logo.svg') no-repeat center;
@@ -38,10 +38,7 @@
 .c-loader::after {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   opacity: 0.5;
   background-color: var(--color-background-canvas);
 }

@@ -14,6 +14,7 @@ specifiers:
   stylelint-config-property-sort-order-smacss: 9.1.0
   stylelint-config-standard: 33.0.0
   stylelint-prettier: 3.0.0
+  stylelint-use-logical: ^2.1.0
   vite: 4.2.1
   vite-plugin-pwa: 0.14.7
 
@@ -33,6 +34,7 @@ devDependencies:
   stylelint-config-property-sort-order-smacss: 9.1.0_stylelint@15.5.0
   stylelint-config-standard: 33.0.0_stylelint@15.5.0
   stylelint-prettier: 3.0.0_v77xz4p37u6vnptjf47da5l3le
+  stylelint-use-logical: 2.1.0_stylelint@15.5.0
   vite: 4.2.1_@types+node@18.15.11
   vite-plugin-pwa: 0.14.7_vite@4.2.1
 
@@ -10215,6 +10217,15 @@ packages:
     dependencies:
       prettier: 2.8.7
       prettier-linter-helpers: 1.0.0
+      stylelint: 15.5.0
+    dev: true
+
+  /stylelint-use-logical/2.1.0_stylelint@15.5.0:
+    resolution: {integrity: sha512-DN1boOPI6IMYTlu2KeQpH5hDEiCODHhd+AtXU0InO37wkWAuELiPwuv59HrTg2m9PYmqGTTO/QWdMBafYVPfew==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      stylelint: '>= 11 < 16'
+    dependencies:
       stylelint: 15.5.0
     dev: true
 

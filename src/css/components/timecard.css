@@ -10,8 +10,7 @@
 
 .c-timecard__title {
   grid-area: title;
-  margin-top: var(--s-0);
-  margin-bottom: var(--s-0);
+  margin-block: var(--s-0);
   overflow: hidden;
   font-size: var(--font-size-l);
   font-weight: var(--font-weight-semibold);
@@ -30,8 +29,7 @@
 
 .c-timecard__zone {
   grid-area: zone;
-  margin-top: calc(var(--s-3) * -1);
-  margin-bottom: var(--s-0);
+  margin-block: calc(var(--s-3) * -1) var(--s-0);
   font-size: var(--font-size-s);
 }
 
@@ -52,8 +50,8 @@
 
 .c-timecard__close::after {
   content: '';
-  width: 100%;
-  margin-left: -100%;
+  inline-size: 100%;
+  margin-inline-start: -100%;
   aspect-ratio: 1;
   transition: opacity 100ms ease-out;
   opacity: 0;
@@ -70,8 +68,7 @@
   display: flex;
   grid-area: fields;
   align-items: flex-end;
-  margin-right: 0;
-  margin-left: 0;
+  margin-inline: 0;
   padding: 0;
   border: 0;
   font-size: var(--font-size-m);

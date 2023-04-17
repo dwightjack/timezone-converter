@@ -41,7 +41,7 @@
 .c-field__input {
   grid-area: input;
   order: 1;
-  min-width: 0;
+  min-inline-size: 0;
   padding: var(--s-1) var(--s-2);
   border: 0;
   outline: 0;
@@ -53,7 +53,7 @@
 }
 
 .c-field__input:is([type='date'], [type='time']) {
-  width: auto;
+  inline-size: auto;
   font-family: var(--font-family-mono);
   font-weight: var(--font-weight-light);
 }
@@ -78,7 +78,7 @@
 .c-field__action {
   z-index: 1;
   grid-area: action;
-  margin-left: calc(var(--size-border-radius-s) * -1);
+  margin-inline-start: calc(var(--size-border-radius-s) * -1);
 }
 
 .c-field__label {
@@ -91,8 +91,8 @@
 
 .c-field--compact .c-field__label {
   position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
+  block-size: 1px !important;
+  inline-size: 1px !important;
   margin: -1px !important;
   padding: 0 !important;
   overflow: hidden !important;

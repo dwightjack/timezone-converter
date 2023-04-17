@@ -1,8 +1,8 @@
 .c-icon {
   --icon-size-ratio: 1;
   display: inline-block;
-  width: calc(var(--icon-size-ratio) * 1em);
-  height: calc(var(--icon-size-ratio) * 1em);
+  block-size: calc(var(--icon-size-ratio) * 1em);
+  inline-size: calc(var(--icon-size-ratio) * 1em);
   line-height: inherit;
 }
 
