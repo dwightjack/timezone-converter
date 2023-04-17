@@ -1,7 +1,4 @@
 {
-  "extends": [
-    "config:base",
-    "group:allNonMajor"
-  ],
+  "extends": ["config:base", "group:allNonMajor", ":automergeMinor"],
   "commitBody": "[skip netlify]"
 }
