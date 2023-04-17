@@ -36,16 +36,34 @@
 }
 
 .c-timecard__close {
+  display: flex;
   grid-area: close;
   margin: calc(var(--s-2) * -1);
-  justify-self: end;
   padding: var(--s-2);
   border: 0;
-  border-radius: 0;
+  border-radius: 50%;
+  outline: 2px solid transparent;
   background: transparent;
   color: inherit;
   font-size: var(--font-size-l);
   cursor: pointer;
+  justify-self: end;
+}
+
+.c-timecard__close::after {
+  content: '';
+  width: 100%;
+  margin-left: -100%;
+  aspect-ratio: 1;
+  transition: opacity 100ms ease-out;
+  opacity: 0;
+}
+
+.c-timecard__close:focus-visible::after {
+  border-radius: inherit;
+  outline: 2px solid currentcolor;
+  outline-offset: calc(var(--s-2) * 0.25);
+  opacity: 0.7;
 }
 
 .c-timecard__fieldset {
