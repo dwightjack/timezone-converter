@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@playwright/test': ^1.32.3
   '@types/node': ^18.15.11
-  '@vvo/tzdb': 6.106.0
+  '@vvo/tzdb': 6.107.0
   eslint: 8.39.0
   eslint-config-prettier: 8.8.0
   eslint-plugin-node: 11.1.0
@@ -22,7 +22,7 @@ specifiers:
   workbox-window: ^6.5.4
 
 dependencies:
-  '@vvo/tzdb': 6.106.0
+  '@vvo/tzdb': 6.107.0
   sanitize.css: 13.0.0
 
 devDependencies:
@@ -2965,8 +2965,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vvo/tzdb/6.106.0:
-    resolution: {integrity: sha512-NMgDMHn79j5ABSTqCMxXROgLSzLx8QS/HzuSCkvcZ+TGgvVUh1Ob7JN9Vsp6r7LU5av02aWv6shfpogtHsxTWA==}
+  /@vvo/tzdb/6.107.0:
+    resolution: {integrity: sha512-WVDKqpaP5UXVMC5pa1i9HQ8BHD5wBTUvxLPArC5BGalXlKrOBxS8otKz4YjQl7zMsiG/MoW46jGTHRbcgrKkVQ==}
     dev: false
 
   /abbrev/1.1.1:
