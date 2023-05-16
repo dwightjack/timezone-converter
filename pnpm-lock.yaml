@@ -17,7 +17,7 @@ specifiers:
   stylelint-config-standard: 33.0.0
   stylelint-prettier: 3.0.0
   stylelint-use-logical: ^2.1.0
-  vite: 4.3.6
+  vite: 4.3.7
   vite-plugin-pwa: 0.14.7
   workbox-window: ^6.5.4
 
@@ -40,8 +40,8 @@ devDependencies:
   stylelint-config-standard: 33.0.0_stylelint@15.6.1
   stylelint-prettier: 3.0.0_ydhac4dv5nk3447o7ol4jd6c7a
   stylelint-use-logical: 2.1.0_stylelint@15.6.1
-  vite: 4.3.6_@types+node@18.15.11
-  vite-plugin-pwa: 0.14.7_n6vkdgkfvijeu3afbmk4cgxirq
+  vite: 4.3.7_@types+node@18.15.11
+  vite-plugin-pwa: 0.14.7_myed3eti235rsslt7dlebfpsoy
   workbox-window: 6.5.4
 
 packages:
@@ -11019,7 +11019,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite-plugin-pwa/0.14.7_n6vkdgkfvijeu3afbmk4cgxirq:
+  /vite-plugin-pwa/0.14.7_myed3eti235rsslt7dlebfpsoy:
     resolution: {integrity: sha512-dNJaf0fYOWncmjxv9HiSa2xrSjipjff7IkYE5oIUJ2x5HKu3cXgA8LRgzOwTc5MhwyFYRSU0xyN0Phbx3NsQYw==}
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0
@@ -11030,7 +11030,7 @@ packages:
       fast-glob: 3.2.12
       pretty-bytes: 6.1.0
       rollup: 3.20.3
-      vite: 4.3.6_@types+node@18.15.11
+      vite: 4.3.7_@types+node@18.15.11
       workbox-build: 6.5.4
       workbox-window: 6.5.4
     transitivePeerDependencies:
@@ -11038,8 +11038,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite/4.3.6_@types+node@18.15.11:
-    resolution: {integrity: sha512-cqIyLSbA6gornMS659AXTVKF7cvSHMdKmJJwQ9DXq3lwsT1uZSdktuBRlpHQ8VnOWx0QHtjDwxPpGtyo9Fh/Qg==}
+  /vite/4.3.7_@types+node@18.15.11:
+    resolution: {integrity: sha512-MTIFpbIm9v7Hh5b0wSBgkcWzSBz7SAa6K/cBTwS4kUiQJfQLFlZZRJRQgqunCVzhTPCk674tW+0Qaqh3Q00dBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
