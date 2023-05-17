@@ -12,7 +12,7 @@ specifiers:
   netlify-cli: 13.2.2
   prettier: 2.8.8
   sanitize.css: 13.0.0
-  stylelint: 15.6.1
+  stylelint: 15.6.2
   stylelint-config-property-sort-order-smacss: 9.1.0
   stylelint-config-standard: 33.0.0
   stylelint-prettier: 3.0.0
@@ -35,11 +35,11 @@ devDependencies:
   mockdate: 3.0.5
   netlify-cli: 13.2.2_@types+node@18.15.11
   prettier: 2.8.8
-  stylelint: 15.6.1
-  stylelint-config-property-sort-order-smacss: 9.1.0_stylelint@15.6.1
-  stylelint-config-standard: 33.0.0_stylelint@15.6.1
-  stylelint-prettier: 3.0.0_ydhac4dv5nk3447o7ol4jd6c7a
-  stylelint-use-logical: 2.1.0_stylelint@15.6.1
+  stylelint: 15.6.2
+  stylelint-config-property-sort-order-smacss: 9.1.0_stylelint@15.6.2
+  stylelint-config-standard: 33.0.0_stylelint@15.6.2
+  stylelint-prettier: 3.0.0_oc4dndsiefxv6sspxihof2zrhe
+  stylelint-use-logical: 2.1.0_stylelint@15.6.2
   vite: 4.3.7_@types+node@18.15.11
   vite-plugin-pwa: 0.14.7_myed3eti235rsslt7dlebfpsoy
   workbox-window: 6.5.4
@@ -10211,44 +10211,44 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: true
 
-  /stylelint-config-property-sort-order-smacss/9.1.0_stylelint@15.6.1:
+  /stylelint-config-property-sort-order-smacss/9.1.0_stylelint@15.6.2:
     resolution: {integrity: sha512-TijYeDoDgHAFjpn9NnziQrmUCGrm2AM4e1HzsdI2mCWBRkQRuewc343YqDwdFgQ5eHoMZ3JRL02i72W3vktuDA==}
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0
     dependencies:
       css-property-sort-order-smacss: 2.2.0
-      stylelint: 15.6.1
-      stylelint-order: 6.0.3_stylelint@15.6.1
+      stylelint: 15.6.2
+      stylelint-order: 6.0.3_stylelint@15.6.2
     dev: true
 
-  /stylelint-config-recommended/12.0.0_stylelint@15.6.1:
+  /stylelint-config-recommended/12.0.0_stylelint@15.6.2:
     resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
       stylelint: ^15.5.0
     dependencies:
-      stylelint: 15.6.1
+      stylelint: 15.6.2
     dev: true
 
-  /stylelint-config-standard/33.0.0_stylelint@15.6.1:
+  /stylelint-config-standard/33.0.0_stylelint@15.6.2:
     resolution: {integrity: sha512-eyxnLWoXImUn77+ODIuW9qXBDNM+ALN68L3wT1lN2oNspZ7D9NVGlNHb2QCUn4xDug6VZLsh0tF8NyoYzkgTzg==}
     peerDependencies:
       stylelint: ^15.5.0
     dependencies:
-      stylelint: 15.6.1
-      stylelint-config-recommended: 12.0.0_stylelint@15.6.1
+      stylelint: 15.6.2
+      stylelint-config-recommended: 12.0.0_stylelint@15.6.2
     dev: true
 
-  /stylelint-order/6.0.3_stylelint@15.6.1:
+  /stylelint-order/6.0.3_stylelint@15.6.2:
     resolution: {integrity: sha512-1j1lOb4EU/6w49qZeT2SQVJXm0Ht+Qnq9GMfUa3pMwoyojIWfuA+JUDmoR97Bht1RLn4ei0xtLGy87M7d29B1w==}
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0
     dependencies:
       postcss: 8.4.23
       postcss-sorting: 8.0.2_postcss@8.4.23
-      stylelint: 15.6.1
+      stylelint: 15.6.2
     dev: true
 
-  /stylelint-prettier/3.0.0_ydhac4dv5nk3447o7ol4jd6c7a:
+  /stylelint-prettier/3.0.0_oc4dndsiefxv6sspxihof2zrhe:
     resolution: {integrity: sha512-kIks1xw6np0zElokMT2kP6ar3S4MBoj6vUtPJuND1pFELMpZxVS/0uHPR4HDAVn0WAD3I5oF0IA3qBFxBpMkLg==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -10257,20 +10257,20 @@ packages:
     dependencies:
       prettier: 2.8.8
       prettier-linter-helpers: 1.0.0
-      stylelint: 15.6.1
+      stylelint: 15.6.2
     dev: true
 
-  /stylelint-use-logical/2.1.0_stylelint@15.6.1:
+  /stylelint-use-logical/2.1.0_stylelint@15.6.2:
     resolution: {integrity: sha512-DN1boOPI6IMYTlu2KeQpH5hDEiCODHhd+AtXU0InO37wkWAuELiPwuv59HrTg2m9PYmqGTTO/QWdMBafYVPfew==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       stylelint: '>= 11 < 16'
     dependencies:
-      stylelint: 15.6.1
+      stylelint: 15.6.2
     dev: true
 
-  /stylelint/15.6.1:
-    resolution: {integrity: sha512-d8icFBlVl93Elf3Z5ABQNOCe4nx69is3D/NZhDLAie1eyYnpxfeKe7pCfqzT5W4F8vxHCLSDfV8nKNJzogvV2Q==}
+  /stylelint/15.6.2:
+    resolution: {integrity: sha512-fjQWwcdUye4DU+0oIxNGwawIPC5DvG5kdObY5Sg4rc87untze3gC/5g/ikePqVjrAsBUZjwMN+pZsAYbDO6ArQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
