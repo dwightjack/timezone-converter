@@ -18,7 +18,7 @@ specifiers:
   stylelint-prettier: 3.0.0
   stylelint-use-logical: ^2.1.0
   vite: 4.3.9
-  vite-plugin-pwa: 0.16.0
+  vite-plugin-pwa: 0.16.1
   workbox-window: ^6.5.4
 
 dependencies:
@@ -41,7 +41,7 @@ devDependencies:
   stylelint-prettier: 3.0.0_oc4dndsiefxv6sspxihof2zrhe
   stylelint-use-logical: 2.1.0_stylelint@15.6.2
   vite: 4.3.9_@types+node@18.15.11
-  vite-plugin-pwa: 0.16.0_hjemcocyspwkenofjo4wnksrci
+  vite-plugin-pwa: 0.16.1_hjemcocyspwkenofjo4wnksrci
   workbox-window: 6.5.4
 
 packages:
@@ -10966,8 +10966,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite-plugin-pwa/0.16.0_hjemcocyspwkenofjo4wnksrci:
-    resolution: {integrity: sha512-E+AQRzHxqNU4ZhEeR8X37/foZB+ezJEhXauE/mcf1UITY6k2Pa1dtlFl+BQu57fTdiVlWim5S0Qy44Yap93Dkg==}
+  /vite-plugin-pwa/0.16.1_hjemcocyspwkenofjo4wnksrci:
+    resolution: {integrity: sha512-OdD+ck+jiCkeUQPwXCNttR62ZC2On4wasn+03Qyx0x1bLGv1IXgl59WexpWMbgKD7jZVjozWGcy3etRJJzwsvA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0
