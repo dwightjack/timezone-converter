@@ -33,7 +33,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.2.1",
     "mockdate": "^3.0.5",
-    "netlify-cli": "15.9.1",
+    "netlify-cli": "15.10.0",
     "prettier": "2.8.8",
     "stylelint": "15.10.2",
     "stylelint-config-property-sort-order-smacss": "9.1.0",
