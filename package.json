@@ -29,7 +29,7 @@
     "@playwright/test": "^1.32.3",
     "@types/node": "^18.15.11",
     "eslint": "8.46.0",
-    "eslint-config-prettier": "8.9.0",
+    "eslint-config-prettier": "8.10.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.2.1",
     "mockdate": "^3.0.5",
