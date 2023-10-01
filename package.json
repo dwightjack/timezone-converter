@@ -9,7 +9,7 @@
     "@vvo/tzdb": "6.108.0",
     "sanitize.css": "13.0.0"
   },
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "pnpm@8.8.0",
   "engines": {
     "node": "^18.16.0",
     "pnpm": "^8.0.0"
@@ -28,12 +28,12 @@
   "devDependencies": {
     "@playwright/test": "^1.36.2",
     "@types/node": "^18.15.11",
-    "eslint": "8.49.0",
+    "eslint": "8.50.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "5.0.0",
     "mockdate": "^3.0.5",
-    "netlify-cli": "16.4.0",
+    "netlify-cli": "16.4.2",
     "prettier": "3.0.3",
     "stylelint": "15.10.3",
     "stylelint-config-property-sort-order-smacss": "9.1.0",
