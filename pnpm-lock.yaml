@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^3.0.5
     version: 3.0.5
   netlify-cli:
-    specifier: 16.4.2
-    version: 16.4.2(@types/node@18.15.11)
+    specifier: 16.5.0
+    version: 16.5.0(@types/node@18.15.11)
   prettier:
     specifier: 3.0.3
     version: 3.0.3
@@ -2139,8 +2139,8 @@ packages:
       yargs: 17.7.2
     dev: true
 
-  /@netlify/edge-bundler@8.19.1:
-    resolution: {integrity: sha512-Erj0+dfRFMQjV3R+FX9NtCV35t6qU91rWKtsuawLzS6tAHLvrR8sOmyFxt5Neg4VPjAstYg1ik16lDak2LhQww==}
+  /@netlify/edge-bundler@8.20.0:
+    resolution: {integrity: sha512-eIDXLqAzz2XpGzPUKe6DKAjldFFTlyaZCQ6v8zrBJ60jKQde5/2tWM2yfHVW9seTehP/0ssLYZW2xmrIM+WqWQ==}
     engines: {node: ^14.16.0 || >=16.0.0}
     dependencies:
       '@import-maps/resolve': 1.0.1
@@ -2149,6 +2149,7 @@ packages:
       better-ajv-errors: 1.2.0(ajv@8.12.0)
       common-path-prefix: 3.0.0
       env-paths: 3.0.0
+      esbuild: 0.19.2
       execa: 6.1.0
       find-up: 6.3.0
       get-port: 6.1.2
@@ -2166,8 +2167,8 @@ packages:
       uuid: 9.0.0
     dev: true
 
-  /@netlify/edge-bundler@8.20.0:
-    resolution: {integrity: sha512-eIDXLqAzz2XpGzPUKe6DKAjldFFTlyaZCQ6v8zrBJ60jKQde5/2tWM2yfHVW9seTehP/0ssLYZW2xmrIM+WqWQ==}
+  /@netlify/edge-bundler@9.1.0:
+    resolution: {integrity: sha512-st05JP+QkNbsvlKelM2KL0nceGD3so86fA9oml47AmemSVvqYlGY0iHRdLGgufqpHfrA4QbQY22IGOP9tZxrXg==}
     engines: {node: ^14.16.0 || >=16.0.0}
     dependencies:
       '@import-maps/resolve': 1.0.1
@@ -8053,8 +8054,8 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli@16.4.2(@types/node@18.15.11):
-    resolution: {integrity: sha512-17ygfQJ7HhE+E9zn6aVUYctj+j8Js/ozNqlLbNF4/AGviCmS7phX5FdECKMbFSwC8jdHB12L9mNVfiqYGLPquw==}
+  /netlify-cli@16.5.0(@types/node@18.15.11):
+    resolution: {integrity: sha512-Od0TJi4Gba7lLrzdt7BlGm8lxplE9Gw3OoHO7ggsChBhGMkbfNd1mN10+5WwSqk5UWhlpdm8Ia+FPenz1IQPCg==}
     engines: {node: '>=16.16.0'}
     hasBin: true
     requiresBuild: true
@@ -8064,7 +8065,7 @@ packages:
       '@netlify/build': 29.21.1(@types/node@18.15.11)(debug@4.3.4)
       '@netlify/build-info': 7.8.0
       '@netlify/config': 20.9.0
-      '@netlify/edge-bundler': 8.19.1
+      '@netlify/edge-bundler': 9.1.0
       '@netlify/local-functions-proxy': 1.1.1
       '@netlify/serverless-functions-api': 1.7.3
       '@netlify/zip-it-and-ship-it': 9.18.1(supports-color@9.3.1)
