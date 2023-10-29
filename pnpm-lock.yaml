@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@vvo/tzdb':
-    specifier: 6.109.0
-    version: 6.109.0
+    specifier: 6.110.0
+    version: 6.110.0
   sanitize.css:
     specifier: 13.0.0
     version: 13.0.0
@@ -3462,8 +3462,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vvo/tzdb@6.109.0:
-    resolution: {integrity: sha512-HFE2m2YIiW0POGepiHAPYlqzv9YZxc96faxVH0UOen4Djvl+l3fSVeeTgQRCOCy+aKLtqALthVrVgt8BOlWkmg==}
+  /@vvo/tzdb@6.110.0:
+    resolution: {integrity: sha512-LwodOX84sx9jRbhOA4wWE1+cwCfVJVazsp6ZUQcG+sHWeU0HUvHdQBOn6RBeXQdU7lAcZfLe1kWnlo8lccQjnA==}
     dev: false
 
   /@xhmikosr/archive-type@6.0.1:
