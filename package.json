@@ -6,10 +6,10 @@
   "homepage": "https://github.com/dwightjack/timezone-converter",
   "license": "MIT",
   "dependencies": {
-    "@vvo/tzdb": "6.111.0",
+    "@vvo/tzdb": "6.112.0",
     "sanitize.css": "13.0.0"
   },
-  "packageManager": "pnpm@8.10.4",
+  "packageManager": "pnpm@8.10.5",
   "engines": {
     "node": "^18.16.0",
     "pnpm": "^8.0.0"
