@@ -56,11 +56,11 @@ devDependencies:
     specifier: ^2.1.0
     version: 2.1.0(stylelint@15.11.0)
   vite:
-    specifier: 4.5.0
-    version: 4.5.0(@types/node@18.15.11)
+    specifier: 4.5.1
+    version: 4.5.1(@types/node@18.15.11)
   vite-plugin-pwa:
     specifier: 0.17.2
-    version: 0.17.2(vite@4.5.0)(workbox-build@7.0.0)(workbox-window@7.0.0)
+    version: 0.17.2(vite@4.5.1)(workbox-build@7.0.0)(workbox-window@7.0.0)
   workbox-window:
     specifier: ^7.0.0
     version: 7.0.0
@@ -10982,7 +10982,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite-plugin-pwa@0.17.2(vite@4.5.0)(workbox-build@7.0.0)(workbox-window@7.0.0):
+  /vite-plugin-pwa@0.17.2(vite@4.5.1)(workbox-build@7.0.0)(workbox-window@7.0.0):
     resolution: {integrity: sha512-aVH9sxcTDumiWYiNcLrFqu+FdL79I2cT5EhlVe5V6nGcC64yQNGT1jamMytwi+OdfXl4VYic0LtoJ6JHMkM3ZQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -10993,15 +10993,15 @@ packages:
       debug: 4.3.4(supports-color@9.3.1)
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 4.5.0(@types/node@18.15.11)
+      vite: 4.5.1(@types/node@18.15.11)
       workbox-build: 7.0.0
       workbox-window: 7.0.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@4.5.0(@types/node@18.15.11):
-    resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
+  /vite@4.5.1(@types/node@18.15.11):
+    resolution: {integrity: sha512-AXXFaAJ8yebyqzoNB9fu2pHoo/nWX+xZlaRwoeYUxEqBO+Zj4msE5G+BhGBll9lYEKv9Hfks52PAF2X7qDYXQA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
