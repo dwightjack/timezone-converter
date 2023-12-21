@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@vvo/tzdb':
-    specifier: 6.120.0
-    version: 6.120.0
+    specifier: 6.121.0
+    version: 6.121.0
   sanitize.css:
     specifier: 13.0.0
     version: 13.0.0
@@ -29,8 +29,8 @@ devDependencies:
     specifier: 11.1.0
     version: 11.1.0(eslint@8.56.0)
   eslint-plugin-prettier:
-    specifier: 5.1.0
-    version: 5.1.0(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1)
+    specifier: 5.1.1
+    version: 5.1.1(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1)
   mockdate:
     specifier: ^3.0.5
     version: 3.0.5
@@ -3462,8 +3462,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vvo/tzdb@6.120.0:
-    resolution: {integrity: sha512-lZQlk2HQha36nxIdVYgjaYgZ7JprGau9grB25wd1745V51uBf/p9o8jIWI6llOkRCnoVAAFycxs+6SToFQWNZA==}
+  /@vvo/tzdb@6.121.0:
+    resolution: {integrity: sha512-ODnjZm9ZIKV+MkfsGA232jWPVDyI4zVr6SXcwacPlm9Ky2qI9V9rbTog/UpVt5hu76PEpeL/HNIepHbS7rHsMg==}
     dev: false
 
   /@xhmikosr/archive-type@6.0.1:
@@ -5414,8 +5414,8 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-prettier@5.1.0(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1):
-    resolution: {integrity: sha512-hQc+2zbnMeXcIkg+pKZtVa+3Yqx4WY7SMkn1PLZ4VbBEU7jJIpVn9347P8BBhTbz6ne85aXvQf30kvexcqBeWw==}
+  /eslint-plugin-prettier@5.1.1(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1):
+    resolution: {integrity: sha512-WQpV3mSmIobb77s4qiCZu3dBrZZ0rj8ckSfBtRrgNK9Wnh2s3eiaxNTWloz1LJ1WtvqZES/PAI7PLvsrGt/CEA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
