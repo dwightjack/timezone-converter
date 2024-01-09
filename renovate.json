@@ -1,4 +1,3 @@
 {
-  "extends": ["config:base", "group:allNonMajor", ":automergeMinor"],
-  "commitBody": "[skip netlify]"
+  "extends": ["github>dwightjack/renovate-config"]
 }
