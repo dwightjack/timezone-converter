@@ -6,10 +6,10 @@ jobs:
   lint_and_build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
       - uses: pnpm/action-setup@v2
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version-file: '.node-version'
           cache: 'pnpm'
@@ -20,10 +20,10 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
     - uses: pnpm/action-setup@v2
     - name: Use Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
       with:
         node-version-file: '.node-version'
         cache: 'pnpm'
@@ -32,7 +32,7 @@ jobs:
       run: pnpm exec playwright install chromium --with-deps
     - name: Run Playwright tests
       run: pnpm exec playwright test
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32 # v3
       if: always()
       with:
         name: playwright-report
