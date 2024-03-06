@@ -35,7 +35,7 @@
     "mockdate": "^3.0.5",
     "netlify-cli": "16.9.3",
     "prettier": "3.2.5",
-    "stylelint": "15.11.0",
+    "stylelint": "16.2.1",
     "stylelint-config-property-sort-order-smacss": "10.0.0",
     "stylelint-config-standard": "34.0.0",
     "stylelint-prettier": "4.1.0",
