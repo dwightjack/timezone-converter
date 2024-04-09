@@ -95,6 +95,9 @@ YUI.add(
       {
         model: Models.TimeCard,
         initializer() {
+          /**
+           * Start from the current datetime
+           */
           this.after('add', ({ model }) => {
             if (!this.get('referenceDatetime')) {
               this.set('referenceDatetime', Y.TZC.Day().utc());
@@ -102,12 +105,18 @@ YUI.add(
             model.setDatetime(this.get('referenceDatetime'));
           });
 
+          /**
+           * Reset the datetime when the list is empty.
+           * Once a new initial timezone is selected,
+           * we want to start from the current datetime (see above)
+           */
           this.after('remove', () => {
             if (this.size() === 0) {
               this.set('referenceDatetime', null, { silent: true });
             }
           });
 
+          /** Sync the datetime on every model in the list */
           this.after('referenceDatetimeChange', ({ newVal }) => {
             this.invoke('setDatetime', newVal);
           });

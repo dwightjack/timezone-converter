@@ -11,9 +11,19 @@
   "rules": {
     "no-console": 0,
     "node/no-unpublished-require": 0,
+    "node/no-unpublished-import": 0,
     "no-shadow": "warn",
     "block-scoped-var": "error",
     "consistent-return": "error",
     "eqeqeq": "error"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.mjs"],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest"
+      }
+    }
+  ]
 }

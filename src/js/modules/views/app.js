@@ -10,7 +10,7 @@ YUI.add(
         }));
         const cardList = (this.cardList = new Y.TZC.Models.TimeCardList());
 
-        this.cardListView = new Views.TimeCardListView({
+        this.cardListView = new Views.TimeCardList({
           cardList,
           container: Y.one('#timecard-list'),
         });

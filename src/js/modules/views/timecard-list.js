@@ -3,7 +3,7 @@ YUI.add(
   (Y) => {
     const Views = Y.namespace('TZC.Views');
 
-    Views.TimeCardListView = Y.Base.create('timeCardListView', Y.View, [], {
+    Views.TimeCardList = Y.Base.create('timeCardListView', Y.View, [], {
       initializer() {
         const cardList = this.get('cardList');
 

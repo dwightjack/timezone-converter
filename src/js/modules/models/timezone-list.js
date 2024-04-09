@@ -26,6 +26,7 @@ YUI.add(
     Models.TimeZoneList = Y.Base.create('timeZoneList', Y.ModelList, [], {
       model: Models.TimeZone,
       initializer() {
+        /** emit whenever a timezone 'selected' attribute changes  */
         this.after('timeZone:selectedChange', ({ target }) =>
           this.fire('select', target.toJSON()),
         );
@@ -34,6 +35,7 @@ YUI.add(
         return this.filter((model) => !model.get('selected'));
       },
       toggleSelected(label, toggle) {
+        // list of all timezone labels
         const labels = this.get('label');
         if (!labels.includes(label)) {
           alert(`Timezone ${label} is invalid`);

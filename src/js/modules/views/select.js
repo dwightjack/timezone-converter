@@ -4,12 +4,6 @@ YUI.add(
     const Views = Y.namespace('TZC.Views');
 
     Views.Select = Y.Base.create('selectView', Y.View, [], {
-      selectZone(e) {
-        e.preventDefault();
-        const timezone = Y.one('#tz-name').get('value');
-        this.get('zoneList').toggleSelected(timezone, true);
-        Y.one('#tz-name').set('value', '');
-      },
       initializer() {
         if (!this.get('zoneList')) {
           throw new Error('Timezones model list not defined!');
@@ -17,6 +11,13 @@ YUI.add(
         this.get('container').on('submit', this.selectZone, this);
         this.get('zoneList').after('reset', this.renderSelect, this);
         this.get('zoneList').after('select', this.toggleSelectOption, this);
+      },
+
+      selectZone(e) {
+        e.preventDefault();
+        const timezone = Y.one('#tz-name').get('value');
+        this.get('zoneList').toggleSelected(timezone, true);
+        Y.one('#tz-name').set('value', '');
       },
 
       toggleSelectOption({ id, selected }) {
@@ -31,18 +32,17 @@ YUI.add(
       },
 
       renderSelect({ models }) {
-        const $datalist = Y.one('#timezone-data');
-
-        models.forEach((zone) => {
-          const $option = Y.Node.create(
+        const $nodes = Y.Array.map(models, (zone) => {
+          return Y.Node.create(
             `<option value="${zone.get('label')}" data-id="${zone.get(
               'id',
             )}" />`,
-          );
-
-          $option.set('disabled', zone.get('selected'));
-          $datalist.append($option);
+          ).set('disabled', zone.get('selected'));
         });
+
+        const $list = new Y.NodeList($nodes);
+
+        Y.one('#timezone-data').append($list.toFrag());
       },
     });
   },

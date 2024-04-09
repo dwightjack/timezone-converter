@@ -14,7 +14,7 @@ YUI.add(
     };
 
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
-      containerTemplate: '<div class="c-tile a-fade-grow" />',
+      containerTemplate: '<div class="c-tile a-fade-grow"></div>',
       template: Y.Template.Micro.compile(Y.one('#timezone-tmpl').getHTML()),
 
       events: {
