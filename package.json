@@ -9,7 +9,7 @@
     "@vvo/tzdb": "6.125.0",
     "sanitize.css": "13.0.0"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@8.15.7",
   "engines": {
     "node": "^20.0.0",
     "pnpm": "^8.0.0"
