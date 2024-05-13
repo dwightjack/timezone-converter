@@ -12,7 +12,7 @@ YUI.add(
       },
 
       add({ model }) {
-        this.get('container').append(this.renderCard(model));
+        this.renderCard(model).appendTo(this.get('container'));
       },
 
       renderCard(card) {
@@ -20,14 +20,14 @@ YUI.add(
           model: card,
           list: this.get('cardList'),
         });
-        return cardView.render().get('container');
+        return cardView.render();
       },
 
       render() {
         const fragment = Y.one(Y.config.doc.createDocumentFragment());
 
         this.get('cardList').each((card) => {
-          fragment.append(this.renderCard(card));
+          this.renderCard(card).appendTo(fragment);
         });
         this.get('container').empty().append(fragment);
       },

@@ -14,7 +14,7 @@ YUI.add(
     };
 
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
-      containerTemplate: '<div class="c-tile a-fade-grow"></div>',
+      containerTemplate: '<div class="c-tile"></div>',
       template: Y.Template.Micro.compile(Y.one('#timezone-tmpl').getHTML()),
 
       events: {
@@ -33,7 +33,12 @@ YUI.add(
         this.onceAfter('rendered', this.enter, this);
 
         model.after('destroy', () => {
-          this.leave().then(() => {
+          const $container = this.get('container');
+
+          $container.setStyle('view-transition-name', 'tile-anim');
+
+          document.startViewTransition(() => {
+            $container.removeAttribute('style');
             this.destroy({ remove: true });
           });
         });
@@ -42,27 +47,38 @@ YUI.add(
       render() {
         const data = this.get('model').toJSON();
         const $container = this.get('container');
-        $container.setHTML(this.template(data));
+
         this.setDayPart();
-        this.fire('rendered');
+
+        $container.setStyle('view-transition', `tile-${data.id}`);
+        $container.setHTML(this.template(data));
+
+        // this.fire('rendered');
         return this;
       },
 
-      enter() {
+      appendTo($parent) {
         const $container = this.get('container');
-        return Y.TZC.Utils.transition(() => {
-          $container && $container.addClass('a-fade-grow--in');
-        }, 200).then(() => {
-          $container && $container.removeClass('a-fade-grow a-fade-grow--in');
+        $container.setStyle('view-transition-name', 'tile-anim');
+        const transition = document.startViewTransition(() => {
+          $parent.append($container);
+        });
+
+        transition.finished.then(() => {
+          $container.setStyle(
+            'view-transition-name',
+            `tile-${this.get('model').get('id')}`,
+          );
         });
       },
 
-      leave() {
-        const $container = this.get('container');
-        $container.addClass('a-fade-grow a-fade-grow--in');
-        return Y.TZC.Utils.transition(() => {
-          $container && $container.removeClass('a-fade-grow--in');
-        }, 250);
+      enter() {
+        // const $container = this.get('container');
+        // return Y.TZC.Utils.transition(() => {
+        //   $container && $container.addClass('a-fade-grow--in');
+        // }, 200).then(() => {
+        //   $container && $container.removeClass('a-fade-grow a-fade-grow--in');
+        // });
       },
 
       updateDateTime() {
