@@ -26,7 +26,7 @@ importers:
         version: 8.56.10
       '@types/node':
         specifier: ^20.0.0
-        version: 20.12.11
+        version: 20.12.12
       eslint:
         specifier: 9.2.0
         version: 9.2.0
@@ -35,19 +35,19 @@ importers:
         version: 9.1.0(eslint@9.2.0)
       eslint-plugin-prettier:
         specifier: 5.1.3
-        version: 5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0)(eslint@9.2.0)(prettier@3.2.5)
+        version: 5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@9.2.0))(eslint@9.2.0)(prettier@3.2.5)
       globals:
         specifier: ^15.2.0
         version: 15.2.0
       lefthook:
         specifier: ^1.6.8
-        version: 1.6.10
+        version: 1.6.12
       mockdate:
         specifier: ^3.0.5
         version: 3.0.5
       netlify-cli:
         specifier: 17.23.5
-        version: 17.23.5(@types/node@20.12.11)
+        version: 17.23.5(@types/node@20.12.12)(picomatch@2.3.1)
       prettier:
         specifier: 3.2.5
         version: 3.2.5
@@ -56,22 +56,22 @@ importers:
         version: 16.5.0(typescript@5.0.4)
       stylelint-config-property-sort-order-smacss:
         specifier: 10.0.0
-        version: 10.0.0(stylelint@16.5.0)
+        version: 10.0.0(stylelint@16.5.0(typescript@5.0.4))
       stylelint-config-standard:
         specifier: 36.0.0
-        version: 36.0.0(stylelint@16.5.0)
+        version: 36.0.0(stylelint@16.5.0(typescript@5.0.4))
       stylelint-prettier:
         specifier: 5.0.0
-        version: 5.0.0(prettier@3.2.5)(stylelint@16.5.0)
+        version: 5.0.0(prettier@3.2.5)(stylelint@16.5.0(typescript@5.0.4))
       stylelint-use-logical:
         specifier: ^2.1.0
-        version: 2.1.2(stylelint@16.5.0)
+        version: 2.1.2(stylelint@16.5.0(typescript@5.0.4))
       vite:
         specifier: 5.2.11
-        version: 5.2.11(@types/node@20.12.11)
+        version: 5.2.11(@types/node@20.12.12)(terser@5.31.0)
       vite-plugin-pwa:
         specifier: 0.20.0
-        version: 0.20.0(vite@5.2.11)(workbox-build@7.1.0)(workbox-window@7.1.0)
+        version: 0.20.0(vite@5.2.11(@types/node@20.12.12)(terser@5.31.0))(workbox-build@7.1.0)(workbox-window@7.1.0)
       workbox-window:
         specifier: ^7.0.0
         version: 7.1.0
@@ -1844,8 +1844,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@20.12.11':
-    resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
+  '@types/node@20.12.12':
+    resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2364,8 +2364,8 @@ packages:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
 
-  caniuse-lite@1.0.30001618:
-    resolution: {integrity: sha512-p407+D1tIkDvsEAPS22lJxLQQaG8OTBEqo0KhzfABGk0TU4juBNDSfH0hyAp/HRyx+M8L17z/ltyhxh27FTfQg==}
+  caniuse-lite@1.0.30001620:
+    resolution: {integrity: sha512-WJvYsOjd1/BYUY6SNGUosK9DUidBPDTnOARHp3fSmFO1ekdxaY6nKRttEVrfMmYi80ctS0kz1wiWmm14fVc3ew==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -2903,8 +2903,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.4.768:
-    resolution: {integrity: sha512-z2U3QcvNuxdkk33YV7R1bVMNq7fL23vq3WfO5BHcqrm4TnDGReouBfYKLEFh5umoK1XACjEwp8mmnhXk2EJigw==}
+  electron-to-chromium@1.4.774:
+    resolution: {integrity: sha512-132O1XCd7zcTkzS3FgkAzKmnBuNJjK8WjcTtNuoylj7MYbqw5eXehjQ5OK91g0zm7OTKIPeaAG4CPoRfD9M1Mg==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -4209,48 +4209,48 @@ packages:
     resolution: {integrity: sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw==}
     engines: {node: '>= 0.6.3'}
 
-  lefthook-darwin-arm64@1.6.10:
-    resolution: {integrity: sha512-Hh11OkoKG7FEOByS1dcgNV7ETq45VmwBbw0VPTiBznyfOG4k+pi0fIdc1qbmbxvYqNE0r420QR/Q3bimaa4Kxg==}
+  lefthook-darwin-arm64@1.6.12:
+    resolution: {integrity: sha512-IJa50i+78nGxtSvnxLSDfSjBjjM7Ixl03V4+yl3Kdn+S+FwzEZet3LYTLbnKFUVy9Bg23obI3yXgwUx+tJjFXg==}
     cpu: [arm64]
     os: [darwin]
 
-  lefthook-darwin-x64@1.6.10:
-    resolution: {integrity: sha512-FiOB0t5OBcQ8OnG/LSdfUYj736SJdlLjWuOZ4wTlJ7EUrHditieap6VNAxwMmFVyQN0X2ZwKWytwY35y+Hflhw==}
+  lefthook-darwin-x64@1.6.12:
+    resolution: {integrity: sha512-h11ByUtwM78FShgWgSUyyZtwKW6pjYfYvTygw24c/lZXKjupfowK5Ps5A73hCsjr0AEJNVpgW1S5Jd22gIJJCA==}
     cpu: [x64]
     os: [darwin]
 
-  lefthook-freebsd-arm64@1.6.10:
-    resolution: {integrity: sha512-IxGgS3RrNwk3Kr83o5SQhGxqppQi7fu2t//nsp6ocgnJeStrTtXZJOrel2VohzrFxpzQdJVXBGgUGLXtY8t8qw==}
+  lefthook-freebsd-arm64@1.6.12:
+    resolution: {integrity: sha512-Aw1+AosL8r/LFSVKG7i8GI1FpHnWFG66/6DBDUgCwNAwhNCXt7tERAM8dj9S6EqmqHCQCC0nI/6qKNBsFPk7Ow==}
     cpu: [arm64]
     os: [freebsd]
 
-  lefthook-freebsd-x64@1.6.10:
-    resolution: {integrity: sha512-sFSe+dGLa4iBblWAhAGTP9moarcbFtFAH6aaCeyqSX51O6p9VPdGjqNtcE8aGbGAk4lO6v1ScRjk5ogMSinJwQ==}
+  lefthook-freebsd-x64@1.6.12:
+    resolution: {integrity: sha512-G8Dg7UuRstXrqaEA8MSOZikz6PpjPUQu3QmiihzcyGdzI76jFsmjJb2vkrnvMsH9u2gWb3J4sp3TULhbMHXwSw==}
     cpu: [x64]
     os: [freebsd]
 
-  lefthook-linux-arm64@1.6.10:
-    resolution: {integrity: sha512-fXnKiNdRIW+FRvc1keVrvWX5EqIhVFfPjcy+PbsKdxiWRXgjtidi6LPmQ8eosH0DC9PxZ0mpdCMf40FHEZLbQA==}
+  lefthook-linux-arm64@1.6.12:
+    resolution: {integrity: sha512-fwO0i6x5EPelL66EwaySzGzvVbN2vLFZDUWuTi8nZzEgBsCBuG0mORxZg91cNCGLRPT3sgzWPraTkyzIJa7kHg==}
     cpu: [arm64]
     os: [linux]
 
-  lefthook-linux-x64@1.6.10:
-    resolution: {integrity: sha512-bm6l2GOFnmYreZxmHb47QeOiFAItttOOxvCEX1okIRD7JbUC+lGC9evW5GJv/ltjZBoTDYEtQAUa+BpHTGuY2A==}
+  lefthook-linux-x64@1.6.12:
+    resolution: {integrity: sha512-pRAZKZhSoirjRwDF0TrqxgkeXtUmJqaUi0kGmMJmutToqo9IXQcnpueVmyV9Z1m6lLJn4PpKoFydY6tFXqvyNQ==}
     cpu: [x64]
     os: [linux]
 
-  lefthook-windows-arm64@1.6.10:
-    resolution: {integrity: sha512-pFxT8KbOMzGxj6cz4glHYwQSNC7XCuy9RDqIO0AxPlpATsCpapkF4ngDxBT1iFv2VhdeweMa7RXUDsMAGQA4Qw==}
+  lefthook-windows-arm64@1.6.12:
+    resolution: {integrity: sha512-jMMIoqNKtiqGrwyWeN3JXGXi7H7iAXsGB5v4DkcUbdw9y50qhruxWz84I2PoxwYmZVeMxRR+VpYvS7nOvBmzWA==}
     cpu: [arm64]
     os: [win32]
 
-  lefthook-windows-x64@1.6.10:
-    resolution: {integrity: sha512-fcDnUSTv95AdLvm0NIrn3jBWXuRq8SlbDDjkkB5OHLiSmjz4eOr6wyD7xceDp33zZgZmWFzHebJngxxcIaUuHw==}
+  lefthook-windows-x64@1.6.12:
+    resolution: {integrity: sha512-XqEBVIhp/Fd1Fs+VBlPhrSJlUkyXEJuxQmiYSYow3C18RNpQQrJFVFpz0wE/IDTn2jOXx+p5+hcdlJb+s6bnpA==}
     cpu: [x64]
     os: [win32]
 
-  lefthook@1.6.10:
-    resolution: {integrity: sha512-HeVjsDCrHLe9htQHbLuQJu2YdLK6Tl5bh36fOpmXqckEXTI0BDR0Y5JYc7G5Inj4YXQsc51a9dUDZMeniSnSag==}
+  lefthook@1.6.12:
+    resolution: {integrity: sha512-SoHhB0L1D5twH5KKsGAT1h4qF+RhGfPo/JC5z60H0RDuFWtSwFNOeFpT4Qa7XwM6J9c1fvqZzOH9/4XF7dG9Uw==}
     hasBin: true
 
   leven@3.1.0:
@@ -7253,7 +7253,7 @@ snapshots:
 
   '@csstools/css-tokenizer@2.2.4': {}
 
-  '@csstools/media-query-list-parser@2.1.9(@csstools/css-parser-algorithms@2.6.1)(@csstools/css-tokenizer@2.2.4)':
+  '@csstools/media-query-list-parser@2.1.9(@csstools/css-parser-algorithms@2.6.1(@csstools/css-tokenizer@2.2.4))(@csstools/css-tokenizer@2.2.4)':
     dependencies:
       '@csstools/css-parser-algorithms': 2.6.1(@csstools/css-tokenizer@2.2.4)
       '@csstools/css-tokenizer': 2.2.4
@@ -7573,7 +7573,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 20.12.11
+      '@types/node': 20.12.12
       '@types/yargs': 16.0.5
       chalk: 4.1.2
 
@@ -7637,7 +7637,7 @@ snapshots:
       yaml: 2.3.1
       yargs: 17.7.2
 
-  '@netlify/build@29.41.5(@opentelemetry/api@1.8.0)(@types/node@20.12.11)':
+  '@netlify/build@29.41.5(@opentelemetry/api@1.8.0)(@types/node@20.12.12)(picomatch@2.3.1)':
     dependencies:
       '@bugsnag/js': 7.23.0
       '@netlify/blobs': 7.3.0
@@ -7657,7 +7657,7 @@ snapshots:
       chalk: 5.3.0
       clean-stack: 4.2.0
       execa: 6.1.0
-      fdir: 6.0.1
+      fdir: 6.0.1(picomatch@2.3.1)
       figures: 5.0.0
       filter-obj: 5.1.0
       got: 12.6.1
@@ -7694,7 +7694,7 @@ snapshots:
       strip-ansi: 7.1.0
       supports-color: 9.3.1
       terminal-link: 3.0.0
-      ts-node: 10.9.1(@types/node@20.12.11)(typescript@5.0.4)
+      ts-node: 10.9.1(@types/node@20.12.12)(typescript@5.0.4)
       typescript: 5.0.4
       uuid: 9.0.1
       yargs: 17.7.2
@@ -8191,6 +8191,7 @@ snapshots:
       is-builtin-module: 3.2.1
       is-module: 1.0.0
       resolve: 1.22.8
+    optionalDependencies:
       rollup: 2.79.1
 
   '@rollup/plugin-replace@2.4.2(rollup@2.79.1)':
@@ -8201,10 +8202,11 @@ snapshots:
 
   '@rollup/plugin-terser@0.4.4(rollup@2.79.1)':
     dependencies:
-      rollup: 2.79.1
       serialize-javascript: 6.0.2
       smob: 1.5.0
       terser: 5.31.0
+    optionalDependencies:
+      rollup: 2.79.1
 
   '@rollup/pluginutils@3.1.0(rollup@2.79.1)':
     dependencies:
@@ -8223,6 +8225,7 @@ snapshots:
       '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    optionalDependencies:
       rollup: 2.79.1
 
   '@rollup/rollup-android-arm-eabi@4.17.0':
@@ -8320,7 +8323,7 @@ snapshots:
 
   '@types/http-proxy@1.17.10':
     dependencies:
-      '@types/node': 20.12.11
+      '@types/node': 20.12.12
 
   '@types/istanbul-lib-coverage@2.0.4': {}
 
@@ -8334,7 +8337,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@20.12.11':
+  '@types/node@20.12.12':
     dependencies:
       undici-types: 5.26.5
 
@@ -8358,7 +8361,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.12.11
+      '@types/node': 20.12.12
     optional: true
 
   '@typescript-eslint/types@5.60.1': {}
@@ -8372,6 +8375,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.6.2
       tsutils: 3.21.0(typescript@5.0.4)
+    optionalDependencies:
       typescript: 5.0.4
     transitivePeerDependencies:
       - supports-color
@@ -8518,11 +8522,11 @@ snapshots:
       ajv: 8.13.0
 
   ajv-formats@2.1.1(ajv@8.13.0):
-    dependencies:
+    optionalDependencies:
       ajv: 8.13.0
 
   ajv-formats@3.0.1(ajv@8.13.0):
-    dependencies:
+    optionalDependencies:
       ajv: 8.13.0
 
   ajv@6.12.6:
@@ -8863,8 +8867,8 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001618
-      electron-to-chromium: 1.4.768
+      caniuse-lite: 1.0.30001620
+      electron-to-chromium: 1.4.774
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.0)
 
@@ -8942,7 +8946,7 @@ snapshots:
 
   camelcase@7.0.1: {}
 
-  caniuse-lite@1.0.30001618: {}
+  caniuse-lite@1.0.30001620: {}
 
   chalk@2.4.2:
     dependencies:
@@ -9196,6 +9200,7 @@ snapshots:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
+    optionalDependencies:
       typescript: 5.0.4
 
   cp-file@10.0.0:
@@ -9314,6 +9319,7 @@ snapshots:
   debug@4.3.4(supports-color@9.3.1):
     dependencies:
       ms: 2.1.2
+    optionalDependencies:
       supports-color: 9.3.1
 
   decache@4.6.2:
@@ -9486,7 +9492,7 @@ snapshots:
     dependencies:
       jake: 10.9.1
 
-  electron-to-chromium@1.4.768: {}
+  electron-to-chromium@1.4.774: {}
 
   emoji-regex@8.0.0: {}
 
@@ -9696,14 +9702,15 @@ snapshots:
     dependencies:
       eslint: 9.2.0
 
-  eslint-plugin-prettier@5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0)(eslint@9.2.0)(prettier@3.2.5):
+  eslint-plugin-prettier@5.1.3(@types/eslint@8.56.10)(eslint-config-prettier@9.1.0(eslint@9.2.0))(eslint@9.2.0)(prettier@3.2.5):
     dependencies:
-      '@types/eslint': 8.56.10
       eslint: 9.2.0
-      eslint-config-prettier: 9.1.0(eslint@9.2.0)
       prettier: 3.2.5
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.6
+    optionalDependencies:
+      '@types/eslint': 8.56.10
+      eslint-config-prettier: 9.1.0(eslint@9.2.0)
 
   eslint-scope@8.0.1:
     dependencies:
@@ -10017,7 +10024,9 @@ snapshots:
     dependencies:
       pend: 1.2.0
 
-  fdir@6.0.1: {}
+  fdir@6.0.1(picomatch@2.3.1):
+    optionalDependencies:
+      picomatch: 2.3.1
 
   fecha@4.2.3: {}
 
@@ -10140,7 +10149,7 @@ snapshots:
       from2: 2.3.0
 
   follow-redirects@1.15.2(debug@4.3.4):
-    dependencies:
+    optionalDependencies:
       debug: 4.3.4(supports-color@9.3.1)
 
   for-each@0.3.3:
@@ -10993,40 +11002,40 @@ snapshots:
     dependencies:
       readable-stream: 2.3.8
 
-  lefthook-darwin-arm64@1.6.10:
+  lefthook-darwin-arm64@1.6.12:
     optional: true
 
-  lefthook-darwin-x64@1.6.10:
+  lefthook-darwin-x64@1.6.12:
     optional: true
 
-  lefthook-freebsd-arm64@1.6.10:
+  lefthook-freebsd-arm64@1.6.12:
     optional: true
 
-  lefthook-freebsd-x64@1.6.10:
+  lefthook-freebsd-x64@1.6.12:
     optional: true
 
-  lefthook-linux-arm64@1.6.10:
+  lefthook-linux-arm64@1.6.12:
     optional: true
 
-  lefthook-linux-x64@1.6.10:
+  lefthook-linux-x64@1.6.12:
     optional: true
 
-  lefthook-windows-arm64@1.6.10:
+  lefthook-windows-arm64@1.6.12:
     optional: true
 
-  lefthook-windows-x64@1.6.10:
+  lefthook-windows-x64@1.6.12:
     optional: true
 
-  lefthook@1.6.10:
+  lefthook@1.6.12:
     optionalDependencies:
-      lefthook-darwin-arm64: 1.6.10
-      lefthook-darwin-x64: 1.6.10
-      lefthook-freebsd-arm64: 1.6.10
-      lefthook-freebsd-x64: 1.6.10
-      lefthook-linux-arm64: 1.6.10
-      lefthook-linux-x64: 1.6.10
-      lefthook-windows-arm64: 1.6.10
-      lefthook-windows-x64: 1.6.10
+      lefthook-darwin-arm64: 1.6.12
+      lefthook-darwin-x64: 1.6.12
+      lefthook-freebsd-arm64: 1.6.12
+      lefthook-freebsd-x64: 1.6.12
+      lefthook-linux-arm64: 1.6.12
+      lefthook-linux-x64: 1.6.12
+      lefthook-windows-arm64: 1.6.12
+      lefthook-windows-x64: 1.6.12
 
   leven@3.1.0: {}
 
@@ -11384,12 +11393,12 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@17.23.5(@types/node@20.12.11):
+  netlify-cli@17.23.5(@types/node@20.12.12)(picomatch@2.3.1):
     dependencies:
       '@bugsnag/js': 7.23.0
       '@fastify/static': 6.12.0
       '@netlify/blobs': 7.3.0
-      '@netlify/build': 29.41.5(@opentelemetry/api@1.8.0)(@types/node@20.12.11)
+      '@netlify/build': 29.41.5(@opentelemetry/api@1.8.0)(@types/node@20.12.12)(picomatch@2.3.1)
       '@netlify/build-info': 7.13.2
       '@netlify/config': 20.12.5
       '@netlify/edge-bundler': 12.0.1(supports-color@9.3.1)
@@ -12728,34 +12737,34 @@ snapshots:
       '@tokenizer/token': 0.3.0
       peek-readable: 5.0.0
 
-  stylelint-config-property-sort-order-smacss@10.0.0(stylelint@16.5.0):
+  stylelint-config-property-sort-order-smacss@10.0.0(stylelint@16.5.0(typescript@5.0.4)):
     dependencies:
       css-property-sort-order-smacss: 2.2.0
       stylelint: 16.5.0(typescript@5.0.4)
-      stylelint-order: 6.0.4(stylelint@16.5.0)
+      stylelint-order: 6.0.4(stylelint@16.5.0(typescript@5.0.4))
 
-  stylelint-config-recommended@14.0.0(stylelint@16.5.0):
+  stylelint-config-recommended@14.0.0(stylelint@16.5.0(typescript@5.0.4)):
     dependencies:
       stylelint: 16.5.0(typescript@5.0.4)
 
-  stylelint-config-standard@36.0.0(stylelint@16.5.0):
+  stylelint-config-standard@36.0.0(stylelint@16.5.0(typescript@5.0.4)):
     dependencies:
       stylelint: 16.5.0(typescript@5.0.4)
-      stylelint-config-recommended: 14.0.0(stylelint@16.5.0)
+      stylelint-config-recommended: 14.0.0(stylelint@16.5.0(typescript@5.0.4))
 
-  stylelint-order@6.0.4(stylelint@16.5.0):
+  stylelint-order@6.0.4(stylelint@16.5.0(typescript@5.0.4)):
     dependencies:
       postcss: 8.4.38
       postcss-sorting: 8.0.2(postcss@8.4.38)
       stylelint: 16.5.0(typescript@5.0.4)
 
-  stylelint-prettier@5.0.0(prettier@3.2.5)(stylelint@16.5.0):
+  stylelint-prettier@5.0.0(prettier@3.2.5)(stylelint@16.5.0(typescript@5.0.4)):
     dependencies:
       prettier: 3.2.5
       prettier-linter-helpers: 1.0.0
       stylelint: 16.5.0(typescript@5.0.4)
 
-  stylelint-use-logical@2.1.2(stylelint@16.5.0):
+  stylelint-use-logical@2.1.2(stylelint@16.5.0(typescript@5.0.4)):
     dependencies:
       stylelint: 16.5.0(typescript@5.0.4)
 
@@ -12763,7 +12772,7 @@ snapshots:
     dependencies:
       '@csstools/css-parser-algorithms': 2.6.1(@csstools/css-tokenizer@2.2.4)
       '@csstools/css-tokenizer': 2.2.4
-      '@csstools/media-query-list-parser': 2.1.9(@csstools/css-parser-algorithms@2.6.1)(@csstools/css-tokenizer@2.2.4)
+      '@csstools/media-query-list-parser': 2.1.9(@csstools/css-parser-algorithms@2.6.1(@csstools/css-tokenizer@2.2.4))(@csstools/css-tokenizer@2.2.4)
       '@csstools/selector-specificity': 3.0.3(postcss-selector-parser@6.0.16)
       '@dual-bundle/import-meta-resolve': 4.0.0
       balanced-match: 2.0.0
@@ -13022,14 +13031,14 @@ snapshots:
 
   triple-beam@1.3.0: {}
 
-  ts-node@10.9.1(@types/node@20.12.11)(typescript@5.0.4):
+  ts-node@10.9.1(@types/node@20.12.12)(typescript@5.0.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 20.12.11
+      '@types/node': 20.12.12
       acorn: 8.11.3
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -13199,7 +13208,6 @@ snapshots:
 
   unstorage@1.10.2(@netlify/blobs@7.3.0):
     dependencies:
-      '@netlify/blobs': 7.3.0
       anymatch: 3.1.3
       chokidar: 3.6.0
       destr: 2.0.3
@@ -13210,6 +13218,8 @@ snapshots:
       node-fetch-native: 1.6.4
       ofetch: 1.3.4
       ufo: 1.5.3
+    optionalDependencies:
+      '@netlify/blobs': 7.3.0
     transitivePeerDependencies:
       - uWebSockets.js
 
@@ -13279,25 +13289,26 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-pwa@0.20.0(vite@5.2.11)(workbox-build@7.1.0)(workbox-window@7.1.0):
+  vite-plugin-pwa@0.20.0(vite@5.2.11(@types/node@20.12.12)(terser@5.31.0))(workbox-build@7.1.0)(workbox-window@7.1.0):
     dependencies:
       debug: 4.3.4(supports-color@9.3.1)
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.2.11(@types/node@20.12.11)
+      vite: 5.2.11(@types/node@20.12.12)(terser@5.31.0)
       workbox-build: 7.1.0
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.2.11(@types/node@20.12.11):
+  vite@5.2.11(@types/node@20.12.12)(terser@5.31.0):
     dependencies:
-      '@types/node': 20.12.11
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.17.0
     optionalDependencies:
+      '@types/node': 20.12.12
       fsevents: 2.3.3
+      terser: 5.31.0
 
   wait-port@1.1.0:
     dependencies:
