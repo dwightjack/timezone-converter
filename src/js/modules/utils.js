@@ -4,14 +4,10 @@ YUI.add(
     const TZC = Y.namespace('TZC');
 
     TZC.Utils = {
-      transition(fn, wait = 0) {
+      transition($container, fn) {
         return new Y.Promise((resolve) => {
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              fn();
-              setTimeout(resolve, wait);
-            });
-          });
+          $container.once('transitionend', resolve);
+          Y.Lang.isFunction(fn) && fn();
         });
       },
     };

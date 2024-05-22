@@ -1,10 +1,27 @@
 .c-tile {
+  --transition-enter-function: cubic-bezier(0.83, 0.31, 0.38, 0.93);
   display: block;
   padding: var(--s-3) var(--s-4);
-  transition: background-color 200ms ease-out;
+  transition: all 200ms cubic-bezier(0.83, 0.31, 0.38, 0.93);
+  transition-property: scale, opacity, background-color;
+  transition-timing-function: var(--transition-enter-function),
+    var(--transition-enter-function), ease-out;
   border-radius: var(--size-border-radius-m);
+  opacity: 1;
   background-color: var(--color-background-accent);
   color: var(--color-text-accent);
+  scale: 1;
+  will-change: background-color, opacity, scale;
+
+  @starting-style {
+    scale: 0.95;
+    opacity: 0;
+  }
+}
+
+.c-tile--out {
+  scale: 0.95;
+  opacity: 0;
 }
 
 .c-tile[data-theme='morning'] {

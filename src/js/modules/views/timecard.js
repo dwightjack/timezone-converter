@@ -14,7 +14,7 @@ YUI.add(
     };
 
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
-      containerTemplate: '<div class="c-tile a-fade-grow"></div>',
+      containerTemplate: '<div class="c-tile"></div>',
       template: Y.Template.Micro.compile(Y.one('#timezone-tmpl').getHTML()),
 
       events: {
@@ -30,8 +30,6 @@ YUI.add(
           debounce(() => this.setDayPart(), 300),
         );
 
-        this.onceAfter('rendered', this.enter, this);
-
         model.after('destroy', () => {
           this.leave().then(() => {
             this.destroy({ remove: true });
@@ -44,25 +42,15 @@ YUI.add(
         const $container = this.get('container');
         $container.setHTML(this.template(data));
         this.setDayPart();
-        this.fire('rendered');
         return this;
-      },
-
-      enter() {
-        const $container = this.get('container');
-        return Y.TZC.Utils.transition(() => {
-          $container && $container.addClass('a-fade-grow--in');
-        }, 200).then(() => {
-          $container && $container.removeClass('a-fade-grow a-fade-grow--in');
-        });
       },
 
       leave() {
         const $container = this.get('container');
-        $container.addClass('a-fade-grow a-fade-grow--in');
-        return Y.TZC.Utils.transition(() => {
-          $container && $container.removeClass('a-fade-grow--in');
-        }, 250);
+
+        return Y.TZC.Utils.transition($container, () =>
+          $container.addClass('c-tile--out'),
+        );
       },
 
       updateDateTime() {
