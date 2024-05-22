@@ -1,32 +1,33 @@
 :root {
   /* Palette */
-  --color-white: 0 0% 100%;
-  --color-gray-800: 0 0% 22%;
-  --color-gray-500: 0 0% 45%;
-  --color-gray-50: 0 0% 96%;
-  --color-blue-700: 220 49% 35%;
-  --color-blue-600: 205 64% 43%;
-  --color-blue-500: 202 50% 47%;
-  --color-orange-500: 30 71% 49%;
-  --color-yellow-400: 43 74% 66%;
-  --color-yellow-300: 43 90% 72%;
+  --color-white: hsl(0deg 0% 100%);
+  --color-black: hsl(0deg 0% 0%);
+  --color-gray-800: hsl(0deg 0% 22%);
+  --color-gray-500: hsl(0deg 0% 45%);
+  --color-gray-50: hsl(0deg 0% 96%);
+  --color-blue-700: hsl(220deg 49% 35%);
+  --color-blue-600: hsl(205deg 64% 43%);
+  --color-blue-500: hsl(202deg 50% 47%);
+  --color-orange-500: hsl(30deg 71% 49%);
+  --color-yellow-400: hsl(43deg 74% 66%);
+  --color-yellow-300: hsl(43deg 90% 72%);
 
   /* UI colors */
-  --color-background-canvas: hsl(var(--color-gray-50));
-  --color-background-primary: hsl(var(--color-gray-800));
-  --color-background-action: hsl(var(--color-yellow-400));
-  --color-background-action-active: hsl(var(--color-yellow-300));
-  --color-text-canvas: hsl(var(--color-gray-800));
-  --color-text-primary: hsl(var(--color-white));
-  --color-text-action: hsl(var(--color-gray-800));
+  --color-background-canvas: var(--color-gray-50);
+  --color-background-primary: var(--color-gray-800);
+  --color-background-action: var(--color-yellow-400);
+  --color-background-action-active: var(--color-yellow-300);
+  --color-text-canvas: var(--color-gray-800);
+  --color-text-primary: var(--color-white);
+  --color-text-action: var(--color-gray-800);
 
   /* Day intervals */
-  --color-background-accent: hsl(var(--color-gray-800));
-  --color-text-accent: hsl(var(--color-white));
-  --color-background-accent-morning: hsl(var(--color-blue-500));
-  --color-background-accent-daytime: hsl(var(--color-blue-600));
-  --color-background-accent-evening: hsl(var(--color-orange-500));
-  --color-background-accent-night: hsl(var(--color-blue-700));
+  --color-background-accent: var(--color-gray-800);
+  --color-text-accent: var(--color-white);
+  --color-background-accent-morning: var(--color-blue-500);
+  --color-background-accent-daytime: var(--color-blue-600);
+  --color-background-accent-evening: var(--color-orange-500);
+  --color-background-accent-night: var(--color-blue-700);
 
   /* Font sizes */
   --font-size-s: 0.75rem;
@@ -59,9 +60,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background-canvas: hsl(var(--color-gray-800));
-    --color-background-primary: hsl(var(--color-gray-500));
-    --color-background-accent: hsl(var(--color-gray-500));
-    --color-text-canvas: hsl(var(--color-gray-50));
+    --color-background-canvas: var(--color-gray-800);
+    --color-background-primary: var(--color-gray-500);
+    --color-background-accent: var(--color-black);
+    --color-text-canvas: var(--color-gray-50);
   }
 }

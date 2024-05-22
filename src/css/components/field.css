@@ -12,40 +12,16 @@
   row-gap: var(--s-1);
 }
 
-.c-field::after,
-.c-field::before {
-  content: '';
-  display: block;
-  grid-area: input;
-  border-radius: var(--size-border-radius-s);
-  pointer-events: none;
-}
-
-.c-field::before {
-  padding: var(--s-1) var(--s-2);
-  border-radius: var(--size-border-radius-s);
-  opacity: 0.1;
-  background-color: currentcolor;
-}
-
-.c-field::after {
-  transition: opacity 100ms ease-out;
-  opacity: 0;
-}
-
-.c-field:focus-within::after {
-  outline: 2px solid currentcolor;
-  opacity: 0.7;
-}
-
 .c-field__input {
   grid-area: input;
-  order: 1;
   min-inline-size: 0;
   padding: var(--s-1) var(--s-2);
+  transition: outline-color 100ms ease-out;
   border: 0;
+  border-radius: var(--size-border-radius-s);
   outline: 0;
-  background-color: transparent;
+  outline: 2px solid transparent;
+  background-color: color-mix(in hsl, currentcolor 10%, transparent 90%);
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -61,6 +37,10 @@
 .c-field__input::placeholder {
   opacity: 1;
   color: inherit;
+}
+
+.c-field__input:focus-visible {
+  outline-color: color-mix(in hsl, currentcolor 70%, transparent 30%);
 }
 
 .c-field__input--reset {
@@ -80,7 +60,6 @@
 .c-field__action {
   z-index: 1;
   grid-area: action;
-  margin-inline-start: calc(var(--size-border-radius-s) * -1);
 }
 
 .c-field__label {
@@ -101,4 +80,14 @@
   clip: rect(0, 0, 0, 0) !important;
   border: 0 !important;
   white-space: nowrap !important;
+}
+
+.c-field:has(.c-field__action) > :not(:first-child) {
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+}
+
+.c-field:has(.c-field__action) > :not(:last-child) {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
 }
