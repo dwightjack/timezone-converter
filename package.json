@@ -9,7 +9,7 @@
     "@vvo/tzdb": "6.139.0",
     "sanitize.css": "13.0.0"
   },
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.1.2",
   "engines": {
     "node": "^20.0.0",
     "pnpm": "^9.0.0"
@@ -38,7 +38,7 @@
     "globals": "^15.2.0",
     "lefthook": "^1.6.8",
     "mockdate": "^3.0.5",
-    "netlify-cli": "17.23.5",
+    "netlify-cli": "17.23.8",
     "prettier": "3.2.5",
     "stylelint": "16.5.0",
     "stylelint-config-property-sort-order-smacss": "10.0.0",
