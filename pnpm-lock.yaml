@@ -26,7 +26,7 @@ importers:
         version: 8.56.10
       '@types/node':
         specifier: ^20.0.0
-        version: 20.12.12
+        version: 20.12.14
       eslint:
         specifier: 9.3.0
         version: 9.3.0
@@ -41,13 +41,13 @@ importers:
         version: 15.3.0
       lefthook:
         specifier: ^1.6.8
-        version: 1.6.12
+        version: 1.6.14
       mockdate:
         specifier: ^3.0.5
         version: 3.0.5
       netlify-cli:
         specifier: 17.23.8
-        version: 17.23.8(@types/node@20.12.12)(picomatch@2.3.1)
+        version: 17.23.8(@types/node@20.12.14)(picomatch@2.3.1)
       prettier:
         specifier: 3.2.5
         version: 3.2.5
@@ -67,11 +67,11 @@ importers:
         specifier: ^2.1.0
         version: 2.1.2(stylelint@16.5.0(typescript@5.0.4))
       vite:
-        specifier: 5.2.11
-        version: 5.2.11(@types/node@20.12.12)(terser@5.31.0)
+        specifier: 5.2.12
+        version: 5.2.12(@types/node@20.12.14)(terser@5.31.0)
       vite-plugin-pwa:
         specifier: 0.20.0
-        version: 0.20.0(vite@5.2.11(@types/node@20.12.12)(terser@5.31.0))(workbox-build@7.1.0)(workbox-window@7.1.0)
+        version: 0.20.0(vite@5.2.12(@types/node@20.12.14)(terser@5.31.0))(workbox-build@7.1.0)(workbox-window@7.1.0)
       workbox-window:
         specifier: ^7.0.0
         version: 7.1.0
@@ -1873,8 +1873,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@20.12.12':
-    resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==}
+  '@types/node@20.12.14':
+    resolution: {integrity: sha512-scnD59RpYD91xngrQQLGkE+6UrHUPzeKZWhhjBSa3HSkwjbQc38+q3RoIVEwxQGRw3M+j5hpNAM+lgV3cVormg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2358,8 +2358,8 @@ packages:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
 
-  caniuse-lite@1.0.30001621:
-    resolution: {integrity: sha512-+NLXZiviFFKX0fk8Piwv3PfLPGtRqJeq2TiNoUff/qB5KJgwecJTvCXDpmlyP/eCI/GUEmp/h/y5j0yckiiZrA==}
+  caniuse-lite@1.0.30001626:
+    resolution: {integrity: sha512-JRW7kAH8PFJzoPCJhLSHgDgKg5348hsQ68aqb+slnzuB5QFERv846oA/mRChmlLAOdEDeOkRn3ynb1gSFnjt3w==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -2697,6 +2697,15 @@ packages:
       supports-color:
         optional: true
 
+  debug@4.3.5:
+    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
   decache@4.6.2:
     resolution: {integrity: sha512-2LPqkLeu8XWHU8qNCS3kcF6sCcb5zIzvWaAHYSvPfwhdd7mHuah29NssMzrTYyHN4F5oFy2ko9OBYxegtU0FEw==}
 
@@ -2860,8 +2869,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.4.783:
-    resolution: {integrity: sha512-bT0jEz/Xz1fahQpbZ1D7LgmPYZ3iHVY39NcWWro1+hA2IvjiPeaXtfSqrQ+nXjApMvQRE2ASt1itSLRrebHMRQ==}
+  electron-to-chromium@1.4.788:
+    resolution: {integrity: sha512-ubp5+Ev/VV8KuRoWnfP2QF2Bg+O2ZFdb49DiiNbz2VmgkIqrnyYaqIOqj8A6K/3p1xV0QcU5hBQ1+BmB6ot1OA==}
 
   emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
@@ -4073,48 +4082,48 @@ packages:
     resolution: {integrity: sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw==}
     engines: {node: '>= 0.6.3'}
 
-  lefthook-darwin-arm64@1.6.12:
-    resolution: {integrity: sha512-IJa50i+78nGxtSvnxLSDfSjBjjM7Ixl03V4+yl3Kdn+S+FwzEZet3LYTLbnKFUVy9Bg23obI3yXgwUx+tJjFXg==}
+  lefthook-darwin-arm64@1.6.14:
+    resolution: {integrity: sha512-CpeLfErvVo7zv4cFMNFjB36OHXytj9H+DyOG1g62LbApMWIC7HOPMQZ0x0QzNIqeRuvpiMst4XOkspQTJ8QYiw==}
     cpu: [arm64]
     os: [darwin]
 
-  lefthook-darwin-x64@1.6.12:
-    resolution: {integrity: sha512-h11ByUtwM78FShgWgSUyyZtwKW6pjYfYvTygw24c/lZXKjupfowK5Ps5A73hCsjr0AEJNVpgW1S5Jd22gIJJCA==}
+  lefthook-darwin-x64@1.6.14:
+    resolution: {integrity: sha512-IUjs7IYuNuKw2pbZP9dLYk9T19qnYKCIBLN58hXkWWFbViiJa+n4vUG4fgw6oBceK6enkvJpa/ma02yqg5Pxsw==}
     cpu: [x64]
     os: [darwin]
 
-  lefthook-freebsd-arm64@1.6.12:
-    resolution: {integrity: sha512-Aw1+AosL8r/LFSVKG7i8GI1FpHnWFG66/6DBDUgCwNAwhNCXt7tERAM8dj9S6EqmqHCQCC0nI/6qKNBsFPk7Ow==}
+  lefthook-freebsd-arm64@1.6.14:
+    resolution: {integrity: sha512-FWg2HR0X9NQ0vVTU2iO36llKqyFyB60CFm/4GIUVkAWs7rhmOS/FG7C9pcl2jTDrLyMYMQpEvwwMQBWe6qCfcw==}
     cpu: [arm64]
     os: [freebsd]
 
-  lefthook-freebsd-x64@1.6.12:
-    resolution: {integrity: sha512-G8Dg7UuRstXrqaEA8MSOZikz6PpjPUQu3QmiihzcyGdzI76jFsmjJb2vkrnvMsH9u2gWb3J4sp3TULhbMHXwSw==}
+  lefthook-freebsd-x64@1.6.14:
+    resolution: {integrity: sha512-qe/cgGUxMld1XcPhOBtthL/yVfP9KglBqFLXLkkpsg78wVo6nKCADEKWW+3+ofUZSnfpPVbx1435kWtp3NmfdA==}
     cpu: [x64]
     os: [freebsd]
 
-  lefthook-linux-arm64@1.6.12:
-    resolution: {integrity: sha512-fwO0i6x5EPelL66EwaySzGzvVbN2vLFZDUWuTi8nZzEgBsCBuG0mORxZg91cNCGLRPT3sgzWPraTkyzIJa7kHg==}
+  lefthook-linux-arm64@1.6.14:
+    resolution: {integrity: sha512-Iw1Av89sxkvxmi5WrHZkNB1lppzFlsRT7CdQ14ckN9xM6kTLnJLKoxKO/ez3WooSp9Yv3NROGAfUzMLCgok3cQ==}
     cpu: [arm64]
     os: [linux]
 
-  lefthook-linux-x64@1.6.12:
-    resolution: {integrity: sha512-pRAZKZhSoirjRwDF0TrqxgkeXtUmJqaUi0kGmMJmutToqo9IXQcnpueVmyV9Z1m6lLJn4PpKoFydY6tFXqvyNQ==}
+  lefthook-linux-x64@1.6.14:
+    resolution: {integrity: sha512-3taGa/Ge7SZMuG82Abu7YuYSWlbJBIT2ZIVA+YVA1lwI7kZsg9WQPAMvdob125EsS20Z6o0EfYAJPuALxD5Yww==}
     cpu: [x64]
     os: [linux]
 
-  lefthook-windows-arm64@1.6.12:
-    resolution: {integrity: sha512-jMMIoqNKtiqGrwyWeN3JXGXi7H7iAXsGB5v4DkcUbdw9y50qhruxWz84I2PoxwYmZVeMxRR+VpYvS7nOvBmzWA==}
+  lefthook-windows-arm64@1.6.14:
+    resolution: {integrity: sha512-XRwJ9wLcMZiXucsQhbuj0yzvX34fVQrYg4gGOVWeb+quO8yYURRInzoYiXGH0iAdQJOUs0WSR5gdZ6lImFgkHg==}
     cpu: [arm64]
     os: [win32]
 
-  lefthook-windows-x64@1.6.12:
-    resolution: {integrity: sha512-XqEBVIhp/Fd1Fs+VBlPhrSJlUkyXEJuxQmiYSYow3C18RNpQQrJFVFpz0wE/IDTn2jOXx+p5+hcdlJb+s6bnpA==}
+  lefthook-windows-x64@1.6.14:
+    resolution: {integrity: sha512-qhRBdgk6GgvwGKKojSUieeGgnOTbFyLwj6RyMa5vTYoO10h0e8CE8LWpnM2niyKmB1jTL8Nu128IH50Vp1UT9w==}
     cpu: [x64]
     os: [win32]
 
-  lefthook@1.6.12:
-    resolution: {integrity: sha512-SoHhB0L1D5twH5KKsGAT1h4qF+RhGfPo/JC5z60H0RDuFWtSwFNOeFpT4Qa7XwM6J9c1fvqZzOH9/4XF7dG9Uw==}
+  lefthook@1.6.14:
+    resolution: {integrity: sha512-IfnzdoZLRnQPm6OgwgH0JlwRK3Ojyn0dXL+JHqewbhDuGGIXqLrHAFK/29KvQK2knsGF4dzlajBvwjwPVY1aVA==}
     hasBin: true
 
   leven@3.1.0:
@@ -5994,8 +6003,8 @@ packages:
       '@vite-pwa/assets-generator':
         optional: true
 
-  vite@5.2.11:
-    resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
+  vite@5.2.12:
+    resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -6269,7 +6278,7 @@ snapshots:
       '@babel/traverse': 7.24.6
       '@babel/types': 7.24.6
       convert-source-map: 2.0.0
-      debug: 4.3.4(supports-color@9.3.1)
+      debug: 4.3.5
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -6324,7 +6333,7 @@ snapshots:
       '@babel/core': 7.24.6
       '@babel/helper-compilation-targets': 7.24.6
       '@babel/helper-plugin-utils': 7.24.6
-      debug: 4.3.4(supports-color@9.3.1)
+      debug: 4.3.5
       lodash.debounce: 4.0.8
       resolve: 1.22.8
     transitivePeerDependencies:
@@ -6959,7 +6968,7 @@ snapshots:
       '@babel/helper-split-export-declaration': 7.24.6
       '@babel/parser': 7.24.6
       '@babel/types': 7.24.6
-      debug: 4.3.4(supports-color@9.3.1)
+      debug: 4.3.5
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -7338,7 +7347,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 20.12.12
+      '@types/node': 20.12.14
       '@types/yargs': 16.0.5
       chalk: 4.1.2
 
@@ -7402,7 +7411,7 @@ snapshots:
       yaml: 2.3.1
       yargs: 17.7.2
 
-  '@netlify/build@29.42.2(@opentelemetry/api@1.8.0)(@types/node@20.12.12)(picomatch@2.3.1)':
+  '@netlify/build@29.42.2(@opentelemetry/api@1.8.0)(@types/node@20.12.14)(picomatch@2.3.1)':
     dependencies:
       '@bugsnag/js': 7.23.0
       '@netlify/blobs': 7.3.0
@@ -7459,7 +7468,7 @@ snapshots:
       strip-ansi: 7.1.0
       supports-color: 9.3.1
       terminal-link: 3.0.0
-      ts-node: 10.9.1(@types/node@20.12.12)(typescript@5.0.4)
+      ts-node: 10.9.1(@types/node@20.12.14)(typescript@5.0.4)
       typescript: 5.0.4
       uuid: 9.0.1
       yargs: 17.7.2
@@ -8120,7 +8129,7 @@ snapshots:
 
   '@types/http-proxy@1.17.10':
     dependencies:
-      '@types/node': 20.12.12
+      '@types/node': 20.12.14
 
   '@types/istanbul-lib-coverage@2.0.4': {}
 
@@ -8134,7 +8143,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@20.12.12':
+  '@types/node@20.12.14':
     dependencies:
       undici-types: 5.26.5
 
@@ -8156,7 +8165,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.12.12
+      '@types/node': 20.12.14
     optional: true
 
   '@typescript-eslint/types@5.60.1': {}
@@ -8630,8 +8639,8 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001621
-      electron-to-chromium: 1.4.783
+      caniuse-lite: 1.0.30001626
+      electron-to-chromium: 1.4.788
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.0)
 
@@ -8697,7 +8706,7 @@ snapshots:
 
   camelcase@7.0.1: {}
 
-  caniuse-lite@1.0.30001621: {}
+  caniuse-lite@1.0.30001626: {}
 
   chalk@2.4.2:
     dependencies:
@@ -9041,6 +9050,10 @@ snapshots:
     optionalDependencies:
       supports-color: 9.3.1
 
+  debug@4.3.5:
+    dependencies:
+      ms: 2.1.2
+
   decache@4.6.2:
     dependencies:
       callsite: 1.0.0
@@ -9196,7 +9209,7 @@ snapshots:
     dependencies:
       jake: 10.9.1
 
-  electron-to-chromium@1.4.783: {}
+  electron-to-chromium@1.4.788: {}
 
   emoji-regex@10.3.0: {}
 
@@ -10588,40 +10601,40 @@ snapshots:
     dependencies:
       readable-stream: 2.3.8
 
-  lefthook-darwin-arm64@1.6.12:
+  lefthook-darwin-arm64@1.6.14:
     optional: true
 
-  lefthook-darwin-x64@1.6.12:
+  lefthook-darwin-x64@1.6.14:
     optional: true
 
-  lefthook-freebsd-arm64@1.6.12:
+  lefthook-freebsd-arm64@1.6.14:
     optional: true
 
-  lefthook-freebsd-x64@1.6.12:
+  lefthook-freebsd-x64@1.6.14:
     optional: true
 
-  lefthook-linux-arm64@1.6.12:
+  lefthook-linux-arm64@1.6.14:
     optional: true
 
-  lefthook-linux-x64@1.6.12:
+  lefthook-linux-x64@1.6.14:
     optional: true
 
-  lefthook-windows-arm64@1.6.12:
+  lefthook-windows-arm64@1.6.14:
     optional: true
 
-  lefthook-windows-x64@1.6.12:
+  lefthook-windows-x64@1.6.14:
     optional: true
 
-  lefthook@1.6.12:
+  lefthook@1.6.14:
     optionalDependencies:
-      lefthook-darwin-arm64: 1.6.12
-      lefthook-darwin-x64: 1.6.12
-      lefthook-freebsd-arm64: 1.6.12
-      lefthook-freebsd-x64: 1.6.12
-      lefthook-linux-arm64: 1.6.12
-      lefthook-linux-x64: 1.6.12
-      lefthook-windows-arm64: 1.6.12
-      lefthook-windows-x64: 1.6.12
+      lefthook-darwin-arm64: 1.6.14
+      lefthook-darwin-x64: 1.6.14
+      lefthook-freebsd-arm64: 1.6.14
+      lefthook-freebsd-x64: 1.6.14
+      lefthook-linux-arm64: 1.6.14
+      lefthook-linux-x64: 1.6.14
+      lefthook-windows-arm64: 1.6.14
+      lefthook-windows-x64: 1.6.14
 
   leven@3.1.0: {}
 
@@ -10930,12 +10943,12 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@17.23.8(@types/node@20.12.12)(picomatch@2.3.1):
+  netlify-cli@17.23.8(@types/node@20.12.14)(picomatch@2.3.1):
     dependencies:
       '@bugsnag/js': 7.23.0
       '@fastify/static': 7.0.4
       '@netlify/blobs': 7.3.0
-      '@netlify/build': 29.42.2(@opentelemetry/api@1.8.0)(@types/node@20.12.12)(picomatch@2.3.1)
+      '@netlify/build': 29.42.2(@opentelemetry/api@1.8.0)(@types/node@20.12.14)(picomatch@2.3.1)
       '@netlify/build-info': 7.13.2
       '@netlify/config': 20.12.6
       '@netlify/edge-bundler': 12.0.1(supports-color@9.3.1)
@@ -12465,14 +12478,14 @@ snapshots:
 
   triple-beam@1.3.0: {}
 
-  ts-node@10.9.1(@types/node@20.12.12)(typescript@5.0.4):
+  ts-node@10.9.1(@types/node@20.12.14)(typescript@5.0.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 20.12.12
+      '@types/node': 20.12.14
       acorn: 8.11.3
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -12705,24 +12718,24 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-pwa@0.20.0(vite@5.2.11(@types/node@20.12.12)(terser@5.31.0))(workbox-build@7.1.0)(workbox-window@7.1.0):
+  vite-plugin-pwa@0.20.0(vite@5.2.12(@types/node@20.12.14)(terser@5.31.0))(workbox-build@7.1.0)(workbox-window@7.1.0):
     dependencies:
       debug: 4.3.4(supports-color@9.3.1)
       fast-glob: 3.3.2
       pretty-bytes: 6.1.1
-      vite: 5.2.11(@types/node@20.12.12)(terser@5.31.0)
+      vite: 5.2.12(@types/node@20.12.14)(terser@5.31.0)
       workbox-build: 7.1.0
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.2.11(@types/node@20.12.12)(terser@5.31.0):
+  vite@5.2.12(@types/node@20.12.14)(terser@5.31.0):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.17.0
     optionalDependencies:
-      '@types/node': 20.12.12
+      '@types/node': 20.12.14
       fsevents: 2.3.3
       terser: 5.31.0
 
