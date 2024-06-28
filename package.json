@@ -6,10 +6,10 @@
   "homepage": "https://github.com/dwightjack/timezone-converter",
   "license": "MIT",
   "dependencies": {
-    "@vvo/tzdb": "6.139.0",
+    "@vvo/tzdb": "6.140.0",
     "sanitize.css": "13.0.0"
   },
-  "packageManager": "pnpm@9.3.0",
+  "packageManager": "pnpm@9.4.0",
   "engines": {
     "node": "^20.0.0",
     "pnpm": "^9.0.0"
@@ -38,7 +38,7 @@
     "globals": "^15.2.0",
     "lefthook": "^1.6.8",
     "mockdate": "^3.0.5",
-    "netlify-cli": "17.27.0",
+    "netlify-cli": "17.30.0",
     "prettier": "3.3.2",
     "stylelint": "16.6.1",
     "stylelint-config-property-sort-order-smacss": "10.0.0",
