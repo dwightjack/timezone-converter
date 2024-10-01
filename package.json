@@ -6,10 +6,10 @@
   "homepage": "https://github.com/dwightjack/timezone-converter",
   "license": "MIT",
   "dependencies": {
-    "@vvo/tzdb": "6.142.0",
+    "@vvo/tzdb": "6.145.0",
     "sanitize.css": "13.0.0"
   },
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.11.0",
   "engines": {
     "node": "^20.0.0",
     "pnpm": "^9.0.0"
@@ -28,24 +28,24 @@
     "test": "playwright test"
   },
   "devDependencies": {
-    "@eslint/js": "9.8.0",
+    "@eslint/js": "9.11.1",
     "@playwright/test": "^1.36.2",
     "@types/eslint": "^9.0.0",
     "@types/node": "^20.0.0",
-    "eslint": "9.8.0",
+    "eslint": "9.11.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "globals": "^15.2.0",
     "lefthook": "^1.6.8",
     "mockdate": "^3.0.5",
-    "netlify-cli": "17.33.6",
+    "netlify-cli": "17.36.3",
     "prettier": "3.3.3",
-    "stylelint": "16.8.2",
+    "stylelint": "16.9.0",
     "stylelint-config-property-sort-order-smacss": "10.0.0",
     "stylelint-config-standard": "36.0.1",
     "stylelint-prettier": "5.0.2",
     "stylelint-use-logical": "^2.1.0",
-    "vite": "5.3.6",
+    "vite": "5.4.8",
     "vite-plugin-pwa": "0.20.2",
     "workbox-window": "^7.0.0"
   }
