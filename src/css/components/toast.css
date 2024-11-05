@@ -9,11 +9,8 @@
   inline-size: 100%;
   min-inline-size: 0;
   margin: 0;
-  padding: var(--s-2);
-  background-color: var(--color-background-primary);
-  color: var(--color-text-primary);
-  font-size: var(--font-size-s);
   gap: var(--s-2);
+  opacity: 0.1;
 }
 
 .c-toast__message {
@@ -21,6 +18,20 @@
   flex-grow: 1;
 }
 
-.c-toast:not(.c-toast--visible) {
+.c-toast > * {
   display: none;
+  transition-behavior: allow-discreet;
+  transition: display 0.1s normal 0.5s;
+}
+
+.c-toast.c-toast--visible {
+  padding: var(--s-2);
+  opacity: 1;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-s);
+}
+
+.c-toast.c-toast--visible > * {
+  display: block;
 }

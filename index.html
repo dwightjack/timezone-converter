@@ -60,6 +60,18 @@
       </symbol>
     </svg>
 
+    <div id="toast" role="status" class="c-toast">
+      <p class="c-toast__message">
+        New content available, click on reload button to update.
+      </p>
+      <button class="c-button c-toast__button c-toast__confirm" type="button">
+        Reload
+      </button>
+      <button class="c-button c-toast__button c-toast__close" type="button">
+        Close
+      </button>
+    </div>
+
     <main id="main" aria-busy="true">
       <h1 class="u-visually-hidden">Time Zones</h1>
       <div class="l-stack">
@@ -93,13 +105,6 @@
     </main>
     <div role="status" class="c-loader c-loader--visible" id="loader">
       <span class="u-visually-hidden">Loading...</span>
-    </div>
-    <div id="toast" role="status" class="c-toast">
-      <p class="c-toast__message">
-        New content available, click on reload button to update.
-      </p>
-      <button class="c-button c-toast__confirm" type="button">Reload</button>
-      <button class="c-button c-toast__close" type="button">Close</button>
     </div>
 
     <script type="text/x-yui3-template" id="timezone-tmpl">
