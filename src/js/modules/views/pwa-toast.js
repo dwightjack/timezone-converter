@@ -8,6 +8,9 @@ YUI.add(
       Y.View,
       [],
       {
+        template: Y.Template.Micro.compile(
+          Y.one('#toast-update-tmpl').getHTML(),
+        ),
         events: {
           '.c-toast__confirm': { click: 'confirm' },
           '.c-toast__close': { click: 'close' },
@@ -29,7 +32,12 @@ YUI.add(
         },
 
         toggle(needsRefresh) {
-          this.get('container').toggleClass('c-toast--visible', !!needsRefresh);
+          const $container = this.get('container');
+          if (needsRefresh) {
+            $container.setHTML(this.template()).addClass('c-toast--visible');
+            return;
+          }
+          $container.empty().removeClass('c-toast--visible');
         },
 
         confirm() {
@@ -50,6 +58,6 @@ YUI.add(
   },
   '1.0.0',
   {
-    requires: ['app'],
+    requires: ['app', 'template-micro'],
   },
 );

@@ -60,23 +60,20 @@
       </symbol>
     </svg>
 
-    <div id="toast" role="status" class="c-toast">
-      <p class="c-toast__message">
-        New content available, click on reload button to update.
-      </p>
-      <button class="c-button c-toast__button c-toast__confirm" type="button">
-        Reload
-      </button>
-      <button class="c-button c-toast__button c-toast__close" type="button">
-        Close
-      </button>
-    </div>
+    <div id="toast" role="status" class="c-toast"></div>
 
     <main id="main" aria-busy="true">
       <h1 class="u-visually-hidden">Time Zones</h1>
       <div class="l-stack">
         <div id="timecard-list" class="u-contents"></div>
-        <form class="c-tile" id="tz-select" action="" method="get">
+        <form
+          class="c-tile"
+          id="tz-select"
+          action=""
+          method="get"
+          aria-labelledby="tz-select-label"
+        >
+          <p class="u-visually-hidden" id="tz-select-label">Add a timezone</p>
           <div class="c-field c-field--compact">
             <input
               class="c-field__input c-field__input--reset"
@@ -109,6 +106,9 @@
 
     <script type="text/x-yui3-template" id="timezone-tmpl">
       {TEMPLATE:./src/templates/timezone.tmpl}
+    </script>
+    <script type="text/x-yui3-template" id="toast-update-tmpl">
+      {TEMPLATE:./src/templates/toast-update.tmpl}
     </script>
   </body>
 </html>

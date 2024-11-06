@@ -10,7 +10,7 @@ const htmlPlugin = () => {
   return {
     name: 'html-transform',
     transformIndexHtml(html) {
-      return html.replace(/\{TEMPLATE:([^}]+)\}/, (_, match) => {
+      return html.replace(/\{TEMPLATE:([^}]+)\}/g, (_, match) => {
         const template = resolve(__dirname, match);
         if (!existsSync(template)) {
           console.error(`Unable to locate template: ${template}`);
