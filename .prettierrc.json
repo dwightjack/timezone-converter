@@ -2,5 +2,14 @@
   "trailingComma": "all",
   "arrowParens": "always",
   "semi": true,
-  "singleQuote": true
+  "singleQuote": true,
+  "plugins": ["prettier-plugin-ejs"],
+  "overrides": [
+    {
+      "files": "*.tmpl",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
 }

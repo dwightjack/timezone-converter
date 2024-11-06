@@ -17,5 +17,12 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": "explicit",
     "source.fixAll.eslint": "explicit"
+  },
+  "files.associations": {
+    "*.ejs": "html",
+    "*.tmpl": "html"
+  },
+  "emmet.includeLanguages": {
+    "ejs": "html"
   }
 }
