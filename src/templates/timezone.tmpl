@@ -1,15 +1,17 @@
 <article class="c-timecard" id="<%= this.id %>">
   <h2 class="c-timecard__title"><%= this.label %></h2>
   <% Y.Array.each(['morning', 'daytime', 'evening', 'night'], (part) => { %>
-    <svg
-      class="c-icon c-timecard__interval c-timecard__interval--<%= part %>"
-      focusable="false"
-      aria-hidden="true"
-    >
-      <use xlink:href="#icon-<%= part %>" />
-    </svg>
+  <svg
+    class="c-icon c-timecard__interval c-timecard__interval--<%= part %>"
+    focusable="false"
+    aria-hidden="true"
+  >
+    <use xlink:href="#icon-<%= part %>" />
+  </svg>
   <% }) %>
-  <p class="c-timecard__zone"><%= this.abbreviation %> (UTC <%= this.offsetLabel %>)</p>
+  <p class="c-timecard__zone">
+    <%= this.abbreviation %> (UTC <%= this.offsetLabel %>)
+  </p>
   <button type="button" class="c-timecard__close">
     <svg class="c-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#icon-close" />
@@ -17,7 +19,9 @@
     <span class="u-visually-hidden">Remove</span>
   </button>
   <fieldset class="c-timecard__fieldset">
-    <legend class="u-visually-hidden">Date and time for <%= this.label %></legend>
+    <legend class="u-visually-hidden">
+      Date and time for <%= this.label %>
+    </legend>
     <div class="c-field c-field--compact">
       <input
         class="c-field__input"
