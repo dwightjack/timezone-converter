@@ -25,8 +25,8 @@ importers:
         specifier: ^9.0.0
         version: 9.6.1
       '@types/node':
-        specifier: ^20.0.0
-        version: 20.17.9
+        specifier: ^22.0.0
+        version: 22.10.3
       eslint:
         specifier: 9.16.0
         version: 9.16.0(jiti@1.21.0)
@@ -47,7 +47,7 @@ importers:
         version: 3.0.5
       netlify-cli:
         specifier: 17.38.0
-        version: 17.38.0(@types/node@20.17.9)(picomatch@4.0.2)
+        version: 17.38.0(@types/node@22.10.3)(picomatch@4.0.2)
       prettier:
         specifier: 3.4.2
         version: 3.4.2
@@ -71,10 +71,10 @@ importers:
         version: 2.1.2(stylelint@16.11.0(typescript@5.0.4))
       vite:
         specifier: 6.0.3
-        version: 6.0.3(@types/node@20.17.9)(jiti@1.21.0)(terser@5.37.0)
+        version: 6.0.3(@types/node@22.10.3)(jiti@1.21.0)(terser@5.37.0)
       vite-plugin-pwa:
         specifier: 0.21.1
-        version: 0.21.1(vite@6.0.3(@types/node@20.17.9)(jiti@1.21.0)(terser@5.37.0))(workbox-build@7.1.0)(workbox-window@7.3.0)
+        version: 0.21.1(vite@6.0.3(@types/node@22.10.3)(jiti@1.21.0)(terser@5.37.0))(workbox-build@7.1.0)(workbox-window@7.3.0)
       workbox-window:
         specifier: ^7.0.0
         version: 7.3.0
@@ -1741,8 +1741,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@20.17.9':
-    resolution: {integrity: sha512-0JOXkRyLanfGPE2QRCwgxhzlBAvaRdCNMcvbd7jFfpmD4eEXll7LRwy5ymJmyeZqk7Nh7eD2LeUyQ68BbndmXw==}
+  '@types/node@22.10.3':
+    resolution: {integrity: sha512-DifAyw4BkrufCILvD3ucnuN8eydUfc/C1GlyrnI+LK6543w5/L3VeVgf05o3B4fqSXP1dKYLOZsKfutpxPzZrw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -5812,8 +5812,8 @@ packages:
   uncrypto@0.1.3:
     resolution: {integrity: sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   unenv@1.9.0:
     resolution: {integrity: sha512-QKnFNznRxmbOF1hDgzpqrlIf6NC5sbZ2OJ+5Wl3OX8uM+LUJXbj4TXvLJCtwbPTmbMHCLIz6JLKNinNsMShK9g==}
@@ -7297,7 +7297,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 20.17.9
+      '@types/node': 22.10.3
       '@types/yargs': 16.0.5
       chalk: 4.1.2
 
@@ -7363,7 +7363,7 @@ snapshots:
       yaml: 2.3.1
       yargs: 17.7.2
 
-  '@netlify/build@29.56.1(@opentelemetry/api@1.8.0)(@types/node@20.17.9)(picomatch@4.0.2)':
+  '@netlify/build@29.56.1(@opentelemetry/api@1.8.0)(@types/node@22.10.3)(picomatch@4.0.2)':
     dependencies:
       '@bugsnag/js': 7.25.0
       '@netlify/blobs': 7.4.0
@@ -7420,7 +7420,7 @@ snapshots:
       strip-ansi: 7.1.0
       supports-color: 9.3.1
       terminal-link: 3.0.0
-      ts-node: 10.9.1(@types/node@20.17.9)(typescript@5.0.4)
+      ts-node: 10.9.1(@types/node@22.10.3)(typescript@5.0.4)
       typescript: 5.0.4
       uuid: 9.0.1
       yargs: 17.7.2
@@ -7955,7 +7955,7 @@ snapshots:
 
   '@types/http-proxy@1.17.10':
     dependencies:
-      '@types/node': 20.17.9
+      '@types/node': 22.10.3
 
   '@types/istanbul-lib-coverage@2.0.4': {}
 
@@ -7969,9 +7969,9 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@20.17.9':
+  '@types/node@22.10.3':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 6.20.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -7991,7 +7991,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.17.9
+      '@types/node': 22.10.3
     optional: true
 
   '@typescript-eslint/types@5.60.1': {}
@@ -10848,12 +10848,12 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@17.38.0(@types/node@20.17.9)(picomatch@4.0.2):
+  netlify-cli@17.38.0(@types/node@22.10.3)(picomatch@4.0.2):
     dependencies:
       '@bugsnag/js': 7.25.0
       '@fastify/static': 7.0.4
       '@netlify/blobs': 8.1.0
-      '@netlify/build': 29.56.1(@opentelemetry/api@1.8.0)(@types/node@20.17.9)(picomatch@4.0.2)
+      '@netlify/build': 29.56.1(@opentelemetry/api@1.8.0)(@types/node@22.10.3)(picomatch@4.0.2)
       '@netlify/build-info': 7.15.2
       '@netlify/config': 20.19.1
       '@netlify/edge-bundler': 12.2.3(supports-color@9.3.1)
@@ -12402,14 +12402,14 @@ snapshots:
 
   triple-beam@1.3.0: {}
 
-  ts-node@10.9.1(@types/node@20.17.9)(typescript@5.0.4):
+  ts-node@10.9.1(@types/node@22.10.3)(typescript@5.0.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 20.17.9
+      '@types/node': 22.10.3
       acorn: 8.14.0
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -12521,7 +12521,7 @@ snapshots:
 
   uncrypto@0.1.3: {}
 
-  undici-types@6.19.8: {}
+  undici-types@6.20.0: {}
 
   unenv@1.9.0:
     dependencies:
@@ -12641,24 +12641,24 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-pwa@0.21.1(vite@6.0.3(@types/node@20.17.9)(jiti@1.21.0)(terser@5.37.0))(workbox-build@7.1.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@0.21.1(vite@6.0.3(@types/node@22.10.3)(jiti@1.21.0)(terser@5.37.0))(workbox-build@7.1.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.3.7(supports-color@9.3.1)
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.10
-      vite: 6.0.3(@types/node@20.17.9)(jiti@1.21.0)(terser@5.37.0)
+      vite: 6.0.3(@types/node@22.10.3)(jiti@1.21.0)(terser@5.37.0)
       workbox-build: 7.1.0
       workbox-window: 7.3.0
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.0.3(@types/node@20.17.9)(jiti@1.21.0)(terser@5.37.0):
+  vite@6.0.3(@types/node@22.10.3)(jiti@1.21.0)(terser@5.37.0):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
       rollup: 4.28.0
     optionalDependencies:
-      '@types/node': 20.17.9
+      '@types/node': 22.10.3
       fsevents: 2.3.3
       jiti: 1.21.0
       terser: 5.37.0
