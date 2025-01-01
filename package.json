@@ -9,7 +9,7 @@
     "@vvo/tzdb": "6.152.0",
     "sanitize.css": "13.0.0"
   },
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@9.15.2",
   "engines": {
     "node": "^20.0.0",
     "pnpm": "^9.0.0"
@@ -38,7 +38,7 @@
     "globals": "^15.2.0",
     "lefthook": "^1.6.8",
     "mockdate": "^3.0.5",
-    "netlify-cli": "17.38.0",
+    "netlify-cli": "17.38.1",
     "prettier": "3.4.2",
     "prettier-plugin-ejs": "^1.0.3",
     "stylelint": "16.11.0",
@@ -46,7 +46,7 @@
     "stylelint-config-standard": "36.0.1",
     "stylelint-prettier": "5.0.2",
     "stylelint-use-logical": "^2.1.0",
-    "vite": "6.0.3",
+    "vite": "6.0.6",
     "vite-plugin-pwa": "0.21.1",
     "workbox-window": "^7.0.0"
   }
