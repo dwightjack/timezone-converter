@@ -22,7 +22,7 @@ YUI.add(
 
       toggleSelectOption({ id, selected }) {
         const $option = Y.one(`option[data-id="${id}"]`);
-        $option && $option.set('disabled', selected);
+        $option?.set('disabled', selected);
       },
 
       render() {

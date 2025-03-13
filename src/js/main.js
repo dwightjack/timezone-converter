@@ -1,16 +1,16 @@
 import api from './modules/api.js?url';
-import day from './modules/day.js?url';
-import utils from './modules/utils.js?url';
 import cache from './modules/cache.js?url';
-import timeZone from './modules/models/timezone-list.js?url';
-import timeCard from './modules/models/timecard-list.js?url';
+import day from './modules/day.js?url';
 import appState from './modules/models/app-state.js?url';
+import timeCard from './modules/models/timecard-list.js?url';
+import timeZone from './modules/models/timezone-list.js?url';
+import utils from './modules/utils.js?url';
 import appView from './modules/views/app.js?url';
-import selectView from './modules/views/select.js?url';
 import loaderView from './modules/views/loader.js?url';
 import pwaToastView from './modules/views/pwa-toast.js?url';
-import timeCardView from './modules/views/timecard.js?url';
+import selectView from './modules/views/select.js?url';
 import timeCardListView from './modules/views/timecard-list.js?url';
+import timeCardView from './modules/views/timecard.js?url';
 import '../css/main.css';
 import { registerSW } from 'virtual:pwa-register';
 

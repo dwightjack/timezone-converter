@@ -11,7 +11,7 @@ YUI.add(
         root: 'timeCards',
         setDatetime(day) {
           const datetime = this.get('datetime');
-          if (datetime && datetime.isSame(day, 'm')) {
+          if (datetime?.isSame(day, 'm')) {
             return;
           }
           const newDatetime = day.tz(this.get('name'));
@@ -42,7 +42,7 @@ YUI.add(
               if (!datetime) {
                 return '';
               }
-              const time = parseInt(datetime.format('H'), 10);
+              const time = Number.parseInt(datetime.format('H'), 10);
               if (time > 6 && time <= 10) {
                 return 'morning';
               }

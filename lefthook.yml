@@ -1,9 +1,6 @@
 pre-commit:
   parallel: true
   commands:
-    eslint:
-      glob: "*.{js,ts}"
-      run: pnpm exec eslint {staged_files}
-    styles:
-      glob: "*.{css}"
-      run: pnpm exec stylelint {staged_files}
+    lint:
+      glob: "*.{js,css,html,json}"
+      run: pnpm exec biome check {staged_files}

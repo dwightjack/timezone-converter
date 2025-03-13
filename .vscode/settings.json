@@ -1,22 +1,19 @@
 {
-  "[js]": {
-    "editor.formatOnSave": false
-  },
-  "[ts]": {
-    "editor.formatOnSave": false
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[css]": {
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "biomejs.biome"
   },
-  "[postcss]": {
-    "editor.formatOnSave": false
+  "[html]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.biome": "explicit"
   },
   "files.associations": {
     "*.ejs": "html",

@@ -41,7 +41,7 @@ YUI.add(
         },
 
         confirm() {
-          this.updater && this.updater();
+          this.updater?.();
           this.close();
         },
 

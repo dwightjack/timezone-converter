@@ -5,9 +5,11 @@ YUI.add(
 
     Views.App = Y.Base.create('appView', Y.View, [], {
       initializer() {
+        // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
         const zoneList = (this.zoneList = new Y.TZC.Models.TimeZoneList({
           items: this.getZoneItems(),
         }));
+        // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
         const cardList = (this.cardList = new Y.TZC.Models.TimeCardList());
 
         this.cardListView = new Views.TimeCardList({

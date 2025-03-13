@@ -6,10 +6,9 @@ YUI.add(
     TZC.Cache = {
       set(key, value) {
         try {
-          if (typeof value === 'function') {
-            value = value(this.get(key));
-          }
-          localStorage.setItem(key, Y.JSON.stringify(value));
+          const input =
+            typeof value === 'function' ? value(this.get(key)) : value;
+          localStorage.setItem(key, Y.JSON.stringify(input));
         } catch (e) {
           console.error(e);
           return false;
