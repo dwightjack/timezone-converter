@@ -79,6 +79,7 @@ test.describe('interactions', () => {
 
   test('Remove Europe/Helsinki time card', async ({ page }) => {
     const card = await getCard(page, 'Europe/Helsinki');
+    await expect(card.getByLabel('Date')).toHaveValue('2022-08-02');
     await card.getByRole('button', { name: 'Remove' }).click();
     await expect(getCard(page, 'Europe/Helsinki')).not.toBeVisible();
 
