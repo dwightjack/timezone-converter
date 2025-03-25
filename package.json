@@ -35,7 +35,7 @@
     "netlify-cli": "17.38.1",
     "prettier": "3.4.2",
     "prettier-plugin-ejs": "^1.0.3",
-    "vite": "6.0.9",
+    "vite": "6.0.12",
     "vite-plugin-pwa": "0.21.1",
     "workbox-window": "^7.3.0"
   }
