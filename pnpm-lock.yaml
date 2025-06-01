@@ -22,8 +22,8 @@ importers:
         specifier: ^1.36.2
         version: 1.51.1
       '@types/node':
-        specifier: ^20.0.0
-        version: 20.17.43
+        specifier: ^22.0.0
+        version: 22.15.29
       globals:
         specifier: ^15.2.0
         version: 15.15.0
@@ -35,7 +35,7 @@ importers:
         version: 3.0.5
       netlify-cli:
         specifier: 17.38.1
-        version: 17.38.1(@types/node@20.17.43)(picomatch@4.0.2)(rollup@2.79.2)
+        version: 17.38.1(@types/node@22.15.29)(picomatch@4.0.2)(rollup@2.79.2)
       prettier:
         specifier: 3.4.2
         version: 3.4.2
@@ -44,10 +44,10 @@ importers:
         version: 1.0.3(prettier@3.4.2)
       vite:
         specifier: 6.1.6
-        version: 6.1.6(@types/node@20.17.43)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0)
+        version: 6.1.6(@types/node@22.15.29)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0)
       vite-plugin-pwa:
         specifier: 0.21.1
-        version: 0.21.1(vite@6.1.6(@types/node@20.17.43)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 0.21.1(vite@6.1.6(@types/node@22.15.29)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       workbox-window:
         specifier: ^7.3.0
         version: 7.3.0
@@ -1712,8 +1712,8 @@ packages:
   '@types/istanbul-reports@3.0.4':
     resolution: {integrity: sha512-pk2B1NWalF9toCRu6gjBzR69syFjP4Od8WRAX+0mmf9lAjCRicLOWc+ZrxZHx/0XRjotgkF9t6iaMJ+aXcOdZQ==}
 
-  '@types/node@20.17.43':
-    resolution: {integrity: sha512-DnDEcDUnVAUYSa7U03QvrXbj1MZj00xoyi/a3lRGkR/c7BFUnqv+OY9EUphMqXUKdZJEOmuzu2mm+LmCisnPow==}
+  '@types/node@22.15.29':
+    resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -5435,8 +5435,8 @@ packages:
   uncrypto@0.1.3:
     resolution: {integrity: sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   unicode-canonical-property-names-ecmascript@2.0.1:
     resolution: {integrity: sha512-dA8WbNeb2a6oQzAQ55YlT5vQAWGV9WXOsi3SskE3bcCdM0P4SDd+24zS/OCacdRq5BkdsRj9q3Pg6YyQoxIGqg==}
@@ -6891,7 +6891,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 20.17.43
+      '@types/node': 22.15.29
       '@types/yargs': 16.0.9
       chalk: 4.1.2
 
@@ -6957,7 +6957,7 @@ snapshots:
       yaml: 2.7.0
       yargs: 17.7.2
 
-  '@netlify/build@29.58.0(@opentelemetry/api@1.8.0)(@types/node@20.17.43)(picomatch@4.0.2)(rollup@2.79.2)':
+  '@netlify/build@29.58.0(@opentelemetry/api@1.8.0)(@types/node@22.15.29)(picomatch@4.0.2)(rollup@2.79.2)':
     dependencies:
       '@bugsnag/js': 7.25.0
       '@netlify/blobs': 7.4.0
@@ -7014,7 +7014,7 @@ snapshots:
       strip-ansi: 7.1.0
       supports-color: 9.4.0
       terminal-link: 3.0.0
-      ts-node: 10.9.2(@types/node@20.17.43)(typescript@5.8.2)
+      ts-node: 10.9.2(@types/node@22.15.29)(typescript@5.8.2)
       typescript: 5.8.2
       uuid: 9.0.1
       yargs: 17.7.2
@@ -7599,7 +7599,7 @@ snapshots:
 
   '@types/http-proxy@1.17.16':
     dependencies:
-      '@types/node': 20.17.43
+      '@types/node': 22.15.29
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -7611,9 +7611,9 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-report': 3.0.3
 
-  '@types/node@20.17.43':
+  '@types/node@22.15.29':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 6.21.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -7633,7 +7633,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.17.43
+      '@types/node': 22.15.29
     optional: true
 
   '@typescript-eslint/types@5.62.0': {}
@@ -10286,12 +10286,12 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@17.38.1(@types/node@20.17.43)(picomatch@4.0.2)(rollup@2.79.2):
+  netlify-cli@17.38.1(@types/node@22.15.29)(picomatch@4.0.2)(rollup@2.79.2):
     dependencies:
       '@bugsnag/js': 7.25.0
       '@fastify/static': 7.0.4
       '@netlify/blobs': 8.1.0
-      '@netlify/build': 29.58.0(@opentelemetry/api@1.8.0)(@types/node@20.17.43)(picomatch@4.0.2)(rollup@2.79.2)
+      '@netlify/build': 29.58.0(@opentelemetry/api@1.8.0)(@types/node@22.15.29)(picomatch@4.0.2)(rollup@2.79.2)
       '@netlify/build-info': 7.17.0
       '@netlify/config': 20.21.0
       '@netlify/edge-bundler': 12.3.1(rollup@2.79.2)(supports-color@9.4.0)
@@ -11705,14 +11705,14 @@ snapshots:
 
   triple-beam@1.4.1: {}
 
-  ts-node@10.9.2(@types/node@20.17.43)(typescript@5.8.2):
+  ts-node@10.9.2(@types/node@22.15.29)(typescript@5.8.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.17.43
+      '@types/node': 22.15.29
       acorn: 8.14.1
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -11812,7 +11812,7 @@ snapshots:
 
   uncrypto@0.1.3: {}
 
-  undici-types@6.19.8: {}
+  undici-types@6.21.0: {}
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 
@@ -11916,24 +11916,24 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-pwa@0.21.1(vite@6.1.6(@types/node@20.17.43)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@0.21.1(vite@6.1.6(@types/node@22.15.29)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.0
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.12
-      vite: 6.1.6(@types/node@20.17.43)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0)
+      vite: 6.1.6(@types/node@22.15.29)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0)
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.1.6(@types/node@20.17.43)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0):
+  vite@6.1.6(@types/node@22.15.29)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.3
       rollup: 4.35.0
     optionalDependencies:
-      '@types/node': 20.17.43
+      '@types/node': 22.15.29
       fsevents: 2.3.3
       jiti: 2.4.2
       terser: 5.39.0
