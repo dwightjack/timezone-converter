@@ -9,7 +9,7 @@
     "@vvo/tzdb": "6.165.0",
     "sanitize.css": "13.0.0"
   },
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": "^20.0.0",
     "pnpm": "^9.0.0"
@@ -36,7 +36,7 @@
     "prettier": "3.5.3",
     "prettier-plugin-ejs": "^1.0.3",
     "vite": "6.3.5",
-    "vite-plugin-pwa": "0.21.1",
+    "vite-plugin-pwa": "0.21.2",
     "workbox-window": "^7.3.0"
   }
 }
