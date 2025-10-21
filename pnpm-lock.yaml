@@ -43,11 +43,11 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3(prettier@3.6.2)
       vite:
-        specifier: 6.3.6
-        version: 6.3.6(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0)
+        specifier: 6.4.1
+        version: 6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0)
       vite-plugin-pwa:
         specifier: 0.21.2
-        version: 0.21.2(vite@6.3.6(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 0.21.2(vite@6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       workbox-window:
         specifier: ^7.3.0
         version: 7.3.0
@@ -5650,8 +5650,8 @@ packages:
       '@vite-pwa/assets-generator':
         optional: true
 
-  vite@6.3.6:
-    resolution: {integrity: sha512-0msEVHJEScQbhkbVTb/4iHZdJ6SXp/AvxL2sjwYQFfBqleHtnCqv1J3sa9zbWz/6kW1m9Tfzn92vW+kZ1WV6QA==}
+  vite@6.4.1:
+    resolution: {integrity: sha512-+Oxm7q9hDoLMyJOYfUYBuHQo+dkAloi33apOPP56pzj+vsdJDzr+j1NISE5pyaAuKL4A3UD34qd0lx5+kfKp2g==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -12000,18 +12000,18 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-pwa@0.21.2(vite@6.3.6(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@0.21.2(vite@6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.1(supports-color@9.4.0)
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.14
-      vite: 6.3.6(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0)
+      vite: 6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0)
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.3.6(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0):
+  vite@6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.5
       fdir: 6.4.5(picomatch@4.0.3)
