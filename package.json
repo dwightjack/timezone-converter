@@ -6,7 +6,7 @@
   "homepage": "https://github.com/dwightjack/timezone-converter",
   "license": "MIT",
   "dependencies": {
-    "@vvo/tzdb": "6.183.0",
+    "@vvo/tzdb": "6.192.0",
     "sanitize.css": "13.0.0"
   },
   "packageManager": "pnpm@9.15.9",
@@ -35,7 +35,7 @@
     "netlify-cli": "17.38.1",
     "prettier": "3.6.2",
     "prettier-plugin-ejs": "^1.0.3",
-    "vite": "6.3.6",
+    "vite": "6.4.1",
     "vite-plugin-pwa": "0.21.2",
     "workbox-window": "^7.3.0"
   }
