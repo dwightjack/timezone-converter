@@ -23,7 +23,7 @@ importers:
         version: 1.56.1
       '@types/node':
         specifier: ^20.0.0
-        version: 20.19.19
+        version: 20.19.24
       globals:
         specifier: ^15.2.0
         version: 15.15.0
@@ -35,7 +35,7 @@ importers:
         version: 3.0.5
       netlify-cli:
         specifier: 17.38.1
-        version: 17.38.1(@types/node@20.19.19)(picomatch@4.0.3)(rollup@2.79.2)
+        version: 17.38.1(@types/node@20.19.24)(picomatch@4.0.3)(rollup@2.79.2)
       prettier:
         specifier: 3.6.2
         version: 3.6.2
@@ -44,10 +44,10 @@ importers:
         version: 1.0.3(prettier@3.6.2)
       vite:
         specifier: 6.4.1
-        version: 6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0)
+        version: 6.4.1(@types/node@20.19.24)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0)
       vite-plugin-pwa:
         specifier: 0.21.2
-        version: 0.21.2(vite@6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 0.21.2(vite@6.4.1(@types/node@20.19.24)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       workbox-window:
         specifier: ^7.3.0
         version: 7.3.0
@@ -1731,8 +1731,8 @@ packages:
   '@types/istanbul-reports@3.0.4':
     resolution: {integrity: sha512-pk2B1NWalF9toCRu6gjBzR69syFjP4Od8WRAX+0mmf9lAjCRicLOWc+ZrxZHx/0XRjotgkF9t6iaMJ+aXcOdZQ==}
 
-  '@types/node@20.19.19':
-    resolution: {integrity: sha512-pb1Uqj5WJP7wrcbLU7Ru4QtA0+3kAXrkutGiD26wUKzSMgNNaPARTUDQmElUXp64kh3cWdou3Q0C7qwwxqSFmg==}
+  '@types/node@20.19.24':
+    resolution: {integrity: sha512-FE5u0ezmi6y9OZEzlJfg37mqqf6ZDSF2V/NLjUyGrR9uTZ7Sb9F7bLNZ03S4XVUNRWGA7Ck4c1kK+YnuWjl+DA==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -6944,7 +6944,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 20.19.19
+      '@types/node': 20.19.24
       '@types/yargs': 16.0.9
       chalk: 4.1.2
 
@@ -7014,7 +7014,7 @@ snapshots:
       yaml: 2.7.0
       yargs: 17.7.2
 
-  '@netlify/build@29.58.0(@opentelemetry/api@1.8.0)(@types/node@20.19.19)(picomatch@4.0.3)(rollup@2.79.2)':
+  '@netlify/build@29.58.0(@opentelemetry/api@1.8.0)(@types/node@20.19.24)(picomatch@4.0.3)(rollup@2.79.2)':
     dependencies:
       '@bugsnag/js': 7.25.0
       '@netlify/blobs': 7.4.0
@@ -7071,7 +7071,7 @@ snapshots:
       strip-ansi: 7.1.0
       supports-color: 9.4.0
       terminal-link: 3.0.0
-      ts-node: 10.9.2(@types/node@20.19.19)(typescript@5.8.2)
+      ts-node: 10.9.2(@types/node@20.19.24)(typescript@5.8.2)
       typescript: 5.8.2
       uuid: 9.0.1
       yargs: 17.7.2
@@ -7666,7 +7666,7 @@ snapshots:
 
   '@types/http-proxy@1.17.16':
     dependencies:
-      '@types/node': 20.19.19
+      '@types/node': 20.19.24
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -7678,7 +7678,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-report': 3.0.3
 
-  '@types/node@20.19.19':
+  '@types/node@20.19.24':
     dependencies:
       undici-types: 6.21.0
 
@@ -7700,7 +7700,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.19.19
+      '@types/node': 20.19.24
     optional: true
 
   '@typescript-eslint/types@5.62.0': {}
@@ -10365,12 +10365,12 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@17.38.1(@types/node@20.19.19)(picomatch@4.0.3)(rollup@2.79.2):
+  netlify-cli@17.38.1(@types/node@20.19.24)(picomatch@4.0.3)(rollup@2.79.2):
     dependencies:
       '@bugsnag/js': 7.25.0
       '@fastify/static': 7.0.4
       '@netlify/blobs': 8.1.0
-      '@netlify/build': 29.58.0(@opentelemetry/api@1.8.0)(@types/node@20.19.19)(picomatch@4.0.3)(rollup@2.79.2)
+      '@netlify/build': 29.58.0(@opentelemetry/api@1.8.0)(@types/node@20.19.24)(picomatch@4.0.3)(rollup@2.79.2)
       '@netlify/build-info': 7.17.0
       '@netlify/config': 20.21.0
       '@netlify/edge-bundler': 12.3.1(rollup@2.79.2)(supports-color@9.4.0)
@@ -11789,14 +11789,14 @@ snapshots:
 
   triple-beam@1.4.1: {}
 
-  ts-node@10.9.2(@types/node@20.19.19)(typescript@5.8.2):
+  ts-node@10.9.2(@types/node@20.19.24)(typescript@5.8.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.19.19
+      '@types/node': 20.19.24
       acorn: 8.14.1
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -12000,18 +12000,18 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-pwa@0.21.2(vite@6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@0.21.2(vite@6.4.1(@types/node@20.19.24)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.1(supports-color@9.4.0)
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.14
-      vite: 6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0)
+      vite: 6.4.1(@types/node@20.19.24)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0)
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.4.1(@types/node@20.19.19)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0):
+  vite@6.4.1(@types/node@20.19.24)(jiti@2.4.2)(terser@5.44.0)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.5
       fdir: 6.4.5(picomatch@4.0.3)
@@ -12020,7 +12020,7 @@ snapshots:
       rollup: 4.35.0
       tinyglobby: 0.2.14
     optionalDependencies:
-      '@types/node': 20.19.19
+      '@types/node': 20.19.24
       fsevents: 2.3.3
       jiti: 2.4.2
       terser: 5.44.0
