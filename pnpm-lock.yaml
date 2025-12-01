@@ -36,12 +36,6 @@ importers:
       netlify-cli:
         specifier: 17.38.1
         version: 17.38.1(@types/node@20.19.24)(picomatch@4.0.3)(rollup@2.79.2)
-      prettier:
-        specifier: 3.7.3
-        version: 3.7.3
-      prettier-plugin-ejs:
-        specifier: ^1.0.3
-        version: 1.0.3(prettier@3.7.3)
       vite:
         specifier: 6.4.1
         version: 6.4.1(@types/node@20.19.24)(jiti@2.4.2)(terser@5.44.1)(yaml@2.7.0)
@@ -4625,16 +4619,6 @@ packages:
   precond@0.2.3:
     resolution: {integrity: sha512-QCYG84SgGyGzqJ/vlMsxeXd/pgL/I94ixdNFyh1PusWmTCyVfPJjZ1K1jvHtsbfnXQs2TSkEP2fR7QiMZAnKFQ==}
     engines: {node: '>= 0.6'}
-
-  prettier-plugin-ejs@1.0.3:
-    resolution: {integrity: sha512-wTL4U/ou6dHHp1ZTfS67SHVb/dRgVhpIOTgCvkgdqF/Lw6A472W90dxFtsWSXIR7GmLZRgZb2PdArR9ozxX7cg==}
-    peerDependencies:
-      prettier: 2.x - 3.x
-
-  prettier@3.7.3:
-    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
-    engines: {node: '>=14'}
-    hasBin: true
 
   pretty-bytes@5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
@@ -10933,12 +10917,6 @@ snapshots:
       - supports-color
 
   precond@0.2.3: {}
-
-  prettier-plugin-ejs@1.0.3(prettier@3.7.3):
-    dependencies:
-      prettier: 3.7.3
-
-  prettier@3.7.3: {}
 
   pretty-bytes@5.6.0: {}
 
