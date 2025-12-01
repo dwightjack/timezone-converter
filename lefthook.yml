@@ -3,4 +3,4 @@ pre-commit:
   commands:
     lint:
       glob: "*.{js,css,html,json}"
-      run: pnpm exec biome check {staged_files}
+      run: pnpm exec biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
