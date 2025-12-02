@@ -56,11 +56,16 @@ YUI.add(
           }
         });
       },
-      saveStore() {
-        const zones = this.filter((model) => model.get('selected')).map(
-          (model) => model.get('name'),
-        );
-        this.cache.add('selected', zones);
+      saveStore({ newVal: isSelected, target: model }) {
+        // I cannot just map over the modellist because
+        // I will then lose the cards' order in the UI
+        const currentZones = this.loadStore();
+        const name = model.get('name');
+        const updatedZones = isSelected
+          ? Y.Array.unique([...currentZones, name])
+          : Y.Array.filter(currentZones, (zone) => zone !== name);
+
+        this.cache.add('selected', updatedZones);
       },
       loadStore() {
         return this.cache.retrieve('selected')?.response ?? [];
