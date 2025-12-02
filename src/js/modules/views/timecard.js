@@ -15,7 +15,7 @@ YUI.add(
 
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
       containerTemplate: '<div class="c-tile"></div>',
-      template: Y.Template.Micro.compile(Y.one('#timezone-tmpl').getHTML()),
+      template: Y.Template.Micro.compile(Y.one('#timecard-tmpl').getHTML()),
 
       events: {
         '.c-timecard__close': { click: 'close' },
@@ -88,6 +88,6 @@ YUI.add(
   },
   '1.0.0',
   {
-    requires: ['app', 'template-micro', 'tzc.utils', 'anim'],
+    requires: ['app', 'template-micro', 'tzc.utils'],
   },
 );

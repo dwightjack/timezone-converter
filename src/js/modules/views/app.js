@@ -27,14 +27,8 @@ YUI.add(
         zoneList.after('select', ({ name, selected }) => {
           if (selected) {
             this.addCard(name);
-            Y.TZC.Cache.set('tzselect', (zones) => {
-              return Y.Array.unique((zones || []).concat(name));
-            });
             return;
           }
-          Y.TZC.Cache.set('tzselect', (zones) => {
-            return Y.Array.filter(zones || [], (zone) => zone !== name);
-          });
         });
 
         cardList.after('remove', ({ model }) => {
@@ -46,9 +40,9 @@ YUI.add(
 
         this.onceAfter('rendered', () => {
           // look for cached timezones
-          const cached = Y.TZC.Cache.get('tzselect');
+          const cached = zoneList.loadStore();
 
-          if (Y.Lang.isArray(cached) && cached.length > 0) {
+          if (cached.length > 0) {
             Y.Array.each(cached, (tz) => this.addCard(tz));
             return;
           }
@@ -107,7 +101,6 @@ YUI.add(
     requires: [
       'app',
       'tzc.day',
-      'tzc.cache',
       'tzc.models.timeZoneList',
       'tzc.models.timeCardList',
       'tzc.views.select',

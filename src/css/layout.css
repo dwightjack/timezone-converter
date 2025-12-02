@@ -1,7 +1,8 @@
 #main {
-  max-inline-size: calc(45rem + (var(--s-4) * 2));
+  max-inline-size: 45rem;
   margin-inline: auto;
   padding: var(--s-5) var(--s-4);
+  box-sizing: content-box;
 }
 
 #main[aria-busy='true'] {

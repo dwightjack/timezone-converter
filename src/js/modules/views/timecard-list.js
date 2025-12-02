@@ -26,6 +26,10 @@ YUI.add(
       render() {
         const fragment = Y.one(Y.config.doc.createDocumentFragment());
 
+        if (this.get('cardList').size() === 0) {
+          return;
+        }
+
         this.get('cardList').each((card) => {
           fragment.append(this.renderCard(card));
         });
