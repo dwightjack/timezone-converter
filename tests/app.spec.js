@@ -8,7 +8,7 @@ import zones from './fixtures/zones';
  * @returns {import('@playwright/test').Locator}
  */
 function getCard(page, name) {
-  return page.locator('article', {
+  return page.locator('li', {
     has: page.getByRole('heading', { name }),
   });
 }
