@@ -12,16 +12,6 @@ YUI.add(
         // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
         const cardList = (this.cardList = new Y.TZC.Models.TimeCardList());
 
-        this.cardListView = new Views.TimeCardList({
-          cardList,
-          container: Y.one('#timecard-list'),
-        });
-
-        this.selectView = new Views.Select({
-          container: Y.one('#tz-select'),
-          zoneList,
-        });
-
         Y.Global.after(['app:status', 'app:ready'], this.toggleBusy, this);
 
         zoneList.after('select', ({ name, selected }) => {
@@ -38,25 +28,36 @@ YUI.add(
           zoneList.toggleSelected(model.get('label'), true);
         });
 
-        this.onceAfter('rendered', () => {
-          // look for cached timezones
-          const cached = zoneList.loadStore();
+        this.load();
 
-          if (cached.length > 0) {
-            Y.Array.each(cached, (tz) => this.addCard(tz));
-            return;
-          }
-          const currentTz = Y.TZC.Day.tz.guess();
-          if (currentTz) {
-            this.addCard(currentTz);
-          }
+        this.cardListView = new Views.TimeCardList({
+          cardList,
+          container: Y.one('#timecard-list'),
         });
+
+        this.selectView = new Views.Select({
+          container: Y.one('#tz-select'),
+          zoneList,
+        });
+      },
+
+      load() {
+        // look for cached timezones
+        const cached = this.zoneList.loadStore();
+
+        if (cached.length > 0) {
+          Y.Array.each(cached, (tz) => this.addCard(tz));
+          return;
+        }
+        const currentTz = Y.TZC.Day.tz.guess();
+        if (currentTz) {
+          this.addCard(currentTz);
+        }
       },
 
       render() {
         this.selectView.render();
         this.cardListView.render();
-        this.fire('rendered');
         return this;
       },
 
