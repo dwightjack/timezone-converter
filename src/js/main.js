@@ -16,7 +16,7 @@ import { registerSW } from 'virtual:pwa-register';
 YUI({
   groups: {
     dayjs: {
-      base: 'https://unpkg.com/dayjs@1.10.6/',
+      base: 'https://unpkg.com/dayjs@1.11.19/',
       async: false,
       modules: {
         dayjs: {
