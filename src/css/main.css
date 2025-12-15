@@ -23,3 +23,7 @@ body {
   min-block-size: 100%;
   background-color: var(--color-background-canvas);
 }
+
+#tz-select {
+  view-transition-name: form;
+}

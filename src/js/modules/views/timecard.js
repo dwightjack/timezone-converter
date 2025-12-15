@@ -21,7 +21,8 @@ YUI.add(
         );
 
         model.after('destroy', () => {
-          this.leave().then(() => {
+          this.get('container').addClass('c-tile--out');
+          Y.TZC.Utils.viewTransition(() => {
             this.destroy({ remove: true });
           });
         });
@@ -33,14 +34,6 @@ YUI.add(
         $container.setHTML(this.template(data));
         this.setDayPart();
         return this;
-      },
-
-      leave() {
-        const $container = this.get('container');
-
-        return Y.TZC.Utils.transition($container, () =>
-          $container.addClass('c-tile--out'),
-        );
       },
 
       updateDateTime() {
