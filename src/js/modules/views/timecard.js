@@ -3,16 +3,6 @@ YUI.add(
   (Y) => {
     const Views = Y.namespace('TZC.Views');
 
-    const debounce = (callback, wait) => {
-      let timeoutId = null;
-      return (...args) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          callback.apply(null, args);
-        }, wait);
-      };
-    };
-
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
       containerTemplate: '<li class="c-tile" />',
       template: Y.Template.Micro.compile(Y.one('#timecard-tmpl').getHTML()),
@@ -27,7 +17,7 @@ YUI.add(
         model.after('datetimeUpdate', this.updateFields, this);
         model.after(
           'datetimeUpdate',
-          debounce(() => this.setDayPart(), 300),
+          Y.throttle(() => this.setDayPart(), 300),
         );
 
         model.after('destroy', () => {
@@ -88,6 +78,6 @@ YUI.add(
   },
   '1.0.0',
   {
-    requires: ['app', 'template-micro', 'tzc.utils'],
+    requires: ['app', 'yui-throttle', 'template-micro', 'tzc.utils'],
   },
 );

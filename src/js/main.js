@@ -73,7 +73,7 @@ YUI({
     },
     'tzc.views.timeCard': {
       fullpath: timeCardView,
-      requires: ['app', 'template-micro', 'tzc.utils'],
+      requires: ['app', 'yui-throttle', 'template-micro', 'tzc.utils'],
     },
     'tzc.views.timeCardList': {
       fullpath: timeCardListView,
