@@ -16,6 +16,11 @@
   align-items: stretch;
   justify-content: flex-start;
   gap: var(--stack-spacing);
+
+  &:where(ul, ol) {
+    padding-inline-start: 0;
+    margin-block: 0;
+  }
 }
 
 .l-cluster {
@@ -24,4 +29,9 @@
   display: flex;
   place-items: var(--cluster-align);
   gap: var(--cluster-spacing);
+
+  &:where(ul, ol) {
+    padding-inline-start: 0;
+    margin-block: 0;
+  }
 }
