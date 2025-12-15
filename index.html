@@ -61,44 +61,42 @@
     </svg>
 
     <div id="toast" role="status" class="c-toast"></div>
-
-    <main id="main" aria-busy="true">
-      <h1 class="u-visually-hidden">Time Zones</h1>
-      <div class="l-stack">
-        <div id="timecard-list" class="u-contents"></div>
-        <form
-          class="c-tile"
-          id="tz-select"
-          action=""
-          method="get"
-          aria-labelledby="tz-select-label"
-        >
-          <p class="u-visually-hidden" id="tz-select-label">Add a timezone</p>
-          <div class="c-field c-field--compact">
-            <input
-              class="c-field__input c-field__input--reset"
-              list="timezone-data"
-              type="text"
-              id="tz-name"
-              required
-              placeholder="Add a new timezone..."
-              autocomplete="off"
-            />
-            <datalist id="timezone-data"> </datalist>
-            <label class="c-field__label" for="tz-name">Timezone name</label>
-            <button type="submit" class="c-button c-field__action">
-              <span class="u-visually-hidden">Add</span>
-              <svg
-                class="c-icon c-icon--large"
-                focusable="false"
-                aria-hidden="true"
-              >
-                <use xlink:href="#icon-plus" />
-              </svg>
-            </button>
-          </div>
-        </form>
-      </div>
+    <h1 class="u-visually-hidden">Timezone Converter</h1>
+    <main id="main" aria-busy="true" class="l-stack">
+      <h2 class="u-visually-hidden" id="timecard-list-title">Time Zones</h2>
+      <ul id="timecard-list" class="l-stack" aria-labelledby="timecard-list-title"></ul>
+      <form
+        class="c-tile"
+        id="tz-select"
+        action=""
+        method="get"
+        aria-labelledby="tz-select-label"
+      >
+        <p class="u-visually-hidden" id="tz-select-label">Add a timezone</p>
+        <div class="c-field c-field--compact">
+          <input
+            class="c-field__input c-field__input--reset"
+            list="timezone-data"
+            type="text"
+            id="tz-name"
+            required
+            placeholder="Add a new timezone..."
+            autocomplete="off"
+          />
+          <datalist id="timezone-data"> </datalist>
+          <label class="c-field__label" for="tz-name">Timezone name</label>
+          <button type="submit" class="c-button c-field__action">
+            <span class="u-visually-hidden">Add</span>
+            <svg
+              class="c-icon c-icon--large"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <use xlink:href="#icon-plus" />
+            </svg>
+          </button>
+        </div>
+      </form>
     </main>
     <div role="status" class="c-loader c-loader--visible" id="loader">
       <span class="u-visually-hidden">Loading...</span>

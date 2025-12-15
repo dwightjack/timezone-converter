@@ -14,7 +14,7 @@ YUI.add(
     };
 
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
-      containerTemplate: '<div class="c-tile"></div>',
+      containerTemplate: '<li class="c-tile" />',
       template: Y.Template.Micro.compile(Y.one('#timecard-tmpl').getHTML()),
 
       events: {
