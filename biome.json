@@ -6,8 +6,10 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": false,
+    "includes": ["**", "!**/*.tmpl"]
   },
+
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
@@ -34,6 +36,11 @@
       "quoteStyle": "single"
     },
     "linter": {
+      "enabled": true
+    }
+  },
+  "html": {
+    "formatter": {
       "enabled": true
     }
   },
