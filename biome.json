@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.9/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -12,9 +12,7 @@
     "enabled": true,
     "indentStyle": "space"
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -41,7 +39,7 @@
   },
   "overrides": [
     {
-      "include": ["src/**/*.js"],
+      "includes": ["**/src/**/*.js"],
       "javascript": {
         "globals": ["YUI"]
       }
