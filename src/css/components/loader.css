@@ -1,41 +1,43 @@
-.c-loader {
-  position: fixed;
-  z-index: 10;
-  block-size: 100%;
-  inline-size: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: color-mix(
-    in hsl,
-    var(--color-background-canvas) 50%,
-    transparent 50%
-  );
-}
-
-@keyframes pulse {
-  from {
-    opacity: 1;
+@layer components {
+  .c-loader {
+    position: fixed;
+    z-index: 10;
+    block-size: 100%;
+    inline-size: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: color-mix(
+      in hsl,
+      var(--color-background-canvas) 50%,
+      transparent 50%
+    );
   }
-  to {
-    opacity: 0.8;
+
+  @keyframes pulse {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.8;
+    }
   }
-}
 
-.c-loader:not(.c-loader--visible) {
-  display: none;
-}
+  .c-loader:not(.c-loader--visible) {
+    display: none;
+  }
 
-.c-loader::before {
-  content: '';
-  display: block;
-  position: fixed;
-  z-index: 1;
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
-  inline-size: min(128px, 80vw);
-  transform: translate(-50%, -50%);
-  animation: pulse infinite 700ms alternate ease-in-out;
-  background: url('../../assets/logo.svg') no-repeat center;
-  background-size: cover;
-  aspect-ratio: 1 / 1;
+  .c-loader::before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: 1;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    inline-size: min(128px, 80vw);
+    transform: translate(-50%, -50%);
+    animation: pulse infinite 700ms alternate ease-in-out;
+    background: url('../../assets/logo.svg') no-repeat center;
+    background-size: cover;
+    aspect-ratio: 1 / 1;
+  }
 }

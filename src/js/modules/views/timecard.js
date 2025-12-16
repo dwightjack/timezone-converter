@@ -3,19 +3,9 @@ YUI.add(
   (Y) => {
     const Views = Y.namespace('TZC.Views');
 
-    const debounce = (callback, wait) => {
-      let timeoutId = null;
-      return (...args) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          callback.apply(null, args);
-        }, wait);
-      };
-    };
-
     Views.TimeCard = Y.Base.create('timeCardView', Y.View, [], {
-      containerTemplate: '<div class="c-tile"></div>',
-      template: Y.Template.Micro.compile(Y.one('#timezone-tmpl').getHTML()),
+      containerTemplate: '<li class="c-tile" />',
+      template: Y.Template.Micro.compile(Y.one('#timecard-tmpl').getHTML()),
 
       events: {
         '.c-timecard__close': { click: 'close' },
@@ -27,11 +17,12 @@ YUI.add(
         model.after('datetimeUpdate', this.updateFields, this);
         model.after(
           'datetimeUpdate',
-          debounce(() => this.setDayPart(), 300),
+          Y.throttle(() => this.setDayPart(), 300),
         );
 
         model.after('destroy', () => {
-          this.leave().then(() => {
+          this.get('container').addClass('c-tile--out');
+          Y.TZC.Utils.viewTransition(() => {
             this.destroy({ remove: true });
           });
         });
@@ -43,14 +34,6 @@ YUI.add(
         $container.setHTML(this.template(data));
         this.setDayPart();
         return this;
-      },
-
-      leave() {
-        const $container = this.get('container');
-
-        return Y.TZC.Utils.transition($container, () =>
-          $container.addClass('c-tile--out'),
-        );
       },
 
       updateDateTime() {
@@ -88,6 +71,6 @@ YUI.add(
   },
   '1.0.0',
   {
-    requires: ['app', 'template-micro', 'tzc.utils', 'anim'],
+    requires: ['app', 'yui-throttle', 'template-micro', 'tzc.utils'],
   },
 );

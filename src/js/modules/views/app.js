@@ -5,12 +5,30 @@ YUI.add(
 
     Views.App = Y.Base.create('appView', Y.View, [], {
       initializer() {
-        // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+        // biome-ignore lint/suspicious/noAssignInExpressions: it's ok to use here to make the code shorter
         const zoneList = (this.zoneList = new Y.TZC.Models.TimeZoneList({
           items: this.getZoneItems(),
         }));
-        // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+        // biome-ignore lint/suspicious/noAssignInExpressions: it's ok to use here to make the code shorter
         const cardList = (this.cardList = new Y.TZC.Models.TimeCardList());
+
+        Y.Global.after(['app:status', 'app:ready'], this.toggleBusy, this);
+
+        zoneList.after('select', ({ name, selected }) => {
+          if (selected) {
+            this.addCard(name);
+            return;
+          }
+        });
+
+        cardList.after('remove', ({ model }) => {
+          zoneList.toggleSelected(model.get('label'), false);
+        });
+        cardList.after('add', ({ model }) => {
+          zoneList.toggleSelected(model.get('label'), true);
+        });
+
+        this.load();
 
         this.cardListView = new Views.TimeCardList({
           cardList,
@@ -21,48 +39,25 @@ YUI.add(
           container: Y.one('#tz-select'),
           zoneList,
         });
+      },
 
-        Y.Global.after(['app:status', 'app:ready'], this.toggleBusy, this);
+      load() {
+        // look for cached timezones
+        const cached = this.zoneList.loadStore();
 
-        zoneList.after('select', ({ name, selected }) => {
-          if (selected) {
-            this.addCard(name);
-            Y.TZC.Cache.set('tzselect', (zones) => {
-              return Y.Array.unique((zones || []).concat(name));
-            });
-            return;
-          }
-          Y.TZC.Cache.set('tzselect', (zones) => {
-            return Y.Array.filter(zones || [], (zone) => zone !== name);
-          });
-        });
-
-        cardList.after('remove', ({ model }) => {
-          zoneList.toggleSelected(model.get('label'), false);
-        });
-        cardList.after('add', ({ model }) => {
-          zoneList.toggleSelected(model.get('label'), true);
-        });
-
-        this.onceAfter('rendered', () => {
-          // look for cached timezones
-          const cached = Y.TZC.Cache.get('tzselect');
-
-          if (Y.Lang.isArray(cached) && cached.length > 0) {
-            Y.Array.each(cached, (tz) => this.addCard(tz));
-            return;
-          }
-          const currentTz = Y.TZC.Day.tz.guess();
-          if (currentTz) {
-            this.addCard(currentTz);
-          }
-        });
+        if (cached.length > 0) {
+          Y.Array.each(cached, (tz) => this.addCard(tz));
+          return;
+        }
+        const currentTz = Y.TZC.Day.tz.guess();
+        if (currentTz) {
+          this.addCard(currentTz);
+        }
       },
 
       render() {
         this.selectView.render();
         this.cardListView.render();
-        this.fire('rendered');
         return this;
       },
 
@@ -107,7 +102,6 @@ YUI.add(
     requires: [
       'app',
       'tzc.day',
-      'tzc.cache',
       'tzc.models.timeZoneList',
       'tzc.models.timeCardList',
       'tzc.views.select',

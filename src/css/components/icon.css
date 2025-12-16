@@ -1,19 +1,21 @@
-.c-icon {
-  --icon-size-ratio: 1;
-  display: inline-block;
-  block-size: calc(var(--icon-size-ratio) * 1em);
-  inline-size: calc(var(--icon-size-ratio) * 1em);
-  line-height: inherit;
-}
+@layer components {
+  .c-icon {
+    --icon-size-ratio: 1;
+    display: inline-block;
+    block-size: calc(var(--icon-size-ratio) * 1em);
+    inline-size: calc(var(--icon-size-ratio) * 1em);
+    line-height: inherit;
+  }
 
-svg.c-icon {
-  stroke-width: 2px;
-  stroke-linecap: round;
-  stroke: currentcolor;
-  fill: none;
-  stroke-linejoin: round;
-}
+  svg.c-icon {
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke: currentcolor;
+    fill: none;
+    stroke-linejoin: round;
+  }
 
-.c-icon--large {
-  --icon-size-ratio: 1.25;
+  .c-icon--large {
+    --icon-size-ratio: 1.25;
+  }
 }

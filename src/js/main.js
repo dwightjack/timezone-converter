@@ -1,5 +1,4 @@
 import api from './modules/api.js?url';
-import cache from './modules/cache.js?url';
 import day from './modules/day.js?url';
 import appState from './modules/models/app-state.js?url';
 import timeCard from './modules/models/timecard-list.js?url';
@@ -9,15 +8,15 @@ import appView from './modules/views/app.js?url';
 import loaderView from './modules/views/loader.js?url';
 import pwaToastView from './modules/views/pwa-toast.js?url';
 import selectView from './modules/views/select.js?url';
-import timeCardListView from './modules/views/timecard-list.js?url';
 import timeCardView from './modules/views/timecard.js?url';
+import timeCardListView from './modules/views/timecard-list.js?url';
 import '../css/main.css';
 import { registerSW } from 'virtual:pwa-register';
 
 YUI({
   groups: {
     dayjs: {
-      base: 'https://unpkg.com/dayjs@1.10.6/',
+      base: 'https://unpkg.com/dayjs@1.11.19/',
       async: false,
       modules: {
         dayjs: {
@@ -43,10 +42,6 @@ YUI({
     'tzc.utils': {
       fullpath: utils,
       requires: ['promise'],
-    },
-    'tzc.cache': {
-      fullpath: cache,
-      requires: ['json'],
     },
     'tzc.day': {
       fullpath: day,
@@ -78,7 +73,7 @@ YUI({
     },
     'tzc.views.timeCard': {
       fullpath: timeCardView,
-      requires: ['app', 'template-micro', 'tzc.utils', 'anim'],
+      requires: ['app', 'yui-throttle', 'template-micro', 'tzc.utils'],
     },
     'tzc.views.timeCardList': {
       fullpath: timeCardListView,
@@ -93,7 +88,6 @@ YUI({
         'tzc.models.timeCardList',
         'tzc.views.select',
         'tzc.views.timeCardList',
-        'tzc.cache',
       ],
     },
   },

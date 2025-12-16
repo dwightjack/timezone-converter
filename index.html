@@ -1,29 +1,29 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timezone Converter</title>
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta
       name="theme-color"
       content="hsl(0 0% 22%)"
       media="(prefers-color-scheme: dark)"
-    />
+    >
     <meta
       name="theme-color"
       content="hsl(0 0% 96%)"
       media="(prefers-color-scheme: light)"
-    />
-    <meta name="color-scheme" content="dark light" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    >
+    <meta name="color-scheme" content="dark light">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono:wght@300&display=swap"
       rel="stylesheet"
-    />
+    >
     <script
       src="https://yui-s.yahooapis.com/3.18.1/build/yui/yui-min.js"
       defer
@@ -33,17 +33,17 @@
   <body>
     <svg display="none" id="icons">
       <symbol id="icon-close" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M15 9l-6 6M9 9l6 6" />
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M15 9l-6 6M9 9l6 6"/>
       </symbol>
       <symbol viewBox="0 0 24 24" id="icon-plus">
-        <path d="M12 5v14M5 12h14" />
+        <path d="M12 5v14M5 12h14"/>
       </symbol>
       <symbol id="icon-night" viewBox="0 0 24 24">
-        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
       </symbol>
       <symbol id="icon-daytime" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="5" />
+        <circle cx="12" cy="12" r="5"/>
         <path
           d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
         />
@@ -61,51 +61,53 @@
     </svg>
 
     <div id="toast" role="status" class="c-toast"></div>
-
-    <main id="main" aria-busy="true">
-      <h1 class="u-visually-hidden">Time Zones</h1>
-      <div class="l-stack">
-        <div id="timecard-list" class="u-contents"></div>
-        <form
-          class="c-tile"
-          id="tz-select"
-          action=""
-          method="get"
-          aria-labelledby="tz-select-label"
-        >
-          <p class="u-visually-hidden" id="tz-select-label">Add a timezone</p>
-          <div class="c-field c-field--compact">
-            <input
-              class="c-field__input c-field__input--reset"
-              list="timezone-data"
-              type="text"
-              id="tz-name"
-              required
-              placeholder="Add a new timezone..."
-              autocomplete="off"
-            />
-            <datalist id="timezone-data"> </datalist>
-            <label class="c-field__label" for="tz-name">Timezone name</label>
-            <button type="submit" class="c-button c-field__action">
-              <span class="u-visually-hidden">Add</span>
-              <svg
-                class="c-icon c-icon--large"
-                focusable="false"
-                aria-hidden="true"
-              >
-                <use xlink:href="#icon-plus" />
-              </svg>
-            </button>
-          </div>
-        </form>
-      </div>
+    <h1 class="u-visually-hidden">Timezone Converter</h1>
+    <main id="main" aria-busy="true" class="l-stack">
+      <h2 class="u-visually-hidden" id="timecard-list-title">Time Zones</h2>
+      <ul
+        id="timecard-list"
+        class="l-stack"
+        aria-labelledby="timecard-list-title"
+      ></ul>
+      <form
+        class="c-tile"
+        id="tz-select"
+        action=""
+        method="get"
+        aria-labelledby="tz-select-label"
+      >
+        <p class="u-visually-hidden" id="tz-select-label">Add a timezone</p>
+        <div class="c-field c-field--compact">
+          <input
+            class="c-field__input c-field__input--reset"
+            list="timezone-data"
+            type="text"
+            id="tz-name"
+            required
+            placeholder="Add a new timezone..."
+            autocomplete="off"
+          >
+          <datalist id="timezone-data"></datalist>
+          <label class="c-field__label" for="tz-name">Timezone name</label>
+          <button type="submit" class="c-button c-field__action">
+            <span class="u-visually-hidden">Add</span>
+            <svg
+              class="c-icon c-icon--large"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <use xlink:href="#icon-plus"/>
+            </svg>
+          </button>
+        </div>
+      </form>
     </main>
     <div role="status" class="c-loader c-loader--visible" id="loader">
       <span class="u-visually-hidden">Loading...</span>
     </div>
 
-    <script type="text/x-yui3-template" id="timezone-tmpl">
-      {TEMPLATE:./src/templates/timezone.tmpl}
+    <script type="text/x-yui3-template" id="timecard-tmpl">
+      {TEMPLATE:./src/templates/timecard.tmpl}
     </script>
     <script type="text/x-yui3-template" id="toast-update-tmpl">
       {TEMPLATE:./src/templates/toast-update.tmpl}

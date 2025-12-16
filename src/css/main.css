@@ -1,6 +1,9 @@
-@import url('sanitize.css');
-@import url('sanitize.css/reduce-motion.css');
+@layer reset, tokens, base, components, layout, utilities;
+
+@import url('sanitize.css') layer(reset);
+@import url('sanitize.css/reduce-motion.css') layer(reset);
 @import url('./tokens');
+@import url('./base.css');
 @import url('components/timecard.css');
 @import url('components/icon.css');
 @import url('components/tile.css');
@@ -10,16 +13,3 @@
 @import url('components/toast.css');
 @import url('layout.css');
 @import url('./utilities.css');
-
-html {
-  block-size: 100%;
-  font-family: var(--font-family-sans);
-  font-size: 100%;
-  font-weight: var(--font-weight-regular);
-  line-height: 1.5;
-}
-
-body {
-  min-block-size: 100%;
-  background-color: var(--color-background-canvas);
-}

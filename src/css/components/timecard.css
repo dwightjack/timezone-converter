@@ -1,76 +1,78 @@
-.c-timecard {
-  display: grid;
-  grid-template-areas: 'title interval close' 'zone zone close' 'fields fields fields';
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: repeat(2, auto);
-  column-gap: var(--s-2);
-  place-items: start;
-  row-gap: var(--s-4);
-}
+@layer components {
+  .c-timecard {
+    display: grid;
+    grid-template-areas: 'title interval close' 'zone zone close' 'fields fields fields';
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    column-gap: var(--s-2);
+    place-items: start;
+    row-gap: var(--s-4);
+  }
 
-.c-timecard__title {
-  grid-area: title;
-  margin-block: var(--s-0);
-  overflow: hidden;
-  font-size: var(--font-size-l);
-  font-weight: var(--font-weight-semibold);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  justify-self: stretch;
-}
+  .c-timecard__title {
+    grid-area: title;
+    margin-block: var(--s-0);
+    overflow: hidden;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    justify-self: stretch;
+  }
 
-.c-timecard__interval {
-  grid-area: interval;
-  align-self: center;
-  transform: translateY(0.5em);
-  transition: all 150ms ease-out;
-  opacity: 0;
-}
+  .c-timecard__interval {
+    grid-area: interval;
+    align-self: center;
+    transform: translateY(0.5em);
+    transition: all 150ms ease-out;
+    opacity: 0;
+  }
 
-.c-timecard__zone {
-  grid-area: zone;
-  margin-block: calc(var(--s-3) * -1) var(--s-0);
-  font-size: var(--font-size-s);
-}
+  .c-timecard__zone {
+    grid-area: zone;
+    margin-block: calc(var(--s-3) * -1) var(--s-0);
+    font-size: var(--font-size-s);
+  }
 
-.c-timecard__close {
-  display: flex;
-  grid-area: close;
-  margin: calc(var(--s-2) * -1);
-  padding: var(--s-2);
-  transition: outline-color 100ms ease-out;
-  border: 0;
-  border-radius: 50%;
-  outline: 2px solid transparent;
-  outline-offset: calc(var(--s-2) * -0.75);
-  background: transparent;
-  color: inherit;
-  font-size: var(--font-size-l);
-  cursor: pointer;
-  justify-self: end;
-}
+  .c-timecard__close {
+    display: flex;
+    grid-area: close;
+    margin: calc(var(--s-2) * -1);
+    padding: var(--s-2);
+    transition: outline-color 100ms ease-out;
+    border: 0;
+    border-radius: 50%;
+    outline: 2px solid transparent;
+    outline-offset: calc(var(--s-2) * -0.75);
+    background: transparent;
+    color: inherit;
+    font-size: var(--font-size-l);
+    cursor: pointer;
+    justify-self: end;
+  }
 
-.c-timecard__close:focus-visible {
-  outline-color: color-mix(in hsl, currentcolor 70%, transparent 30%);
-}
+  .c-timecard__close:focus-visible {
+    outline-color: color-mix(in hsl, currentcolor 70%, transparent 30%);
+  }
 
-.c-timecard__fieldset {
-  display: flex;
-  grid-area: fields;
-  align-items: flex-end;
-  margin-inline: 0;
-  padding: 0;
-  border: 0;
-  font-size: var(--font-size-m);
-  gap: var(--s-2);
-  justify-self: end;
-}
+  .c-timecard__fieldset {
+    display: flex;
+    grid-area: fields;
+    align-items: flex-end;
+    margin-inline: 0;
+    padding: 0;
+    border: 0;
+    font-size: var(--font-size-m);
+    gap: var(--s-2);
+    justify-self: end;
+  }
 
-[data-theme='morning'] .c-timecard__interval--morning,
-[data-theme='daytime'] .c-timecard__interval--daytime,
-[data-theme='evening'] .c-timecard__interval--evening,
-[data-theme='night'] .c-timecard__interval--night {
-  transform: none;
-  transition-delay: 100ms;
-  opacity: 1;
+  [data-theme='morning'] .c-timecard__interval--morning,
+  [data-theme='daytime'] .c-timecard__interval--daytime,
+  [data-theme='evening'] .c-timecard__interval--evening,
+  [data-theme='night'] .c-timecard__interval--night {
+    transform: none;
+    transition-delay: 100ms;
+    opacity: 1;
+  }
 }

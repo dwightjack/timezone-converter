@@ -12,7 +12,9 @@ YUI.add(
       },
 
       add({ model }) {
-        this.get('container').append(this.renderCard(model));
+        Y.TZC.Utils.viewTransition(() => {
+          this.get('container').append(this.renderCard(model));
+        });
       },
 
       renderCard(card) {
@@ -26,10 +28,16 @@ YUI.add(
       render() {
         const fragment = Y.one(Y.config.doc.createDocumentFragment());
 
+        if (this.get('cardList').size() === 0) {
+          return;
+        }
+
         this.get('cardList').each((card) => {
           fragment.append(this.renderCard(card));
         });
-        this.get('container').empty().append(fragment);
+        Y.TZC.Utils.viewTransition(() => {
+          this.get('container').empty().append(fragment);
+        });
       },
     });
   },
