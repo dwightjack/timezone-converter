@@ -1,8 +1,9 @@
-@layer reset, base, components, layout, utilities;
+@layer reset, tokens, base, components, layout, utilities;
 
 @import url('sanitize.css') layer(reset);
 @import url('sanitize.css/reduce-motion.css') layer(reset);
 @import url('./tokens');
+@import url('./base.css');
 @import url('components/timecard.css');
 @import url('components/icon.css');
 @import url('components/tile.css');
