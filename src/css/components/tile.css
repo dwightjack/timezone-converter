@@ -1,53 +1,57 @@
-.c-tile {
-  display: block;
-  padding: var(--s-3) var(--s-4);
-  transition: background-color 200ms ease-out;
-  border-radius: var(--size-border-radius-m);
-  opacity: 1;
-  background-color: var(--color-background-accent);
-  color: var(--color-text-accent);
-  scale: 1;
-  will-change: background-color, opacity, scale;
-  view-transition-name: match-element;
-  animation: show cubic-bezier(0.83, 0.31, 0.38, 0.93) 200ms forwards;
-  animation-delay: calc(var(--stagger-delay, 0) * 60ms);
-}
+@layer components {
+  .c-tile {
+    display: block;
+    padding: var(--s-3) var(--s-4);
+    transition: background-color 200ms ease-out;
+    border-radius: var(--size-border-radius-m);
+    opacity: 1;
+    background-color: var(--color-background-accent);
+    color: var(--color-text-accent);
+    scale: 1;
+    will-change: background-color, opacity, scale;
+    view-transition-name: match-element;
 
-@keyframes show {
-  from {
-    scale: 0.95;
-    opacity: 0;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: show cubic-bezier(0.83, 0.31, 0.38, 0.93) 200ms forwards;
+    }
   }
-}
 
-@keyframes hide {
-  to {
-    opacity: 0;
-    scale: 0.95;
+  @keyframes show {
+    from {
+      scale: 0.95;
+      opacity: 0;
+    }
   }
-}
 
-::view-transition-old(removed-card) {
-  animation: hide cubic-bezier(0.83, 0.31, 0.38, 0.93) 200ms forwards;
-}
+  @keyframes hide {
+    to {
+      opacity: 0;
+      scale: 0.95;
+    }
+  }
 
-.c-tile--out {
-  view-transition-name: removed-card;
-  transform-origin: center top;
-}
+  ::view-transition-old(removed-card) {
+    animation: hide cubic-bezier(0.83, 0.31, 0.38, 0.93) 200ms forwards;
+  }
 
-.c-tile[data-theme='morning'] {
-  --color-background-accent: var(--color-background-accent-morning);
-}
+  .c-tile--out {
+    view-transition-name: removed-card;
+    transform-origin: center top;
+  }
 
-.c-tile[data-theme='daytime'] {
-  --color-background-accent: var(--color-background-accent-daytime);
-}
+  .c-tile[data-theme='morning'] {
+    --color-background-accent: var(--color-background-accent-morning);
+  }
 
-.c-tile[data-theme='evening'] {
-  --color-background-accent: var(--color-background-accent-evening);
-}
+  .c-tile[data-theme='daytime'] {
+    --color-background-accent: var(--color-background-accent-daytime);
+  }
 
-.c-tile[data-theme='night'] {
-  --color-background-accent: var(--color-background-accent-night);
+  .c-tile[data-theme='evening'] {
+    --color-background-accent: var(--color-background-accent-evening);
+  }
+
+  .c-tile[data-theme='night'] {
+    --color-background-accent: var(--color-background-accent-night);
+  }
 }

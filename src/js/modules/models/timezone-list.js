@@ -53,7 +53,9 @@ YUI.add(
               'selected',
               toggle !== undefined ? toggle : !this.get('selected'),
             );
+            return true;
           }
+          return false;
         });
       },
       saveStore({ newVal: isSelected, target: model }) {

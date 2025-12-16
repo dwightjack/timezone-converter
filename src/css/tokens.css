@@ -1,68 +1,70 @@
-:root {
-  /* Palette */
-  --color-white: hsl(0deg 0% 100%);
-  --color-black: hsl(0deg 0% 0%);
-  --color-gray-800: hsl(0deg 0% 22%);
-  --color-gray-500: hsl(0deg 0% 45%);
-  --color-gray-50: hsl(0deg 0% 96%);
-  --color-blue-700: hsl(220deg 49% 35%);
-  --color-blue-600: hsl(205deg 64% 43%);
-  --color-blue-500: hsl(202deg 50% 47%);
-  --color-orange-500: hsl(30deg 71% 49%);
-  --color-yellow-400: hsl(43deg 74% 66%);
-  --color-yellow-300: hsl(43deg 90% 72%);
-
-  /* UI colors */
-  --color-background-canvas: var(--color-gray-50);
-  --color-background-primary: var(--color-gray-800);
-  --color-background-action: var(--color-yellow-400);
-  --color-background-action-active: var(--color-yellow-300);
-  --color-text-canvas: var(--color-gray-800);
-  --color-text-primary: var(--color-white);
-  --color-text-action: var(--color-gray-800);
-
-  /* Day intervals */
-  --color-background-accent: var(--color-gray-800);
-  --color-text-accent: var(--color-white);
-  --color-background-accent-morning: var(--color-blue-500);
-  --color-background-accent-daytime: var(--color-blue-600);
-  --color-background-accent-evening: var(--color-orange-500);
-  --color-background-accent-night: var(--color-blue-700);
-
-  /* Font sizes */
-  --font-size-s: 0.75rem;
-  --font-size-m: 1.125rem;
-  --font-size-l: 1.25rem;
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-semibold: 600;
-  --font-family-sans: 'Inter', sans-serif;
-  --font-family-mono: 'Roboto Mono', monospace;
-
-  /* Size */
-  --size-spacing-0: 0;
-  --size-spacing-1: 0.25rem;
-  --size-spacing-2: 0.5rem;
-  --size-spacing-3: 0.75rem;
-  --size-spacing-4: 1rem;
-  --size-spacing-5: 1.25rem;
-  --size-border-radius-s: 0.25rem;
-  --size-border-radius-m: 0.5rem;
-
-  /* Size shortcuts */
-  --s-0: var(--size-spacing-0);
-  --s-1: var(--size-spacing-1);
-  --s-2: var(--size-spacing-2);
-  --s-3: var(--size-spacing-3);
-  --s-4: var(--size-spacing-4);
-  --s-5: var(--size-spacing-5);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer tokens {
   :root {
-    --color-background-canvas: var(--color-gray-800);
-    --color-background-primary: var(--color-gray-500);
-    --color-background-accent: var(--color-black);
-    --color-text-canvas: var(--color-gray-50);
+    /* Palette */
+    --color-white: hsl(0deg 0% 100%);
+    --color-black: hsl(0deg 0% 0%);
+    --color-gray-800: hsl(0deg 0% 22%);
+    --color-gray-500: hsl(0deg 0% 45%);
+    --color-gray-50: hsl(0deg 0% 96%);
+    --color-blue-700: hsl(220deg 49% 35%);
+    --color-blue-600: hsl(205deg 64% 43%);
+    --color-blue-500: hsl(202deg 50% 47%);
+    --color-orange-500: hsl(30deg 71% 49%);
+    --color-yellow-400: hsl(43deg 74% 66%);
+    --color-yellow-300: hsl(43deg 90% 72%);
+
+    /* UI colors */
+    --color-background-canvas: var(--color-gray-50);
+    --color-background-primary: var(--color-gray-800);
+    --color-background-action: var(--color-yellow-400);
+    --color-background-action-active: var(--color-yellow-300);
+    --color-text-canvas: var(--color-gray-800);
+    --color-text-primary: var(--color-white);
+    --color-text-action: var(--color-gray-800);
+
+    /* Day intervals */
+    --color-background-accent: var(--color-gray-800);
+    --color-text-accent: var(--color-white);
+    --color-background-accent-morning: var(--color-blue-500);
+    --color-background-accent-daytime: var(--color-blue-600);
+    --color-background-accent-evening: var(--color-orange-500);
+    --color-background-accent-night: var(--color-blue-700);
+
+    /* Font sizes */
+    --font-size-s: 0.75rem;
+    --font-size-m: 1.125rem;
+    --font-size-l: 1.25rem;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-family-sans: 'Inter', sans-serif;
+    --font-family-mono: 'Roboto Mono', monospace;
+
+    /* Size */
+    --size-spacing-0: 0;
+    --size-spacing-1: 0.25rem;
+    --size-spacing-2: 0.5rem;
+    --size-spacing-3: 0.75rem;
+    --size-spacing-4: 1rem;
+    --size-spacing-5: 1.25rem;
+    --size-border-radius-s: 0.25rem;
+    --size-border-radius-m: 0.5rem;
+
+    /* Size shortcuts */
+    --s-0: var(--size-spacing-0);
+    --s-1: var(--size-spacing-1);
+    --s-2: var(--size-spacing-2);
+    --s-3: var(--size-spacing-3);
+    --s-4: var(--size-spacing-4);
+    --s-5: var(--size-spacing-5);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background-canvas: var(--color-gray-800);
+      --color-background-primary: var(--color-gray-500);
+      --color-background-accent: var(--color-black);
+      --color-text-canvas: var(--color-gray-50);
+    }
   }
 }

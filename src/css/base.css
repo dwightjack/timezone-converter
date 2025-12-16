@@ -1,0 +1,23 @@
+@layer base {
+  html {
+    block-size: 100%;
+    font-family: var(--font-family-sans);
+    font-size: 100%;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+  }
+
+  body {
+    min-block-size: 100%;
+    background-color: var(--color-background-canvas);
+  }
+
+  @media (prefers-reduced-motion) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      /* biome-ignore lint/complexity/noImportantStyles: this is actually required */
+      animation: none !important;
+    }
+  }
+}

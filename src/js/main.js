@@ -8,8 +8,8 @@ import appView from './modules/views/app.js?url';
 import loaderView from './modules/views/loader.js?url';
 import pwaToastView from './modules/views/pwa-toast.js?url';
 import selectView from './modules/views/select.js?url';
-import timeCardListView from './modules/views/timecard-list.js?url';
 import timeCardView from './modules/views/timecard.js?url';
+import timeCardListView from './modules/views/timecard-list.js?url';
 import '../css/main.css';
 import { registerSW } from 'virtual:pwa-register';
 

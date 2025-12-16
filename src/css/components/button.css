@@ -1,25 +1,27 @@
-.c-button {
-  display: flex;
-  align-items: center;
-  padding: var(--s-2);
-  transition: background-color 200ms ease-out;
-  border: 0;
-  border-radius: var(--size-border-radius-s);
-  outline: 0;
-  background-color: var(--color-background-action);
-  color: var(--color-text-action);
-  font-family: inherit;
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-semibold);
-  cursor: pointer;
-  gap: var(--s-1);
-}
+@layer components {
+  .c-button {
+    display: flex;
+    align-items: center;
+    padding: var(--s-2);
+    transition: background-color 200ms ease-out;
+    border: 0;
+    border-radius: var(--size-border-radius-s);
+    outline: 0;
+    background-color: var(--color-background-action);
+    color: var(--color-text-action);
+    font-family: inherit;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    gap: var(--s-1);
+  }
 
-.c-button:where(:hover, :focus) {
-  background-color: var(--color-background-action-active);
-}
+  .c-button:where(:hover, :focus) {
+    background-color: var(--color-background-action-active);
+  }
 
-.c-button:focus-visible:focus {
-  outline: 2px solid var(--color-background-action);
-  outline-offset: 2px;
+  .c-button:focus-visible:focus {
+    outline: 2px solid var(--color-background-action);
+    outline-offset: 2px;
+  }
 }
