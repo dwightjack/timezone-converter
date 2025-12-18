@@ -39,5 +39,6 @@
 
   #tz-select {
     view-transition-name: form;
+    view-transition-class: form;
   }
 }

@@ -30,13 +30,23 @@
     }
   }
 
-  ::view-transition-old(removed-card) {
-    animation: hide cubic-bezier(0.83, 0.31, 0.38, 0.93) 200ms forwards;
+  .c-tile:not(.c-tile--out) {
+    view-transition-class: card;
   }
 
   .c-tile--out {
     view-transition-name: removed-card;
     transform-origin: center top;
+  }
+
+  ::view-transition-old(removed-card) {
+    animation: hide cubic-bezier(0.83, 0.31, 0.38, 0.93) 200ms forwards;
+  }
+
+  ::view-transition-group(.card),
+  ::view-transition-new(.card),
+  ::view-transition-old(.card) {
+    animation: none;
   }
 
   .c-tile[data-theme='morning'] {
