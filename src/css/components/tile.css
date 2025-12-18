@@ -8,7 +8,7 @@
     background-color: var(--color-background-accent);
     color: var(--color-text-accent);
     scale: 1;
-    will-change: background-color, opacity, scale;
+    will-change: background-color;
     view-transition-name: match-element;
 
     @media (prefers-reduced-motion: no-preference) {
@@ -41,12 +41,6 @@
 
   ::view-transition-old(removed-card) {
     animation: hide cubic-bezier(0.83, 0.31, 0.38, 0.93) 200ms forwards;
-  }
-
-  ::view-transition-group(.card),
-  ::view-transition-new(.card),
-  ::view-transition-old(.card) {
-    animation: none;
   }
 
   .c-tile[data-theme='morning'] {
