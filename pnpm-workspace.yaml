@@ -1,0 +1,4 @@
+allowBuilds:
+  lefthook: true
+  netlify-cli: true
+  sharp: true
