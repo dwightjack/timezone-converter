@@ -1,7 +1,10 @@
 allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
   lefthook: true
   netlify-cli: true
   sharp: true
+  unix-dgram: true
 
 # Security settings
 # https://pnpm.io/blog/2025/12/05/newsroom-npm-supply-chain-security
