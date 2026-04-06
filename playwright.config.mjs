@@ -41,7 +41,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'pnpm exec vite --port=8888',
+    command: 'VITE_IS_TEST=true pnpm exec vite --port=8888',
     url: 'http://localhost:8888',
     reuseExistingServer: !process.env.CI,
   },

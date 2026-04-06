@@ -26,6 +26,7 @@ export default defineConfig({
   plugins: [
     htmlPlugin(),
     VitePWA({
+      disable: !!process.env.VITE_IS_TEST,
       manifest: {
         name: 'Timezone Converter',
         short_name: 'Timezone Converter',
