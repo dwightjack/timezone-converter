@@ -12,7 +12,7 @@ YUI.add(
         // biome-ignore lint/suspicious/noAssignInExpressions: it's ok to use here to make the code shorter
         const cardList = (this.cardList = new Y.TZC.Models.TimeCardList());
 
-        Y.Global.after(['app:status', 'app:ready'], this.toggleBusy, this);
+        Y.after(['app:status', 'app:ready'], this.toggleBusy, this);
 
         zoneList.after('select', ({ name, selected }) => {
           if (selected) {

@@ -10,11 +10,11 @@ YUI.add(
       {
         root: 'appState',
         initializer() {
-          Y.Global.after('app:load', this.updateQueue, this);
+          Y.after('app:load', this.updateQueue, this);
 
           this.after('change', ({ changed }) => {
             Y.Object.each(changed, ({ newVal, prevVal }, key) => {
-              Y.Global.fire(`app:${key}`, newVal, prevVal);
+              Y.fire(`app:${key}`, newVal, prevVal);
             });
           });
         },

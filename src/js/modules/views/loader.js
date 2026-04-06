@@ -5,7 +5,7 @@ YUI.add(
 
     Views.Loader = Y.Base.create('loaderView', Y.View, [], {
       initializer() {
-        Y.Global.after('app:status', this.toggle, this);
+        Y.after('app:status', this.toggle, this);
       },
 
       render() {

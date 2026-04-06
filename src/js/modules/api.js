@@ -29,7 +29,7 @@ YUI.add(
        * @return {Promise<string[]>}
        */
       fetchList() {
-        Y.Global.fire('app:load', true);
+        Y.fire('app:load', true);
         return new Y.Promise((resolve, reject) => {
           function success({ response }) {
             try {
@@ -40,12 +40,12 @@ YUI.add(
             } catch (error) {
               reject(error);
             } finally {
-              Y.Global.fire('app:load', false);
+              Y.fire('app:load', false);
             }
           }
           function failure({ error }) {
             reject(error);
-            Y.Global.fire('app:load', false);
+            Y.fire('app:load', false);
           }
 
           tzListSource.sendRequest({

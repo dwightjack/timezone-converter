@@ -98,13 +98,21 @@ YUI({
   'tzc.views.pwaToast',
   'tzc.models.appState',
   (Y) => {
+    const updateSW = registerSW({
+      onNeedRefresh() {
+        Y.fire('app:updateReady');
+      },
+      onOfflineReady() {},
+    });
+
+    Y.on('app:updateForce', updateSW);
+
     const rootState = new Y.TZC.Models.AppState();
 
     new Y.TZC.Views.Loader({ container: '#loader' }).render();
 
     new Y.TZC.Views.PwaToast({
       container: '#toast',
-      registerSW,
     }).render();
 
     Y.TZC.Api.fetchList()
