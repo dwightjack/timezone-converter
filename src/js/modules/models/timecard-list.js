@@ -15,11 +15,7 @@ YUI.add(
             return;
           }
           const newDatetime = day.tz(this.get('name'));
-          // change event fires a re-render
-          // but we want to avoid that because input fields will loose focus
-          // so instead we fire a custom event
-          this.set('datetime', newDatetime, { silent: true });
-          this.fire('datetimeUpdate', newDatetime);
+          this.set('datetime', newDatetime);
         },
       },
       {
