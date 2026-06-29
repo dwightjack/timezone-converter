@@ -14,13 +14,14 @@ YUI.add(
       initializer() {
         const model = this.get('model');
 
-        model.after('datetimeUpdate', this.updateFields, this);
+        model.after('datetimeChange', this.updateFields, this);
         model.after(
-          'datetimeUpdate',
+          'datetimeChange',
           Y.throttle(() => this.setDayPart(), 300),
         );
 
         model.after('destroy', () => {
+          this.get('container').addClass('c-tile--out');
           Y.TZC.Utils.viewTransition(() => {
             this.destroy({ remove: true });
           });
