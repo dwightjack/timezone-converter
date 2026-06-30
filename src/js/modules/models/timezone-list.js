@@ -26,11 +26,6 @@ YUI.add(
     Models.TimeZoneList = Y.Base.create('timeZoneList', Y.ModelList, [], {
       model: Models.TimeZone,
       initializer() {
-        this.cache = new Y.CacheOffline({
-          expires: 0,
-          max: 1,
-          sandbox: 'Models.TimeZoneList',
-        });
         /** emit whenever a timezone 'selected' attribute changes  */
         this.after('timeZone:selectedChange', ({ target }) =>
           this.fire('select', target.toJSON()),
@@ -72,6 +67,13 @@ YUI.add(
       loadStore() {
         return this.cache.retrieve('selected')?.response ?? [];
       },
+    });
+
+    Y.Base.plug(Models.TimeZoneList, Y.Plugin.Cache, {
+      cache: Y.CacheOffline,
+      expires: 0,
+      max: 1,
+      sandbox: 'Models.TimeZoneList',
     });
   },
   '1.0.0',
