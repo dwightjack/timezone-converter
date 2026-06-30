@@ -16,9 +16,9 @@ YUI.add(
               return this.get('name').toLowerCase().replace(/\W/, '-');
             },
           },
-          label: { value: '' },
-          name: { value: '' },
-          selected: { value: false },
+          label: { value: '', validator: Y.Lang.isString },
+          name: { value: '', validator: Y.Lang.isString },
+          selected: { value: false, validator: Y.Lang.isBoolean },
         },
       },
     );
