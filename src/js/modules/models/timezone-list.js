@@ -17,6 +17,12 @@ YUI.add(
             },
           },
           label: { value: '', validator: Y.Lang.isString },
+          group: {
+            readOnly: true,
+            getter() {
+              return this.get('label').replace(/\/.+$/, '');
+            },
+          },
           name: { value: '', validator: Y.Lang.isString },
           selected: { value: false, validator: Y.Lang.isBoolean },
         },
