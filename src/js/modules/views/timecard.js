@@ -14,9 +14,9 @@ YUI.add(
       initializer() {
         const model = this.get('model');
 
-        model.after('datetimeUpdate', this.updateFields, this);
+        model.after('datetimeChange', this.updateFields, this);
         model.after(
-          'datetimeUpdate',
+          'datetimeChange',
           Y.throttle(() => this.setDayPart(), 300),
         );
 
