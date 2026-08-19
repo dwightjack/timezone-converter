@@ -26,11 +26,14 @@ YUI.add(
               return this.get('name').toLowerCase().replace(/\W/, '-');
             },
           },
-          name: { value: '' },
-          label: { value: '' },
-          abbreviation: { value: '' },
-          offset: { value: 0 },
-          datetime: { value: null },
+          name: { value: '', validator: Y.Lang.isString },
+          label: { value: '', validator: Y.Lang.isString },
+          abbreviation: { value: '', validator: Y.Lang.isString },
+          offset: { value: 0, validator: Y.Lang.isNumber },
+          datetime: {
+            value: null,
+            validator: (v) => Y.Lang.isNull(v) || Y.TZC.Day.isDayjs(v),
+          },
           dayPart: {
             readOnly: true,
             getter() {
@@ -124,7 +127,10 @@ YUI.add(
       },
       {
         ATTRS: {
-          referenceDatetime: { value: null },
+          referenceDatetime: {
+            value: null,
+            validator: (v) => Y.Lang.isNull(v) || Y.TZC.Day.isDayjs(v),
+          },
         },
       },
     );

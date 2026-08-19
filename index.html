@@ -88,16 +88,7 @@
       >
         <p class="u-visually-hidden" id="tz-select-label">Add a timezone</p>
         <div class="c-field c-field--compact">
-          <input
-            class="c-field__input c-field__input--reset"
-            list="timezone-data"
-            type="text"
-            id="tz-name"
-            required
-            placeholder="Add a new timezone..."
-            autocomplete="off"
-          >
-          <datalist id="timezone-data"></datalist>
+          <select class="c-field__input" id="tz-name" required></select>
           <label class="c-field__label" for="tz-name">Timezone name</label>
           <button type="submit" class="c-button c-field__action">
             <span class="u-visually-hidden">Add</span>
@@ -118,6 +109,9 @@
 
     <script type="text/x-yui3-template" id="timecard-tmpl">
       {TEMPLATE:./src/templates/timecard.tmpl}
+    </script>
+    <script type="text/x-yui3-template" id="select-tmpl">
+      {TEMPLATE:./src/templates/select.tmpl}
     </script>
     <script type="text/x-yui3-template" id="toast-update-tmpl">
       {TEMPLATE:./src/templates/toast-update.tmpl}
