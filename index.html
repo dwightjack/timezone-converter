@@ -37,6 +37,13 @@
       src="https://yui-s.yahooapis.com/3.18.1/build/yui/yui-min.js"
       defer
     ></script>
+    <script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document
+        .querySelector('link[rel=manifest]')
+        ?.setAttribute('href', 'manifest-dark.webmanifest');
+    }
+    </script>
     <script src="/src/js/main.js" type="module"></script>
   </head>
   <body>

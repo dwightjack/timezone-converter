@@ -57,19 +57,6 @@ const darkManifestPlugin = () => {
       await writeFile(dest, JSON.stringify(manifest));
       logger.info(`[dark-manifest] wrote ${dest}`);
     },
-    transformIndexHtml() {
-      return [
-        {
-          tag: 'link',
-          attrs: {
-            rel: 'manifest',
-            href: '/manifest-dark.webmanifest',
-            media: '(prefers-color-scheme: dark)',
-          },
-          injectTo: 'head',
-        },
-      ];
-    },
   };
 };
 
