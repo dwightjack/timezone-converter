@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from 'node:fs';
+import { access, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
@@ -18,6 +19,56 @@ const htmlPlugin = () => {
         }
         return readFileSync(template, 'utf8');
       });
+    },
+  };
+};
+
+/**
+ * @param {string} darkColor
+ * @returns {import('vite').Plugin}
+ */
+const darkManifestPlugin = () => {
+  /** @type {string} */
+  let absOutDir;
+
+  /** @type {import('vite').ResolvedConfig['logger']} */
+  let logger;
+
+  return {
+    name: 'dark-manifest',
+    enforce: 'post',
+    apply: 'build',
+    configResolved(config) {
+      absOutDir = resolve(config.root, config.build.outDir);
+      logger = config.logger;
+    },
+    async closeBundle() {
+      const src = resolve(absOutDir, 'manifest.webmanifest');
+      const dest = resolve(absOutDir, 'manifest-dark.webmanifest');
+      try {
+        await access(src);
+      } catch {
+        logger.warn('[dark-manifest] manifest.webmanifest not found, skipping');
+        return;
+      }
+      const manifest = JSON.parse(await readFile(src, 'utf-8'));
+      manifest.theme_color = 'hsl(0deg 0% 22%)';
+      manifest.background_color = 'hsl(0deg 0% 22%)';
+      await writeFile(dest, JSON.stringify(manifest));
+      logger.info(`[dark-manifest] wrote ${dest}`);
+    },
+    transformIndexHtml() {
+      return [
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'manifest',
+            href: '/manifest-dark.webmanifest',
+            media: '(prefers-color-scheme: dark)',
+          },
+          injectTo: 'head',
+        },
+      ];
     },
   };
 };
@@ -107,6 +158,7 @@ export default defineConfig({
         ],
       },
     }),
+    darkManifestPlugin(),
   ],
   build: {
     assetsInlineLimit: 0,
