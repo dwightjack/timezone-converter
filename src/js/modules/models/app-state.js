@@ -31,9 +31,12 @@ YUI.add(
       },
       {
         ATTRS: {
-          loadQueue: { value: 0 },
-          status: { value: 'idle' },
-          ready: { value: false },
+          loadQueue: { value: 0, validator: Y.Lang.isBoolean },
+          status: {
+            value: 'idle',
+            validator: (v) => ['idle', 'loading', 'loaded'].includes(v),
+          },
+          ready: { value: false, validator: Y.Lang.isBoolean },
         },
       },
     );

@@ -61,7 +61,7 @@ YUI({
     },
     'tzc.views.select': {
       fullpath: selectView,
-      requires: ['app'],
+      requires: ['app', 'template-micro'],
     },
     'tzc.views.loader': {
       fullpath: loaderView,

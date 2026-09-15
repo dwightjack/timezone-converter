@@ -4,6 +4,7 @@ YUI.add(
     const Views = Y.namespace('TZC.Views');
 
     Views.Select = Y.Base.create('selectView', Y.View, [], {
+      template: Y.Template.Micro.compile(Y.one('#select-tmpl').getHTML()),
       initializer() {
         if (!this.get('zoneList')) {
           throw new Error('Timezones model list not defined!');
@@ -32,22 +33,14 @@ YUI.add(
       },
 
       renderSelect({ models }) {
-        const $nodes = Y.Array.map(models, (zone) => {
-          return Y.Node.create(
-            `<option value="${zone.get('label')}" data-id="${zone.get(
-              'id',
-            )}" />`,
-          ).set('disabled', zone.get('selected'));
-        });
+        const groups = Object.groupBy(models, (model) => model.get('group'));
 
-        const $list = new Y.NodeList($nodes);
-
-        Y.one('#timezone-data').append($list.toFrag());
+        Y.one('#tz-name').setHTML(this.template({ groups }));
       },
     });
   },
   '1.0.0',
   {
-    requires: ['app'],
+    requires: ['app', 'template-micro'],
   },
 );

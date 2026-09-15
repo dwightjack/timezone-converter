@@ -21,7 +21,6 @@ YUI.add(
         );
 
         model.after('destroy', () => {
-          this.get('container').addClass('c-tile--out');
           Y.TZC.Utils.viewTransition(() => {
             this.destroy({ remove: true });
           });
