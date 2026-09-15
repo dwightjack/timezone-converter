@@ -1,55 +1,55 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.5.12/schema.json",
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"useIgnoreFile": true
-	},
-	"files": {
-		"ignoreUnknown": false,
-		"includes": ["**", "!**/*.tmpl"]
-	},
+  "$schema": "https://biomejs.dev/schemas/2.5.12/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["**", "!**/*.tmpl"]
+  },
 
-	"formatter": {
-		"enabled": true,
-		"indentStyle": "space"
-	},
-	"assist": { "actions": { "source": { "organizeImports": "on" } } },
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"preset": "recommended",
-			"correctness": {
-				"noUndeclaredVariables": "error",
-				"noUnusedVariables": "warn",
-				"recommended": true
-			}
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "single"
-		}
-	},
-	"css": {
-		"formatter": {
-			"quoteStyle": "single"
-		},
-		"linter": {
-			"enabled": true
-		}
-	},
-	"html": {
-		"formatter": {
-			"enabled": true
-		}
-	},
-	"overrides": [
-		{
-			"includes": ["**/src/**/*.js"],
-			"javascript": {
-				"globals": ["YUI"]
-			}
-		}
-	]
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "noUnusedVariables": "warn",
+        "recommended": true
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+  "css": {
+    "formatter": {
+      "quoteStyle": "single"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "html": {
+    "formatter": {
+      "enabled": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/src/**/*.js"],
+      "javascript": {
+        "globals": ["YUI"]
+      }
+    }
+  ]
 }
