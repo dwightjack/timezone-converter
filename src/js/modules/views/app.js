@@ -74,7 +74,7 @@ YUI.add(
         return Y.Array.map(this.get('zonesDB'), ({ label, name }) => ({
           label,
           name,
-        }));
+        })).sort((a, b) => a.name.localeCompare(b.name));
       },
 
       addCard(timezone) {

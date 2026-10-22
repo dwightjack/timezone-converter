@@ -43,10 +43,6 @@
     outline-color: color-mix(in hsl, currentcolor 70%, transparent 30%);
   }
 
-  .c-field__input--reset {
-    appearance: textfield;
-  }
-
   @media (prefers-color-scheme: light) {
     .c-field__input:is(
         [type='date'],

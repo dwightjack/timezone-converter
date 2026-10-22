@@ -1,0 +1,13 @@
+<option value="" selected>Add a new timezone...</option>
+<% for (const [group, zones] of Object.entries(this.groups)) { %>
+  <optgroup label="<%= group %>">
+    <% Y.Array.each(zones, (zone) => { %>
+      <option
+        value="<%= zone.get('label') %>"
+        data-id="<%= zone.get('id') %>"
+      >
+          <%= zone.get('label') %>
+      </option>
+    <% }) %>
+  </optgroup>
+<% } %>
